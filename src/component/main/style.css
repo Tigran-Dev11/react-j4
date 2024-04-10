@@ -1,0 +1,29 @@
+main{
+    width: 100%;
+    height: 600px;
+    background-image: url(./img/main-photo.png);
+    position: relative;
+
+}
+
+main div{
+    width: 316px;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+
+main div button{
+    width: 143px;
+    height: 40px;
+    top: 502px;
+    left: 129px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    border: 2px 0px 0px 0px;
+    opacity: 0px;
+    background-color: transparent;
+    cursor: pointer;
+
+}

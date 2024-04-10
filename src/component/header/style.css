@@ -1,0 +1,14 @@
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    background-color: cyan;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+}

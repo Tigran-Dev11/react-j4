@@ -1,12 +1,18 @@
+import Aside from "./component/aside";
+import Footer from "./component/footer";
+import Header from "./component/header";
+import Main from "./component/main";
 
 
 function App() {
   
   return (
-    <div className="App">
-        <h1>hello j4</h1>
-    </div>
-  );
+    // <Header/>
+    <Main />
+    // <Aside />
+    // <Footer />
+  )
 }
+
 
 export default App;

@@ -1,0 +1,46 @@
+
+aside{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+aside div{
+    width: 184px;
+    height: 300px;
+    background-color: #F8F9FA;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+aside div h4{
+    width: 24px;
+    height: 18px;
+    top: 921px;
+    left: 158px;
+    gap: 0px;
+    opacity: 0px;
+    color:#1967D2;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+}
+
+aside div p{
+    width: 153px;
+    height: 24px;
+    top: 1172px;
+    left: 129px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color:#3C4043;
+}
