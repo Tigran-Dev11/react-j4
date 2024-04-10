@@ -1,5 +1,5 @@
 import './style.css';
-
+import { IMAGES } from "../../assets";
 
 const Footer = () => {
 
@@ -30,7 +30,8 @@ const Footer = () => {
             </div>
             <div className='footer-footer'>
                 <ul>
-                    <li><img src="./img/footer.icon.png" alt="flag-icon" />United States</li>
+                    <img src={IMAGES.footerIcon} alt="flag-icon" />
+                    <li>United States</li>
                     <li>Privacy</li>
                     <li>Google Nest Commitment to Privacy</li>
                     <li>Sales Terms</li>
@@ -38,7 +39,7 @@ const Footer = () => {
                     <li>Careers</li>
                 </ul>
             </div>
-            
+
         </footer>
 
     )
