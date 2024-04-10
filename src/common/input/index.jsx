@@ -1,11 +1,7 @@
-import "./style.css";
-
-const Button = ({ title ,id, onClick }) => {
+const Input = ({type, placeholder, ...props }) => {
   
 
-   
-
-  return <button id={id} onClick={onClick}>{title}</button>;
+  return <input placeholder={placeholder} type={type} {...props}/>;
 };
 
-export default Button;
+export default Input;
