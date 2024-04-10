@@ -1,19 +1,31 @@
 import './style.css';
+import { IMAGES } from '../../assets';
+import { menuList } from '../../util/constant';
 
-const Header = ()=>{
+
+const Header = () => {
 
     return (
         <header>
-            <ul>
-                <li>Phones</li>
-                <li>Earbuds</li>
-                <li>Watches</li>
-                <li>Smart Home</li>
-                <li>Laptops</li>
-                <li>Accessories</li>
-                <li>Subscriptions</li>
-                <li>Offers</li>
-            </ul>
+            <div>
+                <img src={IMAGES.headerLogo} alt="LOGO" className='logo' />
+                <ul>
+                    {menuList.map(({ title, path }, index) => {
+                        return (
+                            <li key={index}>
+                                <a href={path}>{title}</a>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>
+            <div>
+                <img src={IMAGES.headerSearchIcon} alt="ICON" />
+                <img src={IMAGES.headerIcon} alt="icon" />
+                <img src={IMAGES.headerUserIcon} alt="ICON" />
+                <img src={IMAGES.headerBagIcon} alt="icon" />
+            </div>
+
         </header>
     )
 }
