@@ -68,6 +68,28 @@ export const menuList = [
   ];
 
 
-  // FOOTER MENU LIST
+  // Menu MENU LIST
+
+
+  export const menuMenuList = [
+    {
+      name:"Google Pixel Watch",
+      title:"Help by Google. Health by Fitbit.",
+      info:"Learn more",
+      img:IMAGES.menuWatch
+    },
+    {
+      name:"Nest Wifi Pro with Wi-Fi 6E",
+      title:"The better way to Wi-Fi.",
+      info:"Learn more",
+      img:IMAGES.menuPods
+    },
+    {
+      name:"Google Pixel Watch",
+      title:"Know more. No charging.",
+      info:"Learn more",
+      img:IMAGES.menuCamera
+    }
+  ]
 
   
