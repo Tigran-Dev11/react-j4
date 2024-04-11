@@ -3,6 +3,8 @@ import Footer from "./component/footer";
 import Header from "./component/header";
 import Main from "./component/main";
 import Menu  from "./component/menu";
+import Nav from "./component/nav";
+import Section from "./component/section";
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <Main />
       <Aside />
       <Menu />
+      <Section />
+      <Nav />
       <Footer />
 
     </div>

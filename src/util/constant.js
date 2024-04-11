@@ -90,6 +90,46 @@ export const menuList = [
       info:"Learn more",
       img:IMAGES.menuCamera
     }
+  ];
+
+  // Section Menu List
+
+
+  export const sectionMenuList = [
+    {
+      name:"Pixel Pass",
+      title:"One price for all things Pixel.",
+      info:"Learn more",
+      img:IMAGES.sectionOne
+    },
+    {
+      name:"Switch to Pixel",
+      title:"Here’s what #TeamPixel has to say about it.",
+      info:"Learn more",
+      img:IMAGES.sectionTwo
+    },
+  ];
+
+  // Nav menu list
+
+
+  export const navMenuList =[
+    {
+      img:IMAGES.navOne,
+      name:"Cameras"
+    },
+    {
+      img:IMAGES.navTwo,
+      name:"Doorbells"
+    },
+    {
+      img:IMAGES.navThree,
+      name:"Streaming"
+    },
+    {
+      img:IMAGES.navFour,
+      name:"Packages"
+    },
   ]
 
   

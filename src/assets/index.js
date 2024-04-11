@@ -12,6 +12,14 @@ import footerIcon from "./images/footer.icon.png";
 import menuWatch from "./images/menu-watch.png";
 import menuPods from "./images/menu-pods.png";
 import menuCamera from "./images/menu-camera.png";
+import sectionTwo from "./images/section-img-2.png";
+import sectionOne from "./images/section-img-1.png";
+import navOne from "./images/nav-img-1.png";
+import navTwo from "./images/nav-img-2.png";
+import navThree from "./images/nav-img-3.png";
+import navFour from "./images/nav-img-4.png";
+
+
 
 
 
@@ -20,5 +28,5 @@ import menuCamera from "./images/menu-camera.png";
 export const IMAGES = {
     headerLogo, headerSearchIcon, headerUserIcon, headerBagIcon, headerIcon,
     watch, phoneOne, phoneTwo, airPods, cameraPhoto, footerIcon, menuWatch,
-    menuPods, menuCamera
+    menuPods, menuCamera, sectionOne, sectionTwo, navOne, navTwo, navThree, navFour
 }
