@@ -1,10 +1,14 @@
-
+import Header from "./components/header"
+import Section from "./components/section-center"
+import Footer from "./components/footer"
 
 function App() {
   
   return (
     <div className="App">
-        <h1>hello j4</h1>
+        <Header />
+        <Section />
+        <Footer />
     </div>
   );
 }
