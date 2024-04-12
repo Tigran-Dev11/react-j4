@@ -1,0 +1,103 @@
+
+
+.foot{
+    width: 100%;
+    min-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot h1{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-family: 'montserrat';
+}
+
+.foot .logo{
+    margin-top: 40px;
+    width: calc(100% - 200px);
+    padding-inline: 100px;
+}
+
+.foot p{
+    margin-top: 30px;
+    font-family: 'montserrat';
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
+    width: 590px;
+    height: 144px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+
+}
+
+.foot .section1 {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    justify-content: space-around;
+    background-color: bisque;
+}
+
+.foot .section1 p{
+    width: 380px;
+    height: 288px;
+    font-family: 'montserrat';
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 200px;
+}
+
+.foot .section1 .girl{
+    width: 480px;
+    height: 480px;
+    margin-top: 200px;
+    
+}
+
+.foot .section2{
+    width: 100%;
+    min-height: 700px;
+    border: 2px solid red;
+}
+
+.foot .section2 p{
+    width: 202px;
+    height: 12px;
+    margin-left: 70px;
+    font-family: 'montserrat';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    margin-top: 50px;
+    
+}
+
+.foot .section2 .p2{
+    width: 1032px;
+    height: 192px;
+    margin-left: 80px;
+    font-family: 'montserrat';
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 2px;
+    text-align: left;
+    
+    
+}
+
+.foot .section2 .image{
+    width: 100%;
+    margin-top: 70px;
+}
