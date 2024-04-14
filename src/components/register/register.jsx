@@ -5,7 +5,10 @@ import { useState } from "react";
 const Register = () => {
 
     const onSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
+
+        localStorage.setItem('registerFormData', JSON.stringify(registerFormData))
+
     }
 
     const [registerFormData, setRegisterFormData] = useState({
@@ -13,6 +16,8 @@ const Register = () => {
         lastname: "",
         email: "",
         password: ""
+
+
     });
 
     const { firstname, lastname, email, password } = registerFormData;
@@ -24,11 +29,6 @@ const Register = () => {
         }));
     };
 
-    const registerData = (click)=>{
-        console.log("hello");
-    }
-
-
     return (
         <section>
             <h1>Registration Page</h1>
@@ -37,7 +37,7 @@ const Register = () => {
                 <input type="text" placeholder="lastname" name="lastname" value={lastname} onChange={inputChange} />
                 <input type="email" placeholder="email" name="email" value={email} onChange={inputChange} />
                 <input type="password" placeholder="password" name="password" value={password} onChange={inputChange} />
-                <button onClick={registerData}>Register</button>
+                <button>Register</button>
             </form>
         </section>
 
