@@ -1,12 +1,18 @@
+import HomePage from "./first-page"
+import { Route, Routes } from "react-router-dom"
+import Register from "./pages/register";
 
 
 function App() {
-  
+
   return (
     <div className="App">
-        <h1>hello j4</h1>
+        {/* <HomePage /> */}
+        <Register />
     </div>
   );
+  
 }
 
 export default App;
+
