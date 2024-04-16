@@ -1,10 +1,16 @@
 
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Router from "./routes/router";
+
 
 function App() {
   
   return (
     <div className="App">
-        <h1>hello j4</h1>
+        <Header />
+        <Router />
+        <Footer />
     </div>
   );
 }
