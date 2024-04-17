@@ -9,3 +9,7 @@ ul{
     gap: 20px;
     list-style: none;
 }
+
+ul li a{
+    text-decoration: none;
+}
