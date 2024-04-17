@@ -5,7 +5,7 @@ const Router = () => {
   return (
     <Routes>
       {routes.map(({ path, Component }) => {
-        return <Route key={path} path={path} element={Component} />;
+        return <Route key={path} path={path} element={<Component />} />;
       })}
     </Routes>
   );
