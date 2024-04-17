@@ -14,6 +14,7 @@ const Register = () => {
 
 
     const onSubmit = (data) => {
+        localStorage.setItem('registerFormData', JSON.stringify(registerFormData))
 
     };
 

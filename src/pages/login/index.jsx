@@ -9,11 +9,11 @@ const Login = () => {
         handleSubmit,
         formState: { errors }
     } = useForm({
-        resolver: yupResolver(SCHEMA.registerSchema)
+        resolver: yupResolver(SCHEMA.loginSchema)
     });
 
     const onSubmit = (data) => {
-
+        localStorage.setItem('loginFormData', JSON.stringify(loginFormData))
     };
 
     return (
