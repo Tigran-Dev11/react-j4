@@ -1,8 +1,9 @@
 const Register = ()=>{
 
     return(
-        <div>Register</div>
+        <div>Home</div>
     )
 };
+
 
 export default Register;
