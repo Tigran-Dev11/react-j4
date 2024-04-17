@@ -5,12 +5,12 @@ import Router from "./routes/router";
 
 
 function App() {
-  
+
   return (
     <div className="App">
-        <Header />
-        <Router />
-        <Footer />
+      <Header />
+      <Router />
+      <Footer />
     </div>
   );
 }

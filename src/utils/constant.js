@@ -1,8 +1,9 @@
 export const ROUTES = {
-    home:"/",
-    login: "/login",
-    register: "/register"
-};
+    home: "/",
+    register: "/register",
+    login: "/login"
+
+  };
 
 
 export const menu = [

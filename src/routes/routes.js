@@ -1,20 +1,23 @@
+
 import Home from "../pages/home";
-import Login from "../pages/login/login";
-import Register from "../pages/register/register";
+import Login from "../pages/login";
+import Register from "../pages/register";
 import { ROUTES } from "../utils/constant";
 
-export const routes = () => [
+export const routes = [
     {
-        Component: Home,
+        component: Home,
         path: ROUTES.home
     },
+
     {
-        Component: Login,
+        component: Login,
         path: ROUTES.login
     },
     {
-        Component: Register,
+        component: Register,
         path: ROUTES.register
-    }
+    },
+
 
 ];
