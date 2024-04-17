@@ -2,7 +2,7 @@ import "./style.scss"
 
 const Home = ()=>{
     return(
-        <div className="Home"></div>
+        <div className="Home">home</div>
     )
 }
 

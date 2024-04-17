@@ -8,8 +8,8 @@ const Header = () =>{
         <ul>
         {menu.map(({ path, title }) => (
           <li key={path}>
-            {/* <NavLink to={path}>{title}</NavLink> */}
-            <a href={path}>{title}</a>
+            <NavLink to={path}>{title}</NavLink>
+           
           </li>
 ))}
       </ul>
