@@ -4,13 +4,6 @@ import { useState } from "react";
 
 const Register = () => {
 
-    const onSubmit = (event) => {
-        event.preventDefault();
-
-        localStorage.setItem('registerFormData', JSON.stringify(registerFormData))
-
-    }
-
     const [registerFormData, setRegisterFormData] = useState({
         firstname: "",
         lastname: "",
@@ -28,6 +21,13 @@ const Register = () => {
             [event.target.name]: event.target.value
         }));
     };
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+
+        localStorage.setItem('registerFormData', JSON.stringify(registerFormData))
+
+    }
 
     return (
         <section>

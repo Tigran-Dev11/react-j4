@@ -4,19 +4,11 @@ import { useState } from "react";
 
 const Login = () => {
 
-    const onSubmit = (event) => {
-        event.preventDefault();
-
-        localStorage.setItem('loginFormData', JSON.stringify(loginFormData))
-
-    }
-
     const [loginFormData, setLoginFormData] = useState({
         firstname: "",
         lastname: "",
         email: "",
         password: ""
-
 
     });
 
@@ -28,6 +20,13 @@ const Login = () => {
             [event.target.name]: event.target.value
         }));
     };
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+
+        localStorage.setItem('loginFormData', JSON.stringify(loginFormData))
+
+    }
 
     return (
         <section>
