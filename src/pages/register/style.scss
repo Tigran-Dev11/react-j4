@@ -1,9 +1,12 @@
-.container {
+.register {
     width: 100%;
     height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    gap: 20px;
 
     h1 {
         font-size: 40px;
@@ -13,16 +16,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
 
         input {
             width: 400px;
             height: 30px;
             border-radius: 8px;
-            background-color:black;
+            background-color: black;
             padding: 6px 16px;
             outline: none;
             color: greenyellow;
+
+            &::placeholder {
+                color: greenyellow;
+            }
 
             &.error {
                 border: 3px solid red;
@@ -35,6 +42,7 @@
             background-color: black;
             border-radius: 8px;
             color: greenyellow;
+            cursor: pointer;
         }
     }
 }

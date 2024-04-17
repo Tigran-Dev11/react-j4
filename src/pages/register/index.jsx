@@ -18,7 +18,7 @@ const Register = () => {
     };
 
     return (
-        <div className="container">
+        <div className="register">
             <h1>Register page</h1>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <input
