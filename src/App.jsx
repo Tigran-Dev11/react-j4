@@ -1,18 +1,15 @@
-import HomePage from "./first-page"
-import { Route, Routes } from "react-router-dom"
-import Register from "./pages/register";
-
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Router from "./routes/router";
 
 function App() {
-
   return (
     <div className="App">
-        {/* <HomePage /> */}
-        <Register />
+      <Header />
+      <Router />
+      <Footer />
     </div>
   );
-  
 }
 
 export default App;
-

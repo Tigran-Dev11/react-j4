@@ -1,23 +1,26 @@
 import css from "./style.module.scss";
 import Apath from "../common/a";
-import Login from "../pages/login/index"
-import Register from "../pages/register";
-import { Link } from "react-router-dom"
-
-// import IMAGES from "../aseets/index"
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTES } from "../utils/constant";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const goToLoginPage = () => {
+    navigate(ROUTES.login);
+  };
+  const goToRegisterPage = () => {
+    navigate(ROUTES.register);
+  };
   return (
     <div className={css.container}>
       <div className={css.centerBlock}>
         <h1>React App</h1>
-        <Apath title="Register" path="/pages/register" />
-        <Apath title="Login" path="/pages/login"/>
+        <Apath title="Register" path="/register" onClick={goToLoginPage} />
+        <Apath title="Login" path="/login" onClick={goToRegisterPage} />
       </div>
     </div>
   );
 };
 
 export default HomePage;
-
-
