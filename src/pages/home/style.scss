@@ -1,6 +1,19 @@
 main {
     width: 100%;
     height: calc(100vh - 200px);
-    background-color: blue;
-    text-align: center;
+    background-color:greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button{
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: black;
+        color: greenyellow;
+        
+    }
 }

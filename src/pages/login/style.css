@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: greenyellow;
+}
+.container h1 {
+  font-size: 40px;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container form input {
+  width: 400px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: gray;
+  padding: 6px 16px;
+  outline: none;
+}
+.container form input.error {
+  border: 3px solid red;
+}
+.container form button {
+  width: 400px;
+  height: 60px;
+  background-color: greenyellow;
+  border-radius: 8px;
+}/*# sourceMappingURL=style.css.map */

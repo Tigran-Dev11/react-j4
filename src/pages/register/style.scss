@@ -1,4 +1,6 @@
 .container {
+    width: 100%;
+    height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,9 +19,10 @@
             width: 400px;
             height: 30px;
             border-radius: 8px;
-            background-color: cadetblue;
+            background-color:black;
             padding: 6px 16px;
             outline: none;
+            color: greenyellow;
 
             &.error {
                 border: 3px solid red;
@@ -29,8 +32,9 @@
         button {
             width: 400px;
             height: 60px;
-            background-color: red;
+            background-color: black;
             border-radius: 8px;
+            color: greenyellow;
         }
     }
 }

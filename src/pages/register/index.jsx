@@ -14,7 +14,6 @@ const Register = () => {
 
 
     const onSubmit = (data) => {
-        localStorage.setItem('registerFormData', JSON.stringify(registerFormData))
 
     };
 
@@ -37,18 +36,24 @@ const Register = () => {
                     className={errors?.email?.message ? "error" : ""}
                 />
                 <p>{errors?.email?.message}</p>
-                <input type="number" placeholder="phone" {...register("phone")} />
+                <input type="number" placeholder="phone" {...register("phone")}
+                    className={errors?.email?.message ? "error" : ""}
+                />
                 <p>{errors?.phone?.message}</p>
                 <input
                     type="password"
                     placeholder="password *"
                     {...register("password")}
+                    className={errors?.email?.message ? "error" : ""}
+
                 />
                 <p>{errors?.password?.message}</p>
                 <input
                     type="password"
                     placeholder="confirm password *"
                     {...register("cPassword")}
+                    className={errors?.email?.message ? "error" : ""}
+
                 />
                 <p>{errors?.cPassword?.message}</p>
                 <button>Submit</button>

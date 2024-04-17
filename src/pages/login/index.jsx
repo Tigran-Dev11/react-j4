@@ -13,7 +13,7 @@ const Login = () => {
     });
 
     const onSubmit = (data) => {
-        localStorage.setItem('loginFormData', JSON.stringify(loginFormData))
+
     };
 
     return (
@@ -32,6 +32,7 @@ const Login = () => {
                     type="password"
                     placeholder="password *"
                     {...register("password")}
+                    className={errors?.email?.message ? "error" : ""}
                 />
                 <p>{errors?.password?.message}</p>
 
