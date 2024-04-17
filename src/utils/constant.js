@@ -3,7 +3,7 @@ export const ROUTES = {
     register: "/register",
     login: "/login"
 
-  };
+};
 
 
 export const menu = [

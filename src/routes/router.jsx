@@ -8,7 +8,7 @@ const Router = () => {
             {routes.map(({ path, component: Component }) => {
                 return <Route key={path} path={path} element={<Component />} />;
             })}
-             <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 };

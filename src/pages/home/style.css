@@ -1,0 +1,6 @@
+div{
+    width: 100%;
+    height: calc(100vh - 200px);
+    background-color: blue;
+    text-align: center;
+}

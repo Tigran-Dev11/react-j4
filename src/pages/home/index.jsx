@@ -1,7 +1,13 @@
-const Home = ()=>{
+import "./style.css";
 
-    return(
-        <div>Home</div>
+
+
+const Home = () => {
+
+    return (
+        <div>
+            <h1>WELCOME HOME PAGE</h1>
+        </div>
     )
 };
 
