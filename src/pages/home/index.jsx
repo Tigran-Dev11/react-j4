@@ -1,7 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
 import "./style.scss";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const goToLoginPage = () => {
+    navigate(ROUTES.login);
+  };
+
+  const goToRegisterPage = () => {
+    navigate(ROUTES.register);
+  };
+
   return (
     <main>
       <h1>Добро пожаловать на наш сайт!</h1>
@@ -14,10 +25,10 @@ const Home = () => {
         <li>Участвуйте в обсуждениях и обменивайтесь мнениями с другими пользователями.</li>
         <li>Получайте рейтинг за полезные ответы и вопросы, и повышайте свой статус в сообществе.</li>
       </ul>
-      <p>Чтобы начать, пожалуйста, <Link to="/register">зарегистрируйтесь</Link> или <Link to="/login">войдите</Link> в свой аккаунт.</p>
+      <p>Чтобы начать, пожалуйста, <button onClick={goToRegisterPage}>зарегистрируйтесь</button> или <button onClick={goToLoginPage}>войдите</button> в свой аккаунт.</p>
       <Link to="https://google.com" target="_blank">google</Link>
     </main>
   );
 };
-
+ 
 export default Home;
