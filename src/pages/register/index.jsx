@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
+import Input from "../../commons/input";
 
 const Register = () => {
     const {
@@ -26,41 +27,47 @@ const Register = () => {
         <div className="register">
             <h1>Register page</h1>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
-                <input
+                <Input
                     type="text"
                     placeholder="full name *"
-                    className={errors?.fullName?.message ? "error" : ""}
-                    {...register("fullName")}
+                    register={register("fullname")}
+                    variant={'primary'}
+                    error={errors?.fullName}
                 />
-                <p>{errors?.fullName?.message}</p>
 
-                <input
+
+                <Input
                     type="email"
                     placeholder="email *"
-                    {...register("email")}
-                    className={errors?.email?.message ? "error" : ""}
+                    register={register("email")}
+                    variant={'primary'}
+                    error={errors?.email}
                 />
-                <p>{errors?.email?.message}</p>
-                <input type="number" placeholder="phone" {...register("phone")}
-                    className={errors?.email?.message ? "error" : ""}
+
+                <Input type="number" placeholder="phone" register={register("phone")}
+                    error={errors?.phone}
                 />
-                <p>{errors?.phone?.message}</p>
-                <input
+
+                <Input
                     type="password"
                     placeholder="password *"
-                    {...register("password")}
-                    className={errors?.email?.message ? "error" : ""}
+                    register={register("password")}
+                    error={errors?.password}
+                    variant={'primary'}
+                    isPasswordMode={true}
 
                 />
-                <p>{errors?.password?.message}</p>
+
                 <input
                     type="password"
-                    placeholder="confirm password *"
-                    {...register("cPassword")}
-                    className={errors?.email?.message ? "error" : ""}
+                    placeholder="cPassword *"
+                    register={register("cPassword")}
+                    error={errors?.password}
+                    variant={'primary'}
+                    isPasswordMode={true}
 
                 />
-                <p>{errors?.cPassword?.message}</p>
+
                 <button>Submit</button>
             </form>
         </div>

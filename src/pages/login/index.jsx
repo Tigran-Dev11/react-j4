@@ -34,7 +34,7 @@ const Login = () => {
                     placeholder="email *"
                     register={register("email")}
                     variant={'primary'}
-                    error={errors?.password}
+                    error={errors?.email}
 
                 />
 
