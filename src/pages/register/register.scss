@@ -1,0 +1,38 @@
+.register {
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: maroon;
+    gap: 20px;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        input {
+            width: 300px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: black;
+            backdrop-filter: blur(12px);
+            padding:4px 18px;
+            color: whitesmoke;
+            border: none;
+
+
+            &.error {
+                border: 3px solid red;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,71 @@
+import "./register.scss";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { SCHEMA } from "../../validation";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constants";
+import Button from "../../commons/button/index";
+
+const Register = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(SCHEMA.registerSchema),
+  });
+
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    localStorage.setItem("data", JSON.stringify(data));
+    navigate(ROUTES.home);
+  };
+
+  return (
+    <div className="register">
+      <h1>Register</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          type="text"
+          placeholder="full name *"
+          className={errors?.fullName?.message ? "error" : ""}
+          {...register("fullName")}
+        />
+        <p>{errors?.fullName?.message}</p>
+
+        <input
+          type="email"
+          placeholder="email *"
+          {...register("email")}
+          className={errors?.email?.message ? "error" : ""}
+        />
+        <p>{errors?.email?.message}</p>
+        <input
+          type="number"
+          placeholder="phone"
+          {...register("phone")}
+          className={errors?.email?.message ? "error" : ""}
+        />
+        <p>{errors?.phone?.message}</p>
+        <input
+          type="password"
+          placeholder="password *"
+          {...register("password")}
+          className={errors?.email?.message ? "error" : ""}
+        />
+        <p>{errors?.password?.message}</p>
+        <input
+          type="password"
+          placeholder="confirm password *"
+          {...register("cPassword")}
+          className={errors?.email?.message ? "error" : ""}
+        />
+        <p>{errors?.cPassword?.message}</p>
+        <Button title={"submit"}></Button>
+      </form>
+    </div>
+  );
+};
+
+export default Register;

@@ -1,0 +1,36 @@
+.cont {
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: maroon;
+    gap: 20px;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        input {
+            width: 300px;
+            height: 30px;
+            border-radius: 8px;
+            background-color:black;
+            color: whitesmoke;
+            padding: 6px 16px;
+            border: none;
+
+            &.error {
+                border: 3px solid red;
+            }
+        }
+
+    }
+}

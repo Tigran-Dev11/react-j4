@@ -1,0 +1,25 @@
+
+header{
+    width:calc(100% - 240px);
+    height: 100px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content:end;
+    padding-inline: 120px;
+    align-items: center;
+
+    ul{
+        display: flex;
+        column-gap: 120px;
+
+        li{
+            a{
+                text-decoration: none;
+                color: #fff;
+                border: 1px solid white;
+                padding:14px 50px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
