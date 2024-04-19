@@ -1,7 +1,8 @@
 export const ROUTES = {
     home: "/",
     register: "/register",
-    login: "/login"
+    login: "/login",
+    products:"/products"
 
 };
 
@@ -18,5 +19,9 @@ export const menu = [
     {
         title: "Register",
         path: ROUTES.register
+    },
+    {
+        title:"Products",
+        path:ROUTES.products
     }
 ];
