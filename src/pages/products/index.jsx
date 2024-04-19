@@ -1,5 +1,43 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 const Products = () => {
-    return <div>Products</div>;
-  };
-  
-  export default Products;
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const getPosts = async () => {
+      setLoading(true);
+      try {
+        const response = await axios(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+
+        if (response?.status === 200) {
+          setPosts(response.data);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    };
+
+    getPosts();
+  }, []);
+
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      {posts?.map((post) => (
+        <h1 key={post.id}>{post.title}</h1>
+      ))}
+    </div>
+  );
+};
+
+export default Products;

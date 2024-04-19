@@ -2,6 +2,7 @@ import "./style.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
+import { Input } from "../../common/Input";
 
 const Register = () => {
   const {
@@ -13,8 +14,8 @@ const Register = () => {
     setError,
     formState: { errors }
   } = useForm({
-    defaultValues:{
-      fullName: 'Default Name',
+    defaultValues: {
+      fullName: "Default Name"
     },
     resolver: yupResolver(SCHEMA.registerSchema)
   });
@@ -26,7 +27,6 @@ const Register = () => {
   const onSubmit = (data) => {
     console.log(data, "data");
   };
-
 
   console.log(watch().fullName);
 
@@ -57,12 +57,15 @@ const Register = () => {
           {...register("password")}
         />
         <p>{errors?.password?.message}</p>
-        <input
-          type="password"
-          placeholder="confirm password *"
-          {...register("cPassword")}
+        <Input
+         type="password"
+         placeholder="confirm password *"
+         register={register("cPassword")}
+         isPasswordMode={true}
+         variant={'primary'}
+         error={errors?.password}
         />
-        <p>{errors?.cPassword?.message}</p>
+        
         <button>submit</button>
       </form>
     </div>

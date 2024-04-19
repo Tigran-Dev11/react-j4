@@ -2,7 +2,7 @@ import { menu } from "../../utils/constants";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header>
       <ul>
@@ -16,4 +16,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+
