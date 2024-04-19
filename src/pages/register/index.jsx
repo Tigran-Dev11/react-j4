@@ -14,14 +14,16 @@ const Register = () => {
     formState: { errors }
   } = useForm({
     defaultValues: {
-      fullName: "Default Name",
+      fullName: "Default Name"
     },
-    resolver: yupResolver(SCHEMA.registerSchema),
+    resolver: yupResolver(SCHEMA.registerSchema)
   });
 
   const onSubmit = (data) => {
     console.log(data, "data");
-    {localStorage.setItem("userInfo", JSON.stringify(data))}
+    {
+      localStorage.setItem("userInfo", JSON.stringify(data));
+    }
   };
 
   // const navigate = useNavigate();
@@ -39,7 +41,7 @@ const Register = () => {
           type="text"
           placeholder="Full Name"
           className={errors?.fullName?.message ? "error" : " "}
-          {...register("fullName")}
+          register={register("fullName")}
         />
         <p>{errors?.fullName?.message}</p>
 
@@ -47,7 +49,7 @@ const Register = () => {
           type="text"
           placeholder="Last Name"
           className={errors?.lastName?.message ? "error" : " "}
-          {...register("fullName")}
+          register={register("lastName")}
         />
         <p>{errors?.lastName?.message}</p>
 
@@ -55,7 +57,7 @@ const Register = () => {
           type="email"
           placeholder="Email"
           className={errors?.email?.message ? "error" : " "}
-          {...register("email")}
+          register ={register("email")}
         />
         <p>{errors?.email?.message}</p>
 
@@ -63,21 +65,21 @@ const Register = () => {
           type="phone"
           placeholder="Phone Number"
           className={errors?.phone?.message ? "error" : " "}
-          {...register("phone")}
+          register ={register("phone")}
         />
         <p>{errors?.phone?.message}</p>
 
-        <Input type="pass" placeholder="Password" {...register("password")} />
+        <Input type="pass" placeholder="Password" register = {register("password")} />
         <p>{errors?.password?.message}</p>
 
         <Input
           type="pass"
           placeholder="Confirm Password"
-          {...register("cPassword")}
+          register ={register("cPassword")}
         />
         <p>{errors?.cPassword?.message}</p>
 
-       {alert("gfd")}
+        
 
         <Button title="Submit" className="btn" />
       </form>
