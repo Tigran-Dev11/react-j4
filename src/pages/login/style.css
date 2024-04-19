@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    gap: 20px;
+
+    h1 {
+        font-size: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        input {
+            width: 400px;
+            height: 30px;
+            border-radius: 8px;
+            background-color:black;
+            color: greenyellow;
+            padding: 6px 16px;
+            outline: none;
+            
+            &::placeholder{
+                color: greenyellow;
+            }
+
+            &.error {
+                border: 3px solid red;
+            }
+        }
+
+        button {
+            width: 400px;
+            height: 60px;
+            background-color:black;
+            color: greenyellow;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}
