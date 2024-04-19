@@ -2,6 +2,8 @@ import "./style.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
 
 const Login = () => {
     const {
@@ -12,8 +14,13 @@ const Login = () => {
         resolver: yupResolver(SCHEMA.loginSchema)
     });
 
+    const navigate = useNavigate();
+
     const onSubmit = (data) => {
-        
+        localStorage.setItem('data', JSON.stringify(data))
+
+        navigate(ROUTES.home)
+
     };
 
     return (
