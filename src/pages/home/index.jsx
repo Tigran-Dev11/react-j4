@@ -1,22 +1,10 @@
-import { ROUTES } from "../../utils/constants";
-import { Link, useNavigate } from "react-router-dom";
+import "./home.scss";
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  const goToLoginPage = () => {
-    navigate(ROUTES.login);
-  };
-
-  const goToRegisterPage = () => {
-    navigate(ROUTES.register);
-  };
 
   return (
     <main>
-      <button onClick={goToLoginPage}>Login</button>
-      <button onClick={goToRegisterPage}>Register</button>
-      <Link to="https://google.com" target="_blank">google</Link>
+      <h1>Welcome to home page</h1>
     </main>
   );
 };
