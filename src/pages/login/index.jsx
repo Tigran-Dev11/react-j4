@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
+import Input from "../../commons/input";
 
 const Login = () => {
     const {
@@ -28,20 +29,24 @@ const Login = () => {
             <h1>Login page</h1>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
 
-                <input
+                <Input
                     type="email"
                     placeholder="email *"
-                    {...register("email")}
-                    className={errors?.email?.message ? "error" : ""}
+                    register={register("email")}
+                    variant={'primary'}
+                    error={errors?.password}
+
                 />
-                <p>{errors?.email?.message}</p>
-                <input
+
+                <Input
                     type="password"
                     placeholder="password *"
-                    {...register("password")}
-                    className={errors?.email?.message ? "error" : ""}
+                    register={register("password")}
+                    error={errors?.password}
+                    variant={'primary'}
+                    isPasswordMode={true}
                 />
-                <p>{errors?.password?.message}</p>
+
 
                 <button>Login</button>
             </form>

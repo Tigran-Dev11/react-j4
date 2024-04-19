@@ -3,4 +3,18 @@ input{
     height: 30px;
     padding: 6x 10px;
     border-radius: 8px;
+    position: relative;
+}
+
+img{
+    width: 30px;
+    position: absolute;
+    top: 322px;
+    right: 190px;
+    border-radius: 8px;
+    background-color: greenyellow;
+}
+
+p{
+    height:30px;
 }
