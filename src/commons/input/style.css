@@ -8,11 +8,11 @@ input{
 
 img{
     width: 30px;
-    position: absolute;
     top: 322px;
-    right: 190px;
+    right: 40px;
     border-radius: 8px;
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 p{

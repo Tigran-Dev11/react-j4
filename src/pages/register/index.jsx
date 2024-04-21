@@ -58,13 +58,12 @@ const Register = () => {
 
                 />
 
-                <input
+                <Input
                     type="password"
                     placeholder="Confirm Password *"
                     register={register("cPassword")}
                     error={errors?.password}
                     variant={'primary'}
-                    isPasswordMode={true}
 
                 />
 
