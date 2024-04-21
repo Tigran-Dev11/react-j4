@@ -31,7 +31,7 @@ const Login = () => {
 
                 <Input
                     type="email"
-                    placeholder="email *"
+                    placeholder="Email *"
                     register={register("email")}
                     variant={'primary'}
                     error={errors?.email}
@@ -40,7 +40,7 @@ const Login = () => {
 
                 <Input
                     type="password"
-                    placeholder="password *"
+                    placeholder="Password *"
                     register={register("password")}
                     error={errors?.password}
                     variant={'primary'}

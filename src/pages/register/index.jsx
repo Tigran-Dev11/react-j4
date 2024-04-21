@@ -55,6 +55,7 @@ const Register = () => {
                     error={errors?.password}
                     variant={'primary'}
                     isPasswordMode={true}
+                    className="registerPassword"
 
                 />
 
