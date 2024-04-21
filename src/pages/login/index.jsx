@@ -20,7 +20,7 @@ const Login = () => {
     const onSubmit = (data) => {
         localStorage.getItem('data', JSON.stringify(data))
 
-        navigate(ROUTES.home)
+        navigate(ROUTES.userpage)
 
     };
 

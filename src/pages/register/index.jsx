@@ -29,7 +29,7 @@ const Register = () => {
             <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <Input
                     type="text"
-                    placeholder="Full name *"
+                    placeholder="Fullname *"
                     register={register("fullname")}
                     variant={'primary'}
                     error={errors?.fullName}
