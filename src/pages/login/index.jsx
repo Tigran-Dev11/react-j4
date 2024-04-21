@@ -18,7 +18,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        localStorage.setItem('data', JSON.stringify(data))
+        localStorage.getItem('data')
 
         navigate(ROUTES.home)
 
