@@ -3,7 +3,6 @@ input{
     height: 30px;
     padding: 6x 10px;
     border-radius: 8px;
-    position: relative;
 }
 
 img{
@@ -19,7 +18,4 @@ p{
     height:30px;
 }
 
-&.error {
-    border: 3px solid red;
-}
 

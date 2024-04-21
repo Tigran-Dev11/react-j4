@@ -45,6 +45,7 @@ const Login = () => {
                     error={errors?.password}
                     variant={'primary'}
                     isPasswordMode={true}
+                    className="loginPassword"
                 />
 
 
