@@ -1,6 +1,7 @@
 import "./style.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { IMAGES } from "../../assets/images";
 
 
 const Products = () => {
@@ -26,6 +27,10 @@ const Products = () => {
 
         getPosts();
     }, []);
+
+    if (loading) {
+        return  <img src={IMAGES.loader} alt="loader" />;
+      }
 
     return (
         <div className="products">
