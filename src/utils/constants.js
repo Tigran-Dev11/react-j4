@@ -2,29 +2,31 @@ export const ROUTES = {
   home: "/",
   register: "/register",
   login: "/login",
-  products: "/products",
-  contactUs: "/contact-us"
+  products:"/products",
+  userpage:"/userpage"
+
 };
+
 
 export const menu = [
   {
-    title: "Home",
-    path: ROUTES.home
+      title: "Home",
+      path: ROUTES.home
   },
   {
-    title: "Register",
-    path: ROUTES.register
+      title: "Login",
+      path: ROUTES.login
   },
   {
-    title: "Login",
-    path: ROUTES.login
+      title: "Register",
+      path: ROUTES.register
   },
   {
-    title: "Products",
-    path: ROUTES.products
+      title:"Products",
+      path:ROUTES.products
   },
   {
-    title: "Contact Us",
-    path: ROUTES.contactUs
+      title:"Userpage",
+      path:ROUTES.userpage
   }
 ];
