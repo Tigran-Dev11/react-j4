@@ -1,4 +1,4 @@
-import { menu } from "../../utils/constant";
+import { menu } from "../../utils/constants";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
 
