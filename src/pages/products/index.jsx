@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 import { IMAGES } from "../../assets/images";
 
 const Products = () => {
-  const [posts, setPosts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getPosts = async () => {
+    const getProduct = async () => {
       setLoading(true);
       try {
         const response = await axios("https://fakestoreapi.com/products");
 
         if (response?.status === 200) {
-          setPosts(response.data);
+          setProducts(response.data);
           setLoading(false);
           console.log(response.data);
         }
@@ -23,7 +23,7 @@ const Products = () => {
         setLoading(false);
       }
     };
-    getPosts();
+    getProduct();
   }, []);
 
   if (loading) {
@@ -33,7 +33,7 @@ const Products = () => {
   return (
    
     <div className="Products">
-      {posts?.map((post) => (
+      {products?.map((post) => (
         <div className="prodContainer">
           <h1 key={post.id} className="title">
             {post.title}
