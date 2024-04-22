@@ -4,8 +4,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Input from "../../common/input";
 import Button from "../../common/button";
 import { SCHEMA } from "../../validation";
-// import { useNavigate } from "react-router-dom";
-// import { ROUTES } from "../../utils/constant";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
 
 const Register = () => {
   const {
@@ -26,7 +26,7 @@ const Register = () => {
     }
   };
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // const goToLoginPage = () => {
   //   navigate(ROUTES.login);
@@ -80,7 +80,7 @@ const Register = () => {
         <p>{errors?.cPassword?.message}</p>
 
         
-
+        {navigate(ROUTES.login)}
         <Button title="Submit" className="btn" />
       </form>
     </div>
