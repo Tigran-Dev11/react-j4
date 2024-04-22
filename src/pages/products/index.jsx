@@ -2,21 +2,22 @@ import "./style.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { IMAGES } from "../../assets/images";
+import ProductCard from "../../components/productCard";
 
 
 const Products = () => {
-    const [posts, setPosts] = useState([]);
+    const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
 
 
     useEffect(() => {
-        const getPosts = async () => {
+        const getProducts = async () => {
             setLoading(true);
             try {
                 const response = await axios(
                     'https://fakestoreapi.com/products/category/jewelery')
                 if (response?.status === 200) {
-                    setPosts(response.data);
+                    setProducts(response.data);
                     setLoading(false);
                 }
             } catch (error) {
@@ -25,19 +26,17 @@ const Products = () => {
             }
         };
 
-        getPosts();
+        getProducts();
     }, []);
 
     if (loading) {
-        return  <img src={IMAGES.loader} alt="loader" />;
-      }
+        return <img src={IMAGES.loader} alt="loader" className="loader"/>;
+    }
 
     return (
         <div className="products">
-            {posts?.map((post) => (
-                <div key={post.id}>
-                    {post.title}{post.category}
-                </div>
+            {products?.map((products) => (
+               <ProductCard key={products.id} products={products}/>
             ))}
         </div>
     )

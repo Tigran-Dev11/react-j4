@@ -8,14 +8,6 @@
     background-color: greenyellow;
     gap: 20px;
 
-    .loginpassword{
-        position: relative;
-    }
-
-    img{
-        position: absolute;
-        right: 430px;
-    }
 
     h1 {
         font-size: 40px;
@@ -40,9 +32,6 @@
                 color: greenyellow;
             }
 
-            &.error {
-                border: 3px solid red;
-            }
         }
 
         button {

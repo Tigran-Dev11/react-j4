@@ -8,15 +8,6 @@
     background-color: greenyellow;
     gap: 20px;
 
-    .registerPassword {
-        position: relative;
-    }
-
-    img {
-        position: absolute;
-        top: 416px;
-        right: 420px;
-    }
 
     h1 {
         font-size: 40px;
@@ -41,9 +32,6 @@
                 color: greenyellow;
             }
 
-            &.error {
-                border: 3px solid red;
-            }
         }
 
         button {
