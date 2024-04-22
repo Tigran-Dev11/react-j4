@@ -16,16 +16,17 @@ const ProductCard = ({ products }) => {
     return (
         <div className="productContainer">
             <div className="productItem">
-            {products.category}
-            <img src={products.image} alt="image" />
-            {products.price}
+                {products.category}
+                <img src={products.image} alt="image" className="pruductImg" />
+                {products.price}
             </div>
-            <div>
-                <button>-</button>
-                {count}
-                <button>+</button>
-
-                <button onClick={addBasket}>add basket</button>
+            <div className="addBasket">
+                <div className="productCount">
+                    <button>-</button>
+                    {count}
+                    <button>+</button>
+                </div>
+                <button onClick={addBasket} className="addButton">add basket</button>
             </div>
         </div>
     );
