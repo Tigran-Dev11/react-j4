@@ -12,6 +12,7 @@ export const Input = ({
   variant,
   register,
   error,
+  inputRef,
   isPasswordMode,
   ...rest
 }) => {
@@ -24,8 +25,10 @@ export const Input = ({
         type={isPasswordMode ? inputType : type}
         placeholder={placeholder}
         onChange={onChange}
+       
         {...register}
         {...rest}
+        ref={inputRef}
       />
       {isPasswordMode && (
         <>

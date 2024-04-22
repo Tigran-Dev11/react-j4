@@ -1,9 +1,15 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { GlobalContext } from "../../provider/global-provider";
 
 const Products = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { basketItem ,count} = useContext(GlobalContext);
+ 
+
+
+  console.log(count,'count');
 
   useEffect(() => {
     const getPosts = async () => {
@@ -25,7 +31,6 @@ const Products = () => {
 
     getPosts();
   }, []);
-
 
   if (loading) {
     return <div>Loading...</div>;
