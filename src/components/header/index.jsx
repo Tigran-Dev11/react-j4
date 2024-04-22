@@ -1,4 +1,4 @@
-import { menu } from "../../utils/constant";
+import { menu } from "../../utils/conctant";
 import "./style.css";
 import { NavLink } from "react-router-dom";
 

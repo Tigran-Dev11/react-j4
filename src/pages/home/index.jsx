@@ -1,4 +1,4 @@
-import { ROUTES } from "../../utils/constant";
+import { ROUTES } from "../../utils/conctant";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
 
