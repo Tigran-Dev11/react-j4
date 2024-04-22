@@ -18,7 +18,11 @@ const Input = ({ type, placeholder, onChange,
     const [inputType, setInputType] = useState(type);
 
     return (
+<<<<<<< HEAD
         <div className="inputContainer">
+=======
+        <div className="input-wrapper">
+>>>>>>> 84df22e8f230b8ae87e5cabf9a20e9871e1de4d5
             <input
                 className={inputVariants[variant] || inputVariants.primary}
                 type={isPasswordMode ? inputType : type}

@@ -30,7 +30,7 @@ const Register = () => {
                 <Input
                     type="text"
                     placeholder="Fullname *"
-                    register={register("fullname")}
+                    register={register("fullName")}
                     variant={'primary'}
                     error={errors?.fullName}
                 />

@@ -35,8 +35,16 @@ const Products = () => {
 
     return (
         <div className="products">
+<<<<<<< HEAD
             {products?.map((products) => (
                <ProductCard key={products.id} products={products}/>
+=======
+            {posts?.map((post) => (
+                <div key={post.id}>
+                    {post.title}{post.category}
+                    <img src={post.image} alt="" />
+                </div>
+>>>>>>> 84df22e8f230b8ae87e5cabf9a20e9871e1de4d5
             ))}
         </div>
     )
