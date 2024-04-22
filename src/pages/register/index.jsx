@@ -2,71 +2,76 @@ import "./style.scss";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
+import Input from "../../commons/input";
 
 const Register = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    setValue,
-    reset,
-    setError,
-    formState: { errors }
-  } = useForm({
-    defaultValues:{
-      fullName: 'Default Name',
-    },
-    resolver: yupResolver(SCHEMA.registerSchema)
-  });
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm({
+        resolver: yupResolver(SCHEMA.registerSchema)
+    });
 
-  console.log(errors, "error");
+    const navigate = useNavigate();
 
-  console.log({ ...register("fullName") });
+    const onSubmit = (data) => {
+        localStorage.setItem('data', JSON.stringify(data))
 
-  const onSubmit = (data) => {
-    console.log(data, "data");
-  };
+        navigate(ROUTES.home)
+    };
+
+    return (
+        <div className="register">
+            <h1>Register page</h1>
+            <form action="" onSubmit={handleSubmit(onSubmit)}>
+                <Input
+                    type="text"
+                    placeholder="Fullname *"
+                    register={register("fullname")}
+                    variant={'primary'}
+                    error={errors?.fullName}
+                />
 
 
-  console.log(watch().fullName);
+                <Input
+                    type="email"
+                    placeholder="Email *"
+                    register={register("email")}
+                    variant={'primary'}
+                    error={errors?.email}
+                />
 
-  return (
-    <div className="container">
-      <h1>Register</h1>
-      <form action="" onSubmit={handleSubmit(onSubmit)}>
-        <input
-          type="text"
-          placeholder="full name *"
-          className={errors?.fullName?.message ? "error" : ""}
-          {...register("fullName")}
-        />
-        <p>{errors?.fullName?.message}</p>
+                <Input type="number" placeholder="Phone" register={register("phone")}
+                    error={errors?.phone}
+                />
 
-        <input
-          type="email"
-          placeholder="email *"
-          {...register("email")}
-          className={errors?.email?.message ? "error" : ""}
-        />
-        <p>{errors?.email?.message}</p>
-        <input type="number" placeholder="phone" {...register("phone")} />
-        <p>{errors?.phone?.message}</p>
-        <input
-          type="password"
-          placeholder="password *"
-          {...register("password")}
-        />
-        <p>{errors?.password?.message}</p>
-        <input
-          type="password"
-          placeholder="confirm password *"
-          {...register("cPassword")}
-        />
-        <p>{errors?.cPassword?.message}</p>
-        <button>submit</button>
-      </form>
-    </div>
-  );
+                <Input
+                    type="password"
+                    placeholder="Password *"
+                    register={register("password")}
+                    error={errors?.password}
+                    variant={'primary'}
+                    isPasswordMode={true}
+                    className="registerPassword"
+
+                />
+
+                <Input
+                    type="password"
+                    placeholder="Confirm Password *"
+                    register={register("cPassword")}
+                    error={errors?.password}
+                    variant={'primary'}
+
+                />
+
+                <button>Submit</button>
+            </form>
+        </div>
+    );
 };
 
 export default Register;

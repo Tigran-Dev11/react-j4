@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa; /* Изменение цвета фона на светло-серый */
+  gap: 20px;
+}
+
+.container h1 {
+  font-size: 40px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.container form input {
+  width: 400px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #007bff; 
+  color: white; 
+  padding: 6px 16px;
+  outline: none;
+}
+
+.container form input::-moz-placeholder {
+  color: white; 
+}
+
+.container form input::placeholder {
+  color: white; 
+}
+
+.container form input.error {
+  border: 3px solid red;
+}
+
+.container form button {
+  width: 400px;
+  height: 60px;
+  background-color: black; 
+  color: #ffc107; 
+  border-radius: 8px;
+  cursor: pointer;
+}
