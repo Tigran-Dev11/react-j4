@@ -37,6 +37,7 @@ const Products = () => {
             {posts?.map((post) => (
                 <div key={post.id}>
                     {post.title}{post.category}
+                    <img src={post.image} alt="" />
                 </div>
             ))}
         </div>
