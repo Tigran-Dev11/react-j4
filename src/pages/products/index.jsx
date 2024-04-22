@@ -27,29 +27,56 @@ const Products = () => {
   }, []);
 
   if (loading) {
-    return <div className="loadingCont"><img src={IMAGES.gif} alt="loading" className="loading" /></div>;
+    return (
+      <div className="loadingCont">
+        <img src={IMAGES.gif} alt="loading" className="loading" />
+      </div>
+    );
   }
 
   return (
-   
     <div className="Products">
       {products?.map((post) => (
-        <div className="prodContainer">
-          <h1 key={post.id} className="title">
-            {post.title}
-          </h1>
-          <img src={post.image} alt="image" />
-          <h1 key={post.id} className="price">
-            Price:{post.price}
-          </h1>
-
-          <h1 key={post.id} className="desc">
-            {post.description}
-          </h1>
-        </div>
+        <ProductCard key={post.id} post={post} />
       ))}
     </div>
   );
 };
 
 export default Products;
+
+const ProductCard = ({ post }) => {
+  const [count, setCount] = useState(1);
+     
+
+  const addBasket =()=>{
+    const item = {
+      id: post.id,
+      title: post.title,
+      count,
+    }
+  }
+
+  return (
+    <div className="prodContainer">
+      <h1 key={post.id} className="title">
+        {post.title}
+      </h1>
+      <img src={post.image} alt="image" />
+      <h1 key={post.id} className="price">
+        Price:{post.price}
+      </h1>
+
+      <h1 key={post.id} className="desc">
+        {post.description}
+      </h1>
+      <div>
+        <button>-</button>
+        {count}
+        <button>+</button>
+
+        <button onClick={addBasket}>add basket</button>
+      </div>
+    </div>
+  );
+};
