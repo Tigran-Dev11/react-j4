@@ -30,14 +30,21 @@ const Products = () => {
     }, []);
 
     if (loading) {
-        return <img src={IMAGES.loader} alt="loader" className="loader"/>;
+        return <img src={IMAGES.loader} alt="loader" className="loader" />;
     }
 
     return (
         <div className="products">
-            {products?.map((products) => (
-               <ProductCard key={products.id} products={products}/>
-            ))}
+            <div className="productTop">
+                <h1>Products</h1>
+                <img src={IMAGES.basketIcon} alt="icon" />
+            </div>
+            <div className="productMenu">
+                {products?.map((products) => (
+                    <ProductCard key={products.id} products={products} />
+                ))}
+            </div>
+
         </div>
     )
 }

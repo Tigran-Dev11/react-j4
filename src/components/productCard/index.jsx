@@ -13,6 +13,16 @@ const ProductCard = ({ products }) => {
         }
     }
 
+    const decrement = ()=>{
+        if(count > 1){
+            setCount(count - 1)
+        }
+    }
+
+    const increment = ()=>{
+        setCount(count + 1)
+    }
+
     return (
         <div className="productContainer">
             <div className="productItem">
@@ -22,9 +32,9 @@ const ProductCard = ({ products }) => {
             </div>
             <div className="addBasket">
                 <div className="productCount">
-                    <button>-</button>
+                    <button onClick={decrement}>-</button>
                     {count}
-                    <button>+</button>
+                    <button onClick={increment}>+</button>
                 </div>
                 <button onClick={addBasket} className="addButton">add basket</button>
             </div>

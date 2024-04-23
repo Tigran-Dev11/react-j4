@@ -2,8 +2,18 @@
     width: 100%;
     height: calc(100vh - 100px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: greenyellow;
     gap: 20px;
+
+    .productTop{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .productMenu{
+        display: flex;
+        gap: 20px;
+    }
 }
