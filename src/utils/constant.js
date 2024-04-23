@@ -3,7 +3,8 @@ export const ROUTES = {
     register: "/register",
     login: "/login",
     products:"/products",
-    userpage:"/userpage"
+    userpage:"/userpage",
+    basket:"/basket"
 
 };
 
@@ -28,5 +29,9 @@ export const menu = [
     {
         title:"Userpage",
         path:ROUTES.userpage
-    }
+    },
+    {
+        title: "Basket",
+        path: ROUTES.basket
+    },
 ];

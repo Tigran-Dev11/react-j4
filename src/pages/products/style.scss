@@ -7,12 +7,18 @@
     background-color: greenyellow;
     gap: 20px;
 
-    .productTop{
+    .productTop {
         display: flex;
         justify-content: space-between;
+
+        .basketIcon {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
     }
 
-    .productMenu{
+    .productMenu {
         display: flex;
         gap: 20px;
     }
