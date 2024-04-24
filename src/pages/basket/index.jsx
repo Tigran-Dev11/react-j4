@@ -1,4 +1,5 @@
 import "./style.scss"
+import { GlobalContext } from "../../provider";
 
 
 const Basket = () =>{

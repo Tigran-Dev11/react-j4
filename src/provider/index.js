@@ -8,7 +8,7 @@ const GlobalProvider = ({ children }) => {
 
     const [basketItem, setBasketItem] = useState([]);
 
-    let count = 10;
+    let count = 0;
 
     return (
         <GlobalContext.Provider value={{ basketItem, setBasketItem, count }}>

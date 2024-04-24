@@ -5,6 +5,8 @@ import { IMAGES } from "../../assets/images";
 import ProductCard from "../../components/productCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
+import { useContext } from "react";
+
 
 
 const Products = () => {
@@ -12,7 +14,6 @@ const Products = () => {
     const [loading, setLoading] = useState(false);
 
     const usnavigate = useNavigate();
-
 
     useEffect(() => {
         const getProducts = async () => {
@@ -37,15 +38,15 @@ const Products = () => {
         return <img src={IMAGES.loader} alt="loader" className="loader" />;
     }
 
-   const goToBasketPage = ()=>{
-    usnavigate(ROUTES.basket)
-   }
+    const goToBasketPage = () => {
+        usnavigate(ROUTES.basket)
+    }
 
     return (
         <div className="products">
             <div className="productTop">
                 <h1>Products</h1>
-                <img src={IMAGES.basketIcon} alt="icon" className="basketIcon" onClick={goToBasketPage}/>
+                <img src={IMAGES.basketIcon} alt="icon" className="basketIcon" onClick={goToBasketPage} />
             </div>
             <div className="productMenu">
                 {products?.map((products) => (

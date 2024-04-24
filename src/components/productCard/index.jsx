@@ -1,16 +1,22 @@
 import "./style.css"
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { GlobalContext } from "../../provider";
 
 const ProductCard = ({ products }) => {
     const [count, setCount] = useState(1);
+    const { basketItem, setBasketItem } = useContext(GlobalContext);
+
 
 
     const addBasket = () => {
         const item = {
             id: products.id,
             title: products.title,
-            count,
+            image: products.image,
+            price: products.price,
+
         }
+
     }
 
     const decrement = () => {
@@ -36,7 +42,7 @@ const ProductCard = ({ products }) => {
                     {count}
                     <button onClick={increment}>+</button>
                 </div>
-                <button onClick={addBasket} className="addButton">add basket</button>
+                <button onClick={addBasket} className="addButton">Add Basket</button>
             </div>
         </div>
     );

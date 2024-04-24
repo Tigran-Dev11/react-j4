@@ -26,12 +26,5 @@ export const menu = [
         title:"Products",
         path:ROUTES.products
     },
-    {
-        title:"Userpage",
-        path:ROUTES.userpage
-    },
-    {
-        title: "Basket",
-        path: ROUTES.basket
-    },
+    
 ];
