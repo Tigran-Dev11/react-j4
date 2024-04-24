@@ -9,12 +9,11 @@ const ProductCard = ({ products }) => {
 
 
     const addBasket = () => {
-        const item = {
+        const basketItem = {
             id: products.id,
             title: products.title,
             image: products.image,
             price: products.price,
-
         }
 
     }
