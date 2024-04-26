@@ -12,7 +12,7 @@
     flex-direction: column;
     border: solid 1px;
     border-radius: 20px;
-    padding: 4px 4px;
+    padding: 14px 4px;
     margin-top: 10px;
 
     .title {
@@ -32,8 +32,39 @@
 
     .desc {
       font-size: 12px;
+      width: 300px;
+      height: 260px;
     }
+    .btnContainer{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   .incrementbtn{
+    width: 60px;
+    height: 30px;
+    background-color: darkblue;
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 4px;
+   }
+   .decrementbtn{
+    width: 60px;
+    height: 30px;
+    background-color: darkblue;
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 4px;
+   }
+   .addbtn{
+    width: 100px;
+    height: 30px;
+    background-color: darkcyan;
+    color: aliceblue;
+    font-size: 14px;
+    border-radius: 4px;
+   }
   }
+}
 }
 
 .loadingCont {

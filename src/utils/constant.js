@@ -4,7 +4,8 @@ export const ROUTES = {
     products: "/products",
     contactUs: "/contactUs",
     register: "/register",
-    login: "/login"
+    login: "/login",
+    cart: "/cart"
 
   };
   
@@ -32,5 +33,9 @@ export const ROUTES = {
       {
         title:"Login",
         path: ROUTES.login
+      },
+      {
+        title:"Cart",
+        path: ROUTES.cart
       }
   ];

@@ -1,7 +1,9 @@
 import "./style.scss";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { IMAGES } from "../../assets/images";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -17,6 +19,7 @@ const Products = () => {
           setProducts(response.data);
           setLoading(false);
           console.log(response.data);
+
         }
       } catch (error) {
         console.log(error);
@@ -26,6 +29,21 @@ const Products = () => {
     getProduct();
   }, []);
 
+
+  const [count, setCount] = useState(1);
+
+  const navigate = useNavigate();
+
+  const addBasket = () => {
+    navigate(ROUTES.cart);
+  };
+
+  function incrementNum() {
+    setCount(count + 1);
+  }
+  function decrementNum() {
+    setCount(count - 1);
+  }
   if (loading) {
     return (
       <div className="loadingCont">
@@ -34,49 +52,40 @@ const Products = () => {
     );
   }
 
+
   return (
     <div className="Products">
-      {products?.map((post) => (
-        <ProductCard key={post.id} post={post} />
-      ))}
-    </div>
-  );
-};
+    {products?.map((product) => (
 
-export default Products;
-
-const ProductCard = ({ post }) => {
-  const [count, setCount] = useState(1);
-     
-
-  const addBasket =()=>{
-    const item = {
-      id: post.id,
-      title: post.title,
-      count,
-    }
-  }
-
-  return (
     <div className="prodContainer">
-      <h1 key={post.id} className="title">
-        {post.title}
+      <h1 key={product.id} className="title">
+        {product.title}
       </h1>
-      <img src={post.image} alt="image" />
-      <h1 key={post.id} className="price">
-        Price:{post.price}
+      <img src={product.image} alt="image" />
+      <h1 key={product.id} className="price">
+        Price:{product.price}
       </h1>
 
-      <h1 key={post.id} className="desc">
-        {post.description}
+      <h1 key={product.id} className="desc">
+        {product.description}
       </h1>
-      <div>
-        <button>-</button>
+      <div className="btnContainer">
+        <button onClick={decrementNum} className="decrementbtn">
+          -
+        </button>
         {count}
-        <button>+</button>
+        <button onClick={incrementNum} className="incrementbtn">
+          +
+        </button>
 
-        <button onClick={addBasket}>add basket</button>
+        <button onClick={addBasket} className="addbtn">
+          Add Basket
+        </button>
       </div>
     </div>
-  );
-};
+  ))}
+  </div>
+  )
+}
+
+export default Products;
