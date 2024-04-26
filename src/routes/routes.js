@@ -1,3 +1,4 @@
+import Basket from "../pages/basket";
 import ContactUs from "../pages/contact-us";
 import Home from "../pages/home";
 import Login from "../pages/login";
@@ -25,6 +26,9 @@ export const routes = [
   {
     component: ContactUs,
     path: ROUTES.contactUs
+  },
+  {
+    component: Basket,
+    path: ROUTES.basket
   }
-  
 ];

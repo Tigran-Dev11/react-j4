@@ -1,26 +1,22 @@
 import axios from "axios";
-import { useEffect, useState, useContext } from "react";
-import { GlobalContext } from "../../provider/global-provider";
+import { useEffect, useState } from "react";
+import ProductCard from "../../components/product-card";
+
+import './style.css'
 
 const Products = () => {
-  const [posts, setPosts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const { basketItem ,count} = useContext(GlobalContext);
- 
-
-
-  console.log(count,'count');
 
   useEffect(() => {
-    const getPosts = async () => {
+    const getProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios(
-          "https://jsonplaceholder.typicode.com/posts"
-        );
+        const response = await axios("https://fakestoreapi.com/products");
 
         if (response?.status === 200) {
-          setPosts(response.data);
+          console.log(response);
+          setProducts(response.data);
           setLoading(false);
         }
       } catch (error) {
@@ -29,7 +25,7 @@ const Products = () => {
       }
     };
 
-    getPosts();
+    getProducts();
   }, []);
 
   if (loading) {
@@ -37,9 +33,9 @@ const Products = () => {
   }
 
   return (
-    <div>
-      {posts?.map((post) => (
-        <h1 key={post.id}>{post.title}</h1>
+    <div className="products-container">
+      {products?.map((product) => (
+        <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );
