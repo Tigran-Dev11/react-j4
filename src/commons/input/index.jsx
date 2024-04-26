@@ -18,7 +18,8 @@ const Input = ({ type, placeholder, onChange,
     const [inputType, setInputType] = useState(type);
 
     return (
-        <div>
+        <div className="inputContainer">
+
             <input
                 className={inputVariants[variant] || inputVariants.primary}
                 type={isPasswordMode ? inputType : type}
@@ -30,11 +31,11 @@ const Input = ({ type, placeholder, onChange,
             {isPasswordMode && (
                 <>
                     {inputType === "password" ? (
-                        <img src={IMAGES.showPasswordIcon} alt="icon"  onClick={() => {
+                        <img className="showIcon" src={IMAGES.showPasswordIcon} alt="icon"  onClick={() => {
                             setInputType("text");
                         }}/>
                     ) : (
-                        <img src={IMAGES.hidePasswordIcon} alt="icon" onClick={() => {
+                        <img className="hideIcon" src={IMAGES.hidePasswordIcon} alt="icon" onClick={() => {
                             setInputType("password");
                         }}/>
                     )}

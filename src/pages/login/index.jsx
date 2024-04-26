@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../utils/constants";
+import { ROUTES } from "../../utils/constant";
 import Input from "../../commons/input";
 
 const Login = () => {

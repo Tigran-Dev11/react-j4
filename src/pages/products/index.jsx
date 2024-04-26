@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { IMAGES } from "../../assets/images";
 import ProductCard from "../../components/productCard";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../utils/constants";
-import { useContext } from "react";
+import { ROUTES } from "../../utils/constant";
+
 
 
 
