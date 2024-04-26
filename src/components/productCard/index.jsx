@@ -25,7 +25,8 @@ const ProductCard = ({ products }) => {
     }
 
     const increment = () => {
-        setCount(count + 1)
+        if (count < 10)
+            setCount(count + 1)
     }
 
     return (
