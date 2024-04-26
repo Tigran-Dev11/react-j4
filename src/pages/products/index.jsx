@@ -6,40 +6,30 @@ import ProductCard from "../../components/productCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
 
-
-
-
 const Products = () => {
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    const usnavigate = useNavigate();
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const getProducts = async () => {
-            setLoading(true);
-            try {
-                const response = await axios(
-                    'https://fakestoreapi.com/products/category/jewelery')
-                if (response?.status === 200) {
-                    setProducts(response.data);
-                    setLoading(false);
-                }
-            } catch (error) {
-                console.log(error);
+        axios.get('https://fakestoreapi.com/products/category/electronics')
+            .then(response => {
+                setProducts(response.data);
                 setLoading(false);
-            }
-        };
-
-        getProducts();
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+                setLoading(false);
+            });
     }, []);
+    
+
+    const goToBasketPage = () => {
+        navigate(ROUTES.basket);
+    }
 
     if (loading) {
         return <img src={IMAGES.loader} alt="loader" className="loader" />;
-    }
-
-    const goToBasketPage = () => {
-        usnavigate(ROUTES.basket)
     }
 
     return (
@@ -49,14 +39,12 @@ const Products = () => {
                 <img src={IMAGES.basketIcon} alt="icon" className="basketIcon" onClick={goToBasketPage} />
             </div>
             <div className="productMenu">
-                {products?.map((products) => (
-                    <ProductCard key={products.id} products={products} />
+                {products.map((product) => (
+                    <ProductCard key={product.id} products={product} />
                 ))}
             </div>
-
         </div>
-    )
+    );
 }
 
-
-export default Products
+export default Products;

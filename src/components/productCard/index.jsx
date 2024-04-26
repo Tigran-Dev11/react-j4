@@ -3,21 +3,20 @@ import { useState, useContext } from "react";
 import { GlobalContext } from "../../provider";
 
 const ProductCard = ({ products }) => {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(1); 
     const { basketItem, setBasketItem } = useContext(GlobalContext);
 
-
-
     const addBasket = () => {
-        const basketItem = {
+        const newBasketItem = {
             id: products.id,
             title: products.title,
             image: products.image,
             price: products.price,
+            quantity: count, // добавляем количество для каждого товара
         }
-
+        setBasketItem(prevItems => [...prevItems, newBasketItem]);
     }
-
+    
     const decrement = () => {
         if (count > 1) {
             setCount(count - 1)
@@ -47,4 +46,4 @@ const ProductCard = ({ products }) => {
     );
 };
 
-export default ProductCard
+export default ProductCard;

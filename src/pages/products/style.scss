@@ -1,17 +1,26 @@
 .products {
-    width: 100%;
-    height: calc(100vh - 100px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f9fa; 
-    gap: 20px;
-  
-    div {
-      width: 200px;
-      height: 100px;
-      border: 1px solid #007bff; 
-    }
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: greenyellow;
+  gap: 20px;
+
+  .productTop {
+      display: flex;
+      justify-content: space-between;
+
+      .basketIcon {
+          width: 32px;
+          height: 32px;
+          cursor: pointer;
+      }
   }
-  
+
+  .productMenu {
+      display: flex;
+      gap: 20px;
+  }
+
+}
