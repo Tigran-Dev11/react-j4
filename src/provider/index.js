@@ -1,20 +1,23 @@
-import { createContext, useState } from "react"
-
-
+import { createContext, useEffect, useState } from "react";
 
 const GlobalContext = createContext({});
 
 const GlobalProvider = ({ children }) => {
+  const [basketItems, setBasketItems] = useState([]);
 
-    const [basketItem, setBasketItem] = useState([]);
+  useEffect(() => {
+    const basketData = JSON.parse(localStorage.getItem("basketItems"));
 
-    let count = 0;
+    if (basketData?.length) {
+      setBasketItems(basketData);
+    }
+  }, []);
 
-    return (
-        <GlobalContext.Provider value={{ basketItem, setBasketItem, count }}>
-            {children}
-        </GlobalContext.Provider>
-    )
+  return (
+    <GlobalContext.Provider value={{ basketItems, setBasketItems }}>
+      {children}
+    </GlobalContext.Provider>
+  );
 };
 
-export { GlobalContext, GlobalProvider };
+export { GlobalProvider, GlobalContext };

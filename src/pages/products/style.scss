@@ -1,11 +1,12 @@
 .products {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background-color: greenyellow;
     gap: 20px;
+    padding-block: 20px;
 
     .productTop {
         display: flex;
@@ -19,8 +20,11 @@
     }
 
     .productMenu {
+        width: 100%;
         display: flex;
-        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
     }
 
 }

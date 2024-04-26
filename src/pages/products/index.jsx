@@ -5,7 +5,7 @@ import { IMAGES } from "../../assets/images";
 import ProductCard from "../../components/productCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
-import { useContext } from "react";
+
 
 
 
@@ -20,7 +20,7 @@ const Products = () => {
             setLoading(true);
             try {
                 const response = await axios(
-                    'https://fakestoreapi.com/products/category/jewelery')
+                    'https://fakestoreapi.com/products')
                 if (response?.status === 200) {
                     setProducts(response.data);
                     setLoading(false);
