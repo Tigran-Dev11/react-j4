@@ -12,7 +12,7 @@ const ProductCard = ({ products }) => {
             title: products.title,
             image: products.image,
             price: products.price,
-            quantity: count, // добавляем количество для каждого товара
+            quantity: count, 
         }
         setBasketItem(prevItems => [...prevItems, newBasketItem]);
     }
