@@ -1,17 +1,35 @@
-import "./style.css"
+import Input from "../../commons/input";
+import "./style.scss";
 
-const Order = () =>{
+
+const Order = () => {
 
 
-    return(
+    return (
         <div className="orderContainer">
             <h1>Order Page</h1>
-            <form action="">
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-            </form>
+            <Input
+                type="text"
+                placeholder="Fullname *"
+                variant={'primary'}
+            /><Input
+                type="email"
+                placeholder="Email *"
+                variant={'primary'}
+            />
+            <Input
+                type="number"
+                placeholder="Number *"
+                variant={'primary'}
+            />
+            <Input
+                type="text"
+                placeholder="Address *"
+                variant={'primary'}
+            />
+
+            <button className="orderButton">Order</button>
+
         </div>
     )
 }
