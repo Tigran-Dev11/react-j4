@@ -5,16 +5,12 @@ import BasketCard from "../../components/basketcard";
 import Button from "../../commons/button";
 
 const Basket = () => {
-  const { basketItems } = useContext(GlobalContext);
+  const { basketItems, setBasketItems } = useContext(GlobalContext);
 
-
-  // const clearAll = ()=>{
-  //   setBasketItems((prev)=>{
-  //     return prev.map((elem)=>{
-  //       return {}
-  //     })
-  //   })
-  // }
+  const clearAll = () => {
+    const deletAll = setBasketItems([]);
+    localStorage.clear();
+  }
 
   return (
     <div className="basketContainer">
@@ -24,8 +20,8 @@ const Basket = () => {
           <BasketCard key={item.id} item={item} />
         ))}
         <div className="basketButtons">
-        <button>Delete All Items</button>
-        <button>Order</button>
+          <button onClick={clearAll}>Delete All Items</button>
+          <button>Order</button>
         </div>
       </div>
     </div>
