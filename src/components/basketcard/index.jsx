@@ -46,9 +46,9 @@ const BasketCard = ({ item }) => {
         return item.id === id ?
           item.qty > 0
           : true
-      })
+      }); localStorage.setItem("basketItem", JSON.stringify(filtredItems));
+      return filtredItems
     });
-    localStorage.setItem("basketItems", JSON.stringify(filtredItems));
   }
 
   return (
