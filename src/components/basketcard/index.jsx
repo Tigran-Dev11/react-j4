@@ -40,8 +40,15 @@ const BasketCard = ({ item }) => {
     });
   };
 
-  const removeItem = ()=>{
-    
+  const removeItem = () => {
+    setBasketItems((prev) => {
+      const filtredItems = prev.filter(item => {
+        return item.id === id ?
+          item.qty > 0
+          : true
+      })
+    });
+    localStorage.setItem("basketItems", JSON.stringify(filtredItems));
   }
 
   return (
@@ -53,7 +60,7 @@ const BasketCard = ({ item }) => {
         {count}
         <button onClick={plusItem}>+</button>
         <p>{price * count} $</p>
-        <img src={IMAGES.removeIcon} alt="icon" className="removeItem" onClick={removeItem}/>
+        <img src={IMAGES.removeIcon} alt="icon" className="removeItem" onClick={removeItem} />
       </div>
     </div>
   );
