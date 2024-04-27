@@ -2,14 +2,24 @@ import { useContext } from "react";
 import "./style.scss";
 import { GlobalContext } from "../../provider";
 import BasketCard from "../../components/basketcard";
-import Button from "../../commons/button";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../utils/constant";
+
 
 const Basket = () => {
   const { basketItems, setBasketItems } = useContext(GlobalContext);
 
   const clearAll = () => {
-    const deletAll = setBasketItems([]);
+    const deleteAll = setBasketItems([]);
     localStorage.clear();
+  };
+
+  const navigate = useNavigate();
+
+  const orderItems = () => {
+
+    navigate(ROUTES.order)
+
   }
 
   return (
@@ -21,7 +31,7 @@ const Basket = () => {
         ))}
         <div className="basketButtons">
           <button onClick={clearAll}>Delete All Items</button>
-          <button>Order</button>
+          <button onClick={orderItems}>Order</button>
         </div>
       </div>
     </div>

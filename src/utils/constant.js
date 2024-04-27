@@ -4,7 +4,8 @@ export const ROUTES = {
     login: "/login",
     products:"/products",
     userpage:"/userpage",
-    basket:"/basket"
+    basket:"/basket",
+    order:"/order"
 
 };
 
@@ -29,5 +30,9 @@ export const menu = [
     {
         title:"Basket",
         path:ROUTES.basket
+    },
+    {
+        title:"Order",
+        path:ROUTES.order
     },
 ];
