@@ -7,6 +7,15 @@ import Button from "../../commons/button";
 const Basket = () => {
   const { basketItems } = useContext(GlobalContext);
 
+
+  // const clearAll = ()=>{
+  //   setBasketItems((prev)=>{
+  //     return prev.map((elem)=>{
+  //       return {}
+  //     })
+  //   })
+  // }
+
   return (
     <div className="basketContainer">
       <h1>{!basketItems?.length ? "Basket is empty" : "Basket"}</h1>
@@ -16,7 +25,7 @@ const Basket = () => {
         ))}
         <div className="basketButtons">
         <button>Delete All Items</button>
-        <button>Order Items</button>
+        <button>Order</button>
         </div>
       </div>
     </div>
