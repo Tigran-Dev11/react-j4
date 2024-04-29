@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./style.css";
-import { GlobalContext } from "../../provider/global-provider";
+import { useGlobalContext } from "../../hooks/use-global-context";
 
 const BasketCard = ({ item }) => {
   const [count, setCount] = useState(item.count);
 
-  const { basketItems, setBasketItems } = useContext(GlobalContext);
+  const { basketItems, setBasketItems } = useGlobalContext()
 
   const { id, title, image, price } = item;
 

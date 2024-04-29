@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import "./style.css";
-import { GlobalContext } from "../../provider/global-provider";
 import BasketCard from "../../components/basket-card";
+import { useGlobalContext } from "../../hooks/use-global-context";
 
 const Basket = () => {
-  const { basketItems } = useContext(GlobalContext);
+  const { basketItems } = useGlobalContext();
 
   return (
     <div>

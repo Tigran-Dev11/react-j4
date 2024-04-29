@@ -1,32 +1,37 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import ProductCard from "../../components/product-card";
 
-import './style.css'
+import "./style.css";
+import { useFetch } from "../../hooks/use-fetch";
+import { API } from "../../utils/constants";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+   const [products, loading] = useFetch({ url: API.products });
 
-  useEffect(() => {
-    const getProducts = async () => {
-      setLoading(true);
-      try {
-        const response = await axios("https://fakestoreapi.com/products");
+  //const { width, height } = useResize();
 
-        if (response?.status === 200) {
-          console.log(response);
-          setProducts(response.data);
-          setLoading(false);
-        }
-      } catch (error) {
-        console.log(error);
-        setLoading(false);
-      }
-    };
+  // const [products, setProducts] = useState([]);
+  // const [loading, setLoading] = useState(false);
 
-    getProducts();
-  }, []);
+  // useEffect(() => {
+  //   const getProducts = async () => {
+  //     setLoading(true);
+  //     try {
+  //       const response = await axios("https://fakestoreapi.com/products");
+
+  //       if (response?.status === 200) {
+  //         console.log(response);
+  //         setProducts(response.data);
+  //         setLoading(false);
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //       setLoading(false);
+  //     }
+  //   };
+
+  //   getProducts();
+  // }, []);
 
   if (loading) {
     return <div>Loading...</div>;

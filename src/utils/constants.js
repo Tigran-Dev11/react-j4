@@ -33,3 +33,7 @@ export const menu = [
     path: ROUTES.basket
   }
 ];
+
+export const API = {
+   products:'/products'
+}
