@@ -4,32 +4,32 @@ import { GlobalContext } from "../../provider/global-provider";
 import BasketCard from "../../components/basket-card";
 
 const Basket = () => {
-  const { basketItems } = useContext(GlobalContext);
+  const { basketItems, setBasketItems } = useContext(GlobalContext);
 
-  const deleteItems = () =>{
+  const deleteItems = () => {
+    setBasketItems([]);
+    localStorage.clear();
+  };
 
-  }
-
-  const delivery = ()=>{
-    
-  }
+  const delivery = () => {};
 
   return (
     <div className="basket">
       <h1>{!basketItems?.length ? "Basket is empty" : "Basket"}</h1>
-      <button className="delete-item" onClick={deleteItems}>delete all items</button>
+      {basketItems.length ? <button className="delete-item" onClick={deleteItems}>
+        delete all items
+      </button> : <button>go product</button>}
       <div className="basket-container">
-
         {basketItems.map((item) => (
           <BasketCard key={item.id} item={item} />
-          
         ))}
-
-       
       </div>
 
-      <button className="delivery" onClick={delivery}>make a delivery</button>
-
+      {basketItems.length ? (
+        <button className="delivery" onClick={delivery}>
+          make a delivery
+        </button>
+      ) : null}
     </div>
   );
 };

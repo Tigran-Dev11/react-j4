@@ -26,6 +26,17 @@ const BasketCard = ({ item }) => {
     }
   };
 
+  const deleteItem = ()=>{
+    setBasketItems((prev)=>{
+
+      const filterItems = prev.filter((item)=> item.id !== id);
+
+      localStorage.setItem('basketItems', JSON.stringify(filterItems))
+
+      return filterItems;
+    })
+  }
+
   const plusItem = () => {
     setCount(count + 1);
     setBasketItems((prev) => {
@@ -51,6 +62,7 @@ const BasketCard = ({ item }) => {
         {count}
         <button onClick={plusItem}>+</button>
         {/* "       add delete item logic */}
+        <button onClick={deleteItem}>x</button>
       </div>
     </div>
   );
