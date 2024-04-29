@@ -35,7 +35,7 @@ const Products = () => {
     }, []);
 
     if (loading) {
-        return <img src={IMAGES.loading} alt="loading" className="loader" />;
+        return <img src={IMAGES.loader} alt="loader" className="loader" />;
     }
 
     const goToBasketPage = () => {
@@ -58,5 +58,4 @@ const Products = () => {
     )
 }
 
-
-export default Products
+export default Products;
