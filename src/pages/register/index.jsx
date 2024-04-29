@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
 import { useNavigate } from "react-router-dom";
 import Input from "../../commons/input";
-import { ROUTES } from "../../utils/conctant";
+import { ROUTES } from "../../utils/constant";
 
 const Register = () => {
     const {

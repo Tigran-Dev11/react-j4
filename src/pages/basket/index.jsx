@@ -7,7 +7,7 @@ import { ROUTES } from "../../utils/constant";
 
 
 const Basket = () => {
-  const { basketItems, setBasketItems } = useContext(GlobalContext);
+  const { basketItems, setBasketItems } = useContext  (GlobalContext) ;
 
   const clearAll = () => {
     const deleteAll = setBasketItems([]);
