@@ -1,0 +1,34 @@
+*{
+    
+}
+.homeSection {
+  width: calc(100% - 200px);
+  padding-inline: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #af8260;
+  gap: 20px;
+
+  .TopComponentsCont {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .basketIcon {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+  }
+
+  .productMenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 40px;
+  }
+}

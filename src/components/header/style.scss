@@ -1,0 +1,27 @@
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color:#ECCA9C;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        width: 100%;
+        justify-content: space-evenly;
+
+
+        li{
+
+            a{
+                text-decoration: none;
+                color:black;
+                font-size: 20px;
+            }
+        }
+    }
+}

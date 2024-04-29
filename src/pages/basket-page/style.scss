@@ -1,0 +1,20 @@
+.basketSection{
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    background-color:#DBA979;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top-components-cont{
+        width: calc(100% - 200px);
+        padding-inline:100px;
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            width: 60px;
+            cursor: pointer;
+        }
+    }
+}
