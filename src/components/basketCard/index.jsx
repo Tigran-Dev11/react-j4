@@ -50,7 +50,8 @@ const BasketCard = ({ item }) => {
   const deleteItem = () => {
     setBasketItems((prev) => {
 
-      return prev.filter((item) => {
+
+      const data = prev.filter((item) => {
 
         if (item.id == id) {
           
@@ -64,8 +65,11 @@ const BasketCard = ({ item }) => {
 
       });
 
+      localStorage.setItem('basketItems', data)
+
+      return data
+
     });
-    localStorage.removeItem("basketItems", JSON.stringify(item.id))
     
   };
 
