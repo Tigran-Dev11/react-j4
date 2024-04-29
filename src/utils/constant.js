@@ -5,7 +5,7 @@ export const ROUTES = {
     contactUs: "/contactUs",
     register: "/register",
     login: "/login",
-    cart: "/cart"
+    basket: "/basket"
 
   };
   
@@ -35,7 +35,7 @@ export const ROUTES = {
         path: ROUTES.login
       },
       {
-        title:"Cart",
-        path: ROUTES.cart
+        title:"Basket",
+        path: ROUTES.basket
       }
   ];

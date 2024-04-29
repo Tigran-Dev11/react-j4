@@ -1,0 +1,81 @@
+.basketContainer{
+  width: 100%;
+  min-height: calc(100vh - 246px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  h1{
+    font-size: 280px;
+  }
+  
+.prodContainer{
+  width: 200px;
+  height: 150px;
+  border: solid 1px;
+  padding: 10px 10px;
+  .imgtitle{
+    display: flex;
+    justify-content: space-between;
+  
+  img{
+    width: 50px;
+    height: 50px;
+  }
+  h2{
+    font-size: 12px;
+    width: 100px;
+  }
+}
+  .btnContainer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+.incrementbtn{
+  width: 60px;
+  height: 30px;
+  background-color: darkblue;
+  color: aliceblue;
+  font-size: 20px;
+  border-radius: 4px;
+ }
+ .decrementbtn{
+  width: 60px;
+  height: 30px;
+  background-color: darkblue;
+  color: aliceblue;
+  font-size: 20px;
+  border-radius: 4px;
+ }
+ .removebtn{
+  width: 70px;
+  height: 30px;
+  background-color: red;
+  color: aliceblue;
+  font-size: 14px;
+  border-radius: 4px;
+ }
+}
+}
+
+.orderBtn{
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: darkblue;
+
+}
+ 
+}
+
+
+form{
+  width: 300px;
+  height: 200px;
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

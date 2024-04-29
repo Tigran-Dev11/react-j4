@@ -4,7 +4,7 @@ import Home from "../pages/home";
 import Products from "../pages/products";
 import Register from "../pages/register";
 import Login from "../pages/login";
-import Cart from "../pages/cart/cart";
+import Basket from "../pages/basket";
 
 import { ROUTES } from "../utils/constant";
 
@@ -36,8 +36,8 @@ export const routes = [
         path: ROUTES.login
       },
     {
-      component: Cart,
-      path: ROUTES.cart
+      component: Basket,
+      path: ROUTES.basket
     },
   ];
  

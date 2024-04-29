@@ -1,0 +1,73 @@
+.cartContainer{
+    min-height: calc(100vh - 246px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .prodContainer {
+        width: 300px;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        border: solid 1px;
+        border-radius: 20px;
+        padding: 14px 4px;
+        margin-top: 10px;
+    
+        .title {
+          font-size: 20px;
+          text-align: center;
+          height: 100px;
+        }
+    
+        img {
+          width: 290px;
+          height: 300px;
+        }
+    
+        .price {
+          font-size: 20px;
+        }
+    
+        .desc {
+          font-size: 12px;
+          width: 300px;
+          height: 260px;
+        }
+        .btnContainer{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+       .incrementbtn{
+        width: 60px;
+        height: 30px;
+        background-color: darkblue;
+        color: aliceblue;
+        font-size: 20px;
+        border-radius: 4px;
+       }
+       .decrementbtn{
+        width: 60px;
+        height: 30px;
+        background-color: darkblue;
+        color: aliceblue;
+        font-size: 20px;
+        border-radius: 4px;
+       }
+       .addbtn{
+        width: 100px;
+        height: 30px;
+        background-color: darkcyan;
+        color: aliceblue;
+        font-size: 14px;
+        border-radius: 4px;
+       }
+      }
+    }
+    
+    
+   
+}
+  
+    
