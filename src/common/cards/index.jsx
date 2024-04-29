@@ -8,10 +8,9 @@ const Card = ({ products }) => {
     const item = {
       id: products.id,
       title: products.title,
-      price:products.price,
+      price: products.price,
       count,
     };
-
   };
 
   const decrement = () => {
@@ -23,26 +22,26 @@ const Card = ({ products }) => {
   const increment = () => {
     setCount(count + 1);
   };
-  let price = products.price
+  let price = products.price;
   return (
     <div className="productContainer">
-            <div className="productItem">
-                {products.category}
-                <img src={ products.image } alt="image" className="pruductImg" />
-                {price = price * count}
-            </div>
-            <div className="addBasket">
-                <div className="productCount">
-                    <button onClick={decrement}>-</button>
-                    {count}
-                    <button onClick={increment}>+</button>
-                </div>
-                <button onClick={addNewBasket} className="addBasketButton">add basket</button>
-            </div>
+      <div className="productItem">
+        {products.category}
+        <img src={products.image} alt="image" className="pruductImg" />
+        {(price = price * count)}
+      </div>
+      <div className="addBasket">
+        <div className="productCount">
+          <button onClick={decrement}>-</button>
+          {count}
+          <button onClick={increment}>+</button>
         </div>
+        <button onClick={addNewBasket} className="addBasketButton">
+          add basket
+        </button>
+      </div>
+    </div>
   );
 };
-
-
 
 export default Card;
