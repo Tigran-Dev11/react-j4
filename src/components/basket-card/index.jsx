@@ -62,7 +62,7 @@ const BasketCard = ({ item }) => {
         {count}
         <button onClick={plusItem}>+</button>
         {/* "       add delete item logic */}
-        <button onClick={deleteItem}>x</button>
+        <button className="delete" onClick={deleteItem}>x</button>
       </div>
     </div>
   );

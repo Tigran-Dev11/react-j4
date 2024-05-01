@@ -16,7 +16,7 @@ const Basket = () => {
   return (
     <div className="basket">
       <h1>{!basketItems?.length ? "Basket is empty" : "Basket"}</h1>
-      {basketItems.length ? <button className="delete-item" onClick={deleteItems}>
+      {basketItems.length ? <button className="delete" onClick={deleteItems}>
         delete all items
       </button> : <button>go product</button>}
       <div className="basket-container">
