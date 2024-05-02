@@ -36,3 +36,7 @@ export const menu = [
         path:ROUTES.order
     },
 ];
+
+export const API = {
+    products:'https://fakestoreapi.com/products'
+ }

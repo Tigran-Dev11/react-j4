@@ -5,34 +5,37 @@ import { IMAGES } from "../../assets/images";
 import ProductCard from "../../components/productCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constant";
+import { useFetch } from "../../hooks/use-fetch";
+import { API } from "../../utils/constant";
 
 
 
 
 const Products = () => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [products, loading] = useFetch({ url: API.products });
+    // const [products, setProducts] = useState([]);
+    // const [loading, setLoading] = useState(false);
 
     const usnavigate = useNavigate();
 
-    useEffect(() => {
-        const getProducts = async () => {
-            setLoading(true);
-            try {
-                const response = await axios(
-                    'https://fakestoreapi.com/products')
-                if (response?.status === 200) {
-                    setProducts(response.data);
-                    setLoading(false);
-                }
-            } catch (error) {
-                console.log(error);
-                setLoading(false);
-            }
-        };
+    // useEffect(() => {
+    //     const getProducts = async () => {
+    //         setLoading(true);
+    //         try {
+    //             const response = await axios(
+    //                 'https://fakestoreapi.com/products')
+    //             if (response?.status === 200) {
+    //                 setProducts(response.data);
+    //                 setLoading(false);
+    //             }
+    //         } catch (error) {
+    //             console.log(error);
+    //             setLoading(false);
+    //         }
+    //     };
 
-        getProducts();
-    }, []);
+    //     getProducts();
+    // }, []);
 
     if (loading) {
         return <img src={IMAGES.loader} alt="loader" className="loader" />;
@@ -49,8 +52,8 @@ const Products = () => {
                 <img src={IMAGES.basketIcon} alt="icon" className="basketIcon" onClick={goToBasketPage} />
             </div>
             <div className="productMenu">
-                {products?.map((products) => (
-                    <ProductCard key={products.id} products={products} />
+                {products?.map((product) => (
+                    <ProductCard key={product.id} products={product} />
                 ))}
             </div>
 
