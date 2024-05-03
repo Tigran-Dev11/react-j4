@@ -1,12 +1,19 @@
+import './App.css';
 
+import {useRef} from 'react';
 
-function App() {
-  
+export default function App() {
+  const windowWidth = useRef(window.innerWidth);
+  const windowHeight = useRef(window.innerHeight);
+
+  console.log('width: ', windowWidth.current);
+  console.log('height: ', windowWidth.current);
+
   return (
-    <div className="App">
-        <h1>hello j4</h1>
+    <div>
+      <h2>Width: {windowWidth.current}</h2>
+
+      <h2>Height: {windowHeight.current}</h2>
     </div>
   );
 }
-
-export default App;
