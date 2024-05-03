@@ -7,7 +7,7 @@
     align-items: center;
     background-color: greenyellow;
     gap: 20px;
-    //padding-block: 20px;
+    
 
     .basketItem{
         display: flex;
@@ -24,8 +24,8 @@
         button{
             width: 150px;
             height: 40px;
-            background-color: black;
-            color: greenyellow;
+            background-color:blue;
+            color: aquamarine;
             cursor: pointer;
         }
     }
