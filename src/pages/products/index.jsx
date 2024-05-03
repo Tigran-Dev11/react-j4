@@ -2,7 +2,7 @@ import "./style.scss";
 import axios from "axios";
 import { useEffect, useState} from "react";
 import { IMAGES } from "../../assets/images";
-import {useResize} from "../../resize/index"
+import {useResize} from "../../hooks/resize/index"
 
 import ProductCart from "../../components/product-card";
 
@@ -10,7 +10,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
- const [width , height] = useResize([])
+ const [width , height] = useResize()
 
 
 
