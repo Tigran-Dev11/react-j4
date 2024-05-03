@@ -5,7 +5,7 @@ const GlobalContext = createContext({});
 const GlobalProvider = ({children}) => {
   const [basketItems, setBasketItems] = useState([]);
   useEffect(() => {
-    const basketData = JSON.parse(localStorage.getItem("basketItems"));
+    const basketData = JSON.parse(localStorage.getItem("setBasketItems"));
 
     if (basketData?.length) {
       setBasketItems(basketData);

@@ -1,0 +1,23 @@
+.basket{
+    width: 100%;
+    min-height: calc(100vh - 246px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .basketContainer{
+        display: flex;
+        min-height: 500px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+        background-color: darkblue;
+        color: aliceblue;
+        border-radius: 10px;
+    }
+}

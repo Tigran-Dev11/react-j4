@@ -2,12 +2,17 @@ import "./style.scss";
 import axios from "axios";
 import { useEffect, useState} from "react";
 import { IMAGES } from "../../assets/images";
+import {useResize} from "../../resize/index"
 
 import ProductCart from "../../components/product-card";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+
+ const [width , height] = useResize([])
+
+
 
   useEffect(() => {
     const getProduct = async () => {
@@ -36,16 +41,19 @@ const Products = () => {
         <img src={IMAGES.gif} alt="loading" className="loading" />
       </div>
     );
+    
   }
 
 
   return (
     <div className="Products">
+      <span> width: { width }  height: {height}</span>
     {products?.map((product) => (
 
    <ProductCart key={product.id} product={product}/>
   ))}
   </div>
+  
   )
 }
 
