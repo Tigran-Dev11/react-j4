@@ -1,33 +1,17 @@
-import { useState, useEffect } from 'react';
+import {useRef} from 'react';
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
+export default function App() {
+  const windowWidth = useRef(window.innerWidth);
+  const windowHeight = useRef(window.innerHeight);
+
+  console.log('width: ', windowWidth.current);
+  console.log('height: ', windowWidth.current);
+
+  return (
+    <div>
+      <h2>Width: {windowWidth.current}</h2>
+
+      <h2>Height: {windowHeight.current}</h2>
+    </div>
+  );
 }
-
-export default function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowDimensions;
-}
-const Component = () => {
-    const { height, width } = useWindowDimensions();
-  
-    return (
-      <div>
-        width: {width} ~ height: {height}
-      </div>
-    );
-  }
