@@ -1,0 +1,61 @@
+.productCont{
+    width:360px;
+    height: 330px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.productCont .productImg {
+    width: 150px;
+    height: 150px;
+}
+
+.productCont .productTopItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productCont .productTopItem .title{
+    padding-inline: 10px;
+}
+
+.productCont .productItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.addBasket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.productCount {
+    display: flex;
+    gap: 10px;
+}
+
+.productCount button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.addButton {
+    width:100%;
+    height: 40px;
+    background-color:#2C7865;
+    cursor: pointer;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

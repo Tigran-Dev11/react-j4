@@ -1,0 +1,34 @@
+.product-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px dashed #fff;
+}
+
+.product-card-container .title{
+    font-size: 14px;
+}
+
+.product-card-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-card-container button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.product-card-container .removeItem{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.product-card-container .counter-container{
+    display: flex;
+    gap: 20px;
+}

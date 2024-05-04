@@ -1,0 +1,51 @@
+.basketContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ACE2E1;
+    gap: 20px;
+    padding-block: 20px;
+
+    .topContent{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .homeButton{
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .basketItem{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .basketBtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        .clearall{
+            width: 180px;
+            height: 40px;
+            background-color:#58A399;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition: 0.6s;
+        }
+        .clearall:hover{
+            transform: scaleX(1.1);
+            transition: 0.6s
+        }
+    }
+    
+}
