@@ -9,9 +9,15 @@ function TodoForm() {
         setText(e.target.value)
     };
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
-        setTodos([...todos, text]);
+        setTodos([...todos,
+            {
+                id:Math.random(),
+                text:text,
+                completed:false
+            }
+        ]);
         setText("");
     };
 
