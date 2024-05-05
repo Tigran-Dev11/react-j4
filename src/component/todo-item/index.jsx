@@ -3,7 +3,7 @@ import "./style.css";
 function TodoItem ({todo}){
 
     return(
-        <div>
+        <div className="todoItem">
             <input type="checkbox"/>
             {todo.title}
             <button>X</button>
