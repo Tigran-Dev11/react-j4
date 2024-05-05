@@ -1,5 +1,8 @@
-import './App.css'
-import TodoList from './component/todo-list'
+import './App.css';
+import TodoForm from './component/todo-form';
+import TodoList from './component/todo-list';
+
+
 
 
 function App() {
@@ -7,6 +10,7 @@ function App() {
 
   return (
     <>
+    <TodoForm />
     <TodoList />
     </>
   )
