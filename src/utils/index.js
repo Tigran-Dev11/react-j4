@@ -1,16 +1,16 @@
 export const todos = [
     {
-        id: 1,
+        id: Math.random(),
         title: "Learn HTML",
         compledet: false
     },
     {
-        id: 2,
+        id: Math.random(),
         title: "Learn CSS",
         compledet: false
     },
     {
-        id: 3,
+        id: Math.random(),
         title: "Learn JS",
         compledet: false
     },
