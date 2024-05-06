@@ -8,12 +8,12 @@ import TodoList from './component/todo-list';
 
 
 function App() {
-  
+
 
   return (
     <>
-    <TodoForm />
-    <TodoList />
+      <TodoForm />
+      <TodoList />
     </>
   )
 }
