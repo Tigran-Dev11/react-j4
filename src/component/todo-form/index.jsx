@@ -11,13 +11,13 @@ function TodoForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        setTodos([...todos,
-            {
-                id:Math.random(),
-                text:text,
-                completed:false
-            }
-        ]);
+        const newTodo = {
+            id: Math.random(),
+            text: text,
+            completed: false
+        };
+
+        setTodos([...todos, newTodo]);
         setText("");
     };
 

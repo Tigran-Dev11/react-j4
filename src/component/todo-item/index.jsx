@@ -1,14 +1,18 @@
 import "./style.css";
 
-function TodoItem ({todo}){
+function TodoItem({ todo }) {
 
-    return(
+    function deleteTodo() {
+        setTodos(todos.filter(todo => todo.id !== id))
+    }
+
+    return (
         <div className="todoItem">
-            <input type="checkbox"/>
-            {todo.title}
-            <button>X</button>
+            <input type="checkbox" />
+            <p>{todo.title}</p>
+            <button onClick={deleteTodo}>X</button>
         </div>
     )
 };
 
-export default TodoItem
+export default TodoItem;
