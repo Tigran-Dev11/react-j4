@@ -2,20 +2,34 @@ import "./style.scss";
 // import Input from "../commons/input";
 // import Button from "../commons/button";
 import { useState } from "react";
-import TodoTask from "../todo-task";
+import { todos } from "../constant";
 
 function TodoForm() {
   const [title, setTitle] = useState('');
+  const [todos, setTodos] = useState([]);
+
   
 
   const changeValue = (e) => {
     setTitle(e.target.value);
     console.log(e.target.value);
   };
-  const handleSubmit = ({e,setTitle}) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+
   
-        <TodoTask title = {setTitle}/>
+
+  
+
+    setTodos([
+      {
+        id:Math.random(),
+        name:setTitle,
+      
+
+      }
+    ])
+     
       
   };
    
