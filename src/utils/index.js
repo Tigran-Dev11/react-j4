@@ -1,17 +1,17 @@
-export const todos = [
+export const initialTodos = [
     {
         id: Math.random(),
         title: "Learn HTML",
-        compledet: false
+        completed: false
     },
     {
         id: Math.random(),
         title: "Learn CSS",
-        compledet: false
+        completed: false
     },
     {
         id: Math.random(),
         title: "Learn JS",
-        compledet: false
+        completed: false
     },
 ];
