@@ -1,16 +1,14 @@
+/* eslint-disable react/prop-types */
 import "./style.css";
 
-function TodoItem({ todo }) {
+function TodoItem({ todo,deleteTodo}) {
 
-    function deleteTodo() {
-        setTodos(todos.filter(todo => todo.id !== id))
-    }
 
     return (
         <div className="todoItem">
             <input type="checkbox" />
             <p>{todo.title}</p>
-            <button onClick={deleteTodo}>X</button>
+            <button onClick={()=>deleteTodo(todo.id)}>X</button>
         </div>
     )
 };
