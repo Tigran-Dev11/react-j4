@@ -58,7 +58,15 @@ align-items: center;
 gap: 20px;
 
 .initialTodos{
+  width: 400px;
   display: flex;
+  justify-content: space-between;
+
+  button{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
   
 }
 `
