@@ -3,10 +3,9 @@
 import TodoItem from "../todo-item";
 import "./style.css";
 
-function TodoList({ todos, setTodos }) {
+function TodoList({ todos, setTodos, deleteTodo }) {
   const deleteTodo = (id) => {
-    //const filterData = todos.filter((todo)=>todo.id !== id)
-    //  setTodos(filterData)
+
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
