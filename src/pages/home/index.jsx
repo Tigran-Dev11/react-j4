@@ -23,6 +23,11 @@ const Home = () => {
 
   }
 
+  const deleteTodo = (id) => {
+
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+  }
+
 
   return (
     <S.HomeContainer>
@@ -34,13 +39,13 @@ const Home = () => {
             <button>Add Todo</button>
           </form>
         </S.TodoForm>
-        <S.TodoItem>
+        <S.TodoItem >
           {initialTodos.map((initialTodos) => {
             return (
               <div className="initialTodos">
                 <input type="checkbox" />
                 <p>{initialTodos.title}</p>
-                <button>X</button>
+                <button onClick={()=>deleteTodo(todo.id)}>X</button>
               </div>
             )
           })}
