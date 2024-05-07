@@ -9,21 +9,12 @@ import TodoList from './component/todo-list';
 
 
 function App() {
-<<<<<<< HEAD
 
 
   return (
     <>
       <TodoForm />
       <TodoList />
-=======
-  const [todos, setTodos] = useState(initialTodos);
-
-  return (
-    <>
-    <TodoForm  setTodos={setTodos}/>
-    <TodoList todos={todos} setTodos={setTodos}/>
->>>>>>> a4d46005e03318a389fcfcfb0fd734cbcdf1b670
     </>
   )
 }
