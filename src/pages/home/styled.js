@@ -23,7 +23,6 @@ export const TodoList = styled.div`
 export const TodoForm = styled.div`
 widows: 100%;
 height: 100px;
-border: 1px solid white;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -50,7 +49,6 @@ button{
 export const TodoItem = styled.div`
 width: 100%;
 height: 300px;
-border: 1px solid white;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -61,11 +59,15 @@ gap: 20px;
   width: 400px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  button{
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
+  .todoItemButtons{
+    display:flex;
+    gap:10px;
+
+    button{
+      cursor: pointer;
+    }
   }
   
 }
