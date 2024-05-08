@@ -48,7 +48,7 @@ const Home = () => {
 
   return (
     <S.HomeContainer>
-      <h1>Todos</h1>
+      <h1>Todo List</h1>
       <S.TodoList>
         <S.TodoForm>
           <form action="" onSubmit={handleSubmit}>
