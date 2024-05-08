@@ -64,12 +64,18 @@ gap: 20px;
   justify-content: space-between;
   align-items: center;
 
-  input[type="checkbox"] {
-    order: 1;
-  }
+  .left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-  p {
-    order: 2;
+    input[type="checkbox"] {
+      order: 2; 
+    }
+
+    p {
+      order: 1; 
+    }
   }
 
   .buttons {
@@ -77,9 +83,12 @@ gap: 20px;
     gap: 10px;
 
     button {
-      order: 3;
+      order: 3; 
     }
     
   }
+
+}
+
 
 `

@@ -58,18 +58,19 @@ const Home = () => {
         </S.TodoForm>
         <S.TodoItem>
           {todos.map((todo) => {
-          return (
-            <div className="todo" key={todo.id}>
-              <div className="left">
-                <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo.id)} />
-                <p>{todo.title}</p>
-              </div>
-              <div className="buttons">
-                <button className="delete-button" onClick={() => deleteTodo(todo.id)}>X</button>
-                <button className="edit-button" onClick={() => startEdit(todo.id, todo.title)}>Edit</button>
-              </div>
+         return (
+          <div className="todo" key={todo.id}>
+            <div className="left">
+              <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo.id)} />
+              <p>{todo.title}</p>
             </div>
-          )
+            <div className="buttons">
+              <button className="delete-button" onClick={() => todo.completed && deleteTodo(todo.id)}>X</button>
+              <button className="edit-button" onClick={() => todo.completed && startEdit(todo.id, todo.title)}>Edit</button>
+            </div>
+          </div>
+        )
+        
           
           })}
         </S.TodoItem>
