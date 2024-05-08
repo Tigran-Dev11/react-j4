@@ -45,8 +45,12 @@ const Home = () => {
   }
 
 
-  const editTodo = (id, newTitle) => {
-    setTodos((prev) => prev.map(todo => todo.id === id ? { ...todo, title: newTitle } : todo))
+  // const editTodo = (id, newTitle) => {
+  //   setTodos((prev) => prev.map(todo => todo.id === id ? { ...todo, newTitle } : todo))
+  // }
+
+  const isCompleted = (id)=>{
+    setTodos((prev) => prev.map(todo => todo.id === id ? {...todos, completed: true,  } : todo))
   }
 
 
@@ -64,7 +68,7 @@ const Home = () => {
           {todos.map((todo) => {
             return (
               <div className="initialTodos">
-                <input type="checkbox" />
+                <input type="checkbox" onClick={()=> isCompleted(todo.id)}/>
                 <p>{todo.title}</p>
                 <div className="todoItemButtons">
                   <button onClick={() => editTodo(todo.id, todo.title)}>Edit</button>

@@ -18,6 +18,7 @@ export const TodoList = styled.div`
   width: 500px;
   height: 400px;
   border: 1px solid white;
+  overflow: auto;
 `
 
 export const TodoForm = styled.div`
@@ -48,7 +49,7 @@ button{
 
 export const TodoItem = styled.div`
 width: 100%;
-height: 300px;
+height: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -69,6 +70,11 @@ gap: 20px;
       cursor: pointer;
     }
   }
+
+  input{
+    cursor: pointer;
+  }
   
 }
+
 `
