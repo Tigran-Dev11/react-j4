@@ -1,20 +1,13 @@
-import TodoForm from "./todo-form"
-import TodoItem from "./todo-item"
-
-import TodoTask from "./todo-task"
-
+import Home from "../src/pages/home/index" 
 
 
 function App() {
 
   return (
     <div className="cont">
-      <TodoForm/>
-      <TodoItem/>
-   
-    
-      </div>
-  )
+     <Home/>
+    </div>
+  );
 }
 
-export default App
+export default App;

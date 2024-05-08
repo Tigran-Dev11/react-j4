@@ -1,4 +1,4 @@
-export const todos = [
+export const initialTodos = [
     {
         id:Math.random(),
         name:"Go to shopping",
@@ -20,3 +20,7 @@ export const todos = [
         status: false,
     }
 ]
+
+export const ROUTES = {
+    home:'/'
+};
