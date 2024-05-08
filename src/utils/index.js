@@ -1,17 +1,22 @@
 export const initialTodos = [
     {
         id: Math.random(),
-        title: "Learn HTML",
+        title: "Index HTML",
         completed: false
     },
     {
         id: Math.random(),
-        title: "Learn CSS",
+        title: "Style CSS",
         completed: false
     },
     {
         id: Math.random(),
-        title: "Learn JS",
+        title: "React JS",
+        completed: false
+    },
+    {
+        id: Math.random(),
+        title: "Index.jsx",
         completed: false
     },
 ];
