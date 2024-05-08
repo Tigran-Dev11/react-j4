@@ -1,6 +1,5 @@
-
-
-
 export const ROUTES = {
-    home:'/'
-}
+  home: "/",
+  counter: "/counter",
+  profile: "/profile",
+};
