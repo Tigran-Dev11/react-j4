@@ -10,12 +10,12 @@ import {initialTodos} from './utils'
 
 
 function App() {
-const [todos, setTodos] = useState([initialTodos])
+const [todos, setTodos] = useState(initialTodos)
 
   return (
     <>
-      <TodoForm />
-      <TodoList  todos={todos} deleteTodo={deleteTodo}/>
+      <TodoForm setTodos={setTodos}/>
+      <TodoList  todos={todos}/>
     </>
   )
 }
