@@ -1,5 +1,5 @@
 import React , {useState} from "react";
-import "./style.css";
+import * as S from "./styled";
 
 const TodoList = () => {
     const [todos, setTodos] = useState([]);
@@ -26,36 +26,37 @@ const TodoList = () => {
     };
 
     const handleEditTodo = (index) =>{
-        
+
     }
 
 
 
     return(
-        <div className="container">
-            <h1>To-Do List</h1>
+         <S.Container>
+            <S.Text>To Do List</S.Text>
 
-            <div className="sc1">
-            <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)}/>
-            <button onClick={handleAddTodo}>Add</button>
-            </div>
-            <div className="sc2">
-            <ul>
+            <S.Section1>
+            <S.Inp type="text" value={newTodo} onChange={(e)=> setNewTodo(e.target.value)}></S.Inp>
+            <S.Btn onClick={handleAddTodo}>Add</S.Btn>
+            </S.Section1>
+            <S.Section2>
+            <S.Ul>
                 {todos.map((todo, index)=> (
+
+                        <S.Li key={index} style={{ display: "flex"}}>
+                            <S.Section3 style={{display: "flex", alignItems: "center"}}>
+                      <S.Inp type="checkbox" checked={todo.checked} onChange={()=> handleToggleTodo(index)}></S.Inp>
+                      <S.Span style={{ marginRight: "10px", textDecoration: todo.checked ? "line-through" : "none"}}>{todo.text}</S.Span>
+                      <S.Btn onClick={()=>handleEditTodo(index)}>Edit</S.Btn>
+                      <S.Btn onClick={()=> handleDeleteTodo(index)}>Delete</S.Btn>
+                      </S.Section3>
+                      </S.Li>
                     
-                    <li key={index} style={{ display : "flex"}}>
-                        <div style={{ display: "flex", alignItems: "center"}}>
-                      <input type="checkbox" checked={todo.checked} onChange={()=> handleToggleTodo(index)}/>
-                      <span style={{ marginRight: "10px", textDecoration: todo.checked ? "line-through" : "none"}}>{todo.text}</span>
-                      <button onClick={()=> handleEditTodo(index)}>Edit</button>
-                      <button onClick={()=> handleDeleteTodo(index)}>Delete</button>
-                      </div>
-                    </li>
                     
                 ))}
-            </ul>
-            </div>
-        </div>
+            </S.Ul>
+            </S.Section2>
+            </S.Container>
     )
 }
 
