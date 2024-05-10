@@ -1,4 +1,3 @@
-import { IsAuth } from "../hoc/is-auth";
 import Counter from "../pages/counter";
 import Home from "../pages/home";
 import Profile from "../pages/profile";
@@ -14,7 +13,7 @@ export const routes = [
     path: ROUTES.counter
   },
   {
-    component: IsAuth(Profile),
+    component: Profile,
     path: ROUTES.profile
   }
 ];

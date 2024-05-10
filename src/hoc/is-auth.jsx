@@ -5,10 +5,7 @@ export const IsAuth = (Component) => {
   let accessToken = localStorage.getItem("access_token");
   const navigate = useNavigate();
 
-  if (!accessToken) {
-    navigate(ROUTES.home);
-    return
-  }
+
 
   return Component;
 };
