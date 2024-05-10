@@ -1,80 +1,77 @@
-import { useState } from "react";
-import { initialTodos } from "../../utils/constants.js";
-import * as S from "./styled.js";
+import React, { useState } from 'react';
+import { initialTodos } from '../../utils/constants.js';
+import * as S from './styled.js';
 
 const Home = () => {
-
-  const [text, setText] = useState('');
   const [todos, setTodos] = useState(initialTodos);
+  const [newTodo, setNewTodo] = useState("");
   const [editId, setEditId] = useState(null);
   const [editText, setEditText] = useState('');
 
-  function handleChange(e) {
-    setText(e.target.value)
-  }
-
-  function handleSubmit(e) {
+  const handleAddTodo = (e) => {
     e.preventDefault();
-    if (editId) {
-      editTodo(editId, text);
-      setEditId(null);
-    } else {
-      const newTodo = {
+    if(newTodo.trim() !== ""){
+      const newTodoItem = {
         id: Math.random(),
-        title: text,
+        title: newTodo.trim(),
         completed: false
       }
-      setTodos((prev) => [...prev, newTodo]);
+      setTodos([...todos, newTodoItem]);
+      setNewTodo("");
     }
-    setText("");
   }
 
-  function toggleComplete(id) {
-    setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo));
-  }
-
-  function deleteTodo(id) {
+  const handleDeleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
-  }
+  };
 
-  function startEdit(id, title) {
-    setEditId(id);
-    setText(title);
-  }
+  const handleToggleTodo = (id) => {
+    setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo));
+  };
 
-  function editTodo(id, newTitle) {
+  const handleEditTodo = (id, newTitle) => {
     setTodos(todos.map(todo => todo.id === id ? {...todo, title: newTitle} : todo));
+    setEditId(null);
+  };
+
+  const startEdit = (id, title) => {
+    setEditId(id);
+    setEditText(title);
   }
 
   return (
     <S.HomeContainer>
-      <h1>Todo List</h1>
-      <S.TodoList>
-        <S.TodoForm>
-          <form action="" onSubmit={handleSubmit}>
-            <input type="text" value={text} onChange={handleChange} />
-            <button>{editId ? 'Update Todo' : 'Add Todo'}</button>
-          </form>
-        </S.TodoForm>
-        <S.TodoItem>
-          {todos.map((todo) => {
-         return (
-          <div className="todo" key={todo.id}>
-            <div className="left">
-              <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo.id)} />
-              <p>{todo.title}</p>
-            </div>
-            <div className="buttons">
-              <button className="delete-button" onClick={() => todo.completed && deleteTodo(todo.id)}>X</button>
-              <button className="edit-button" onClick={() => todo.completed && startEdit(todo.id, todo.title)}>Edit</button>
-            </div>
-          </div>
-        )
-        
-          
-          })}
-        </S.TodoItem>
-      </S.TodoList>
+      <S.Text>Todo List</S.Text>
+      <S.Section1>
+        <form action="" onSubmit={handleAddTodo}>
+          <S.Inp type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+          <S.Btn>Add</S.Btn>
+        </form>
+      </S.Section1>
+      <S.Section2>
+        <S.Ul>
+          {todos.map((todo) => (
+            <S.Li key={todo.id}>
+              <S.Section3>
+                <S.Inp type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
+                {editId === todo.id ? (
+                  <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)} />
+                ) : (
+                  <S.Span style={{ marginRight: "10px", textDecoration: todo.completed ? "line-through" : "none"}}>{todo.title}</S.Span>
+                )}
+                {editId === todo.id ? (
+                  <S.Btn onClick={() => handleEditTodo(todo.id, editText)}>Save</S.Btn>
+                ) : (
+                  <>
+                    {todo.completed && <S.Btn onClick={() => startEdit(todo.id, todo.title)}>Edit</S.Btn>}
+                    <S.Btn onClick={() => handleDeleteTodo(todo.id)}>Delete</S.Btn>
+                  </>
+                )}
+              </S.Section3>
+            </S.Li>
+          ))}
+        </S.Ul>
+      </S.Section2>
     </S.HomeContainer>
   );
 };
