@@ -11,7 +11,9 @@ export const TodoTask = styled.p`
         width: 150px;
         height: 28px;
         color: black;
-       
+       &.status{
+        text-decoration: line-through;
+       }
     `;
     export const SubmitBtn = styled.button`
         width: 50px;
