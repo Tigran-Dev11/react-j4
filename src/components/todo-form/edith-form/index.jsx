@@ -1,9 +1,10 @@
 
 import * as S from "./styled.js";
 import { useState } from "react";
+import Input from "../../../commons/input/index.jsx";
 
 
-function TodoForm({ setTodos }){
+function EditForm({ setTodos , editTodo,todo }){
   const [title, setTitle] = useState("");
 
   const changeValue = (e) => {
@@ -13,16 +14,17 @@ function TodoForm({ setTodos }){
   const handleSubmit = (e) => {
     e.preventDefault();
     if(title){
-    const newTodo = {
+    editTodo ({
       id: Math.random(),
       name: title,
       status: false,
       isEdith:false
-    };
+    });
 
-    setTodos((prev) => [...prev, newTodo]);
+    setTodos((prev) => [...prev, editTodo]);
+editTodo(todo.id)
+
     setTitle("");
-
   }
   };
 
@@ -30,12 +32,12 @@ function TodoForm({ setTodos }){
     <S.FormContainer>
       <S.TodoContainer>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={changeValue} value={title} placeholder="Whats the next task"/>
-        <button>Add</button>
+        <Input type="text" onChange={changeValue} placeholder= "Udate Task" value={title} />
+        <button>Udate Task</button>
       </form>
       </S.TodoContainer>
       </S.FormContainer>
   )
 };
 
-export default TodoForm;
+export default EditForm;

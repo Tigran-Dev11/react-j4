@@ -11,6 +11,7 @@ export const TodoTask = styled.p`
         width: 150px;
         height: 28px;
         color: black;
+       
     `;
     export const SubmitBtn = styled.button`
         width: 50px;
@@ -18,3 +19,4 @@ export const TodoTask = styled.p`
         background-color: darkblue;
         color: white;
     `;
+    
