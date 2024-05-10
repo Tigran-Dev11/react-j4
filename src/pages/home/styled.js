@@ -41,7 +41,10 @@ export const Section3 = styled.div`
   align-items: center;
 `;
 
-export const Span = styled.span``;
+export const Span = styled.span`
+margin-right: 10px;
+text-decoration: ${props => props.completed ? "line-through" : "none"};
+`;
 
 export const TodoList = styled.div`
   width: 500px;

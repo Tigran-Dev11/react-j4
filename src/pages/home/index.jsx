@@ -57,7 +57,8 @@ const Home = () => {
                 {editId === todo.id ? (
                   <input type="text" value={editText} onChange={(e) => setEditText(e.target.value)} />
                 ) : (
-                  <S.Span style={{ marginRight: "10px", textDecoration: todo.completed ? "line-through" : "none"}}>{todo.title}</S.Span>
+                  <S.Span completed={todo.completed}>{todo.title}</S.Span>
+
                 )}
                 {editId === todo.id ? (
                   <S.Btn onClick={() => handleEditTodo(todo.id, editText)}>Save</S.Btn>
