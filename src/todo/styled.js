@@ -52,7 +52,7 @@ export const checkboxInput = styled.input`
 
 export const editButton = styled.button`
   border-radius: 4px;
-  width: 80px;
+  width: 100px;
   height: 48px;
   border: 1px solid transparent;
   font-weight: 500;
@@ -63,7 +63,7 @@ export const editButton = styled.button`
 `;
 
 export const DeleteButton = styled.button`
-  width: 80px;
+  width: 100px;
   height: 48px;
   border-radius: 4px;
   border: 1px solid transparent;
