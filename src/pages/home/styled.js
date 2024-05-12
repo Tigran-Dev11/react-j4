@@ -15,3 +15,17 @@ export const Text  = styled.p`
   color: ${COLORS.black};
   font-weight: 600;
 `
+
+export const TodosContainer = styled.div`
+widows: 300px;
+height: 400px;
+border: 1px solid;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`
+
+export const TodoTitle = styled.h1`
+font-size: 32px;
+`

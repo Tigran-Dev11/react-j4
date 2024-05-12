@@ -1,12 +1,14 @@
-import { ROUTES } from "../../utils/constants.js";
+
 import * as S from "./styled.js";
-import { NavLink } from "react-router-dom";
+
 
 const Home = () => {
   return (
     <S.HomeContainer>
-      <S.Text>Hello</S.Text>
-      <NavLink to={ROUTES.profile}>go to profile</NavLink>
+      <S.Text>Home</S.Text>
+      <S.TodosContainer>
+        <S.TodoTitle>Todos</S.TodoTitle>
+      </S.TodosContainer>
     </S.HomeContainer>
   );
 };
