@@ -2,6 +2,7 @@
 import * as S from "./styled.js";
 
 
+
 const Home = () => {
   return (
     <S.HomeContainer>
