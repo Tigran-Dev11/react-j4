@@ -13,3 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+ul li div {
+  display: flex;
+  gap: 10px;
+}
