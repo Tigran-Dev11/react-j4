@@ -1,3 +1,4 @@
+// Home.js
 import React, { useState } from 'react';
 import { initialTodos } from '../../utils/constants.js';
 import * as S from './styled.js';
@@ -64,7 +65,7 @@ const Home = () => {
                   <S.Btn onClick={() => handleEditTodo(todo.id, editText)}>Save</S.Btn>
                 ) : (
                   <>
-                    {todo.completed && <S.Btn onClick={() => startEdit(todo.id, todo.title)}>Edit</S.Btn>}
+                    <S.Btn disabled={!todo.completed} onClick={() => startEdit(todo.id, todo.title)}>Edit</S.Btn>
                     <S.Btn onClick={() => handleDeleteTodo(todo.id)}>Delete</S.Btn>
                   </>
                 )}
