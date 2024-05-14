@@ -1,8 +1,10 @@
 
 
-const TodoItem = ({id, title, completed}) =>{
+const TodoItem = ({ todo }) => {
 
-    return(
+    const { id, title, completed } = todo;
+    
+    return (
         <li>
             <input type="checkbox" checked={completed} />
             <p>{title}</p>

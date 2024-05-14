@@ -6,7 +6,7 @@ import { todoSelector } from "../../libs/redux/todo-slice/todo-selector";
 
 const TodoList = () => {
 
-    const todos = useSelector(todoSelector);
+    const {todos} = useSelector(todoSelector);
 
     return(
         <ul>

@@ -1,12 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { isUUID } from "uuid-v4";
-
 
 
 const todoSlice = createSlice({
     name: "todos",
     initialState: {
-        todos: [],
+        todos: [{
+            id: Math.random(),
+            title: "Learn HTML",
+            completed: false
+        },
+        {
+            id: Math.random(),
+            title: "Learn CSS",
+            completed: false
+        },
+        {
+            id: Math.random(),
+            title: "Learn JS",
+            completed: false
+        }],
+
         todoValue: "",
     },
 
@@ -18,17 +31,16 @@ const todoSlice = createSlice({
         addTodo: (state) => {
             if (state.todoValue) {
                 const newTodo = {
-                    id: isUUID(),
+                    id: Math.random(),
                     title: state.todoValue,
                     completed: false
 
                 };
 
-                state.todos = [newTodoItem, ...state.todos];
+                state.todos = [newTodo, ...state.todos];
                 state.todoValue = "";
             }
         }
-
 
     }
 
