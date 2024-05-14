@@ -4,21 +4,23 @@ import { createSlice } from "@reduxjs/toolkit";
 const todoSlice = createSlice({
     name: "todos",
     initialState: {
-        todos: [{
-            id: Math.random(),
-            title: "Learn HTML",
-            completed: false
-        },
-        {
-            id: Math.random(),
-            title: "Learn CSS",
-            completed: false
-        },
-        {
-            id: Math.random(),
-            title: "Learn JS",
-            completed: false
-        }],
+        todos: [
+            {
+                id: Math.random(),
+                title: "Learn HTML",
+                completed: false
+            },
+            {
+                id: Math.random(),
+                title: "Learn CSS",
+                completed: false
+            },
+            {
+                id: Math.random(),
+                title: "Learn JS",
+                completed: false
+            }
+        ],
 
         todoValue: "",
     },
@@ -34,13 +36,14 @@ const todoSlice = createSlice({
                     id: Math.random(),
                     title: state.todoValue,
                     completed: false
-
                 };
 
                 state.todos = [newTodo, ...state.todos];
                 state.todoValue = "";
             }
-        }
+        },
+
+        
 
     }
 

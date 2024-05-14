@@ -10,8 +10,8 @@ const TodoList = () => {
 
     return(
         <ul>
-            {todos.map((item) => {
-                <TodoItem key={item.id} todo={item}/>
+            {todos.map((todo) => {
+                <TodoItem id={todo.id} title={todo.title} completed={todo.completed}/>
             })}
         </ul>
     )

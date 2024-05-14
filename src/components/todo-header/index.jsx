@@ -17,8 +17,8 @@ const TodoHeader = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        dispatch(todoActions.addTodo())
-    }
+        dispatch(todoActions.addTodo());
+    };
 
 
 
