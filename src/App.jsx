@@ -1,5 +1,6 @@
 import TodoHeader from "./components/todo-header";
-import TodoList from "./components/todo-list";
+import TodoItem from "./components/todo-item";
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <TodoHeader/>
-      <TodoList/>
+      <TodoItem/>
     </>
   );
 }

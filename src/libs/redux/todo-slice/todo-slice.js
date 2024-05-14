@@ -21,7 +21,7 @@ const todoSlice = createSlice({
                 completed: false
             }
         ],
-
+        todo: [],
         todoValue: "",
     },
 
@@ -43,8 +43,27 @@ const todoSlice = createSlice({
             }
         },
 
-        
+        deleteTodo: (state, action) => {
+            const filtredTodos = state.todos.filter(
+                (todo) => todo.id === action.payload
+            );
+            state.todos.splice(filtredTodos, 1);
+        },
 
+        isCompleted: (state, action) => {
+            const index = state.findIndex((todo) => todo.id === action.payload.id);
+            state[index].completed = action.payload.completed;
+        },
+
+        editTodo: (state, action) => {
+
+            {
+                const { id, newTitle } = action.payload;
+                state.todos = state.todos.map((todo) =>
+                    todo.id === id ? { ...todos, title: newTitle } : todos
+                );
+            }
+        }
     }
 
 
