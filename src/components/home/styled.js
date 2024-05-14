@@ -14,12 +14,13 @@ export const titleProject = styled.h1``;
 
 export const contTodos = styled.div`
   width: 400px;
-  height: 600px;
+  height: 400px;
   background-color: transparent;
   border: 2px solid #cde8e5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
 `;
 
 export const addButton = styled.button`
@@ -47,3 +48,10 @@ background-color: transparent;
 color: white;
 border: none;
 `;
+
+export const Ul  = styled.ul`
+width: 300px;
+display: flex;
+flex-direction: column;
+
+`
