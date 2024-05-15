@@ -1,45 +1,74 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuid } from "uuid";
+import EditTask from "../../../components/todo-edit";
 
 export const TodosSlice = createSlice({
     name:"Todolist",
     initialState:{
         todos:[
             {
-                name:"Go Shopping",
-                id:Math.random(),
+                title:"Go Shopping",
+                id:uuid(),
                 completed:false,
+                edit:false,
+
             },
             {
-                name:"Go to Schooll",
-                id:Math.random(),
+                title:"Go to Schooll",
+                id:uuid(),
                 completed:false,
+                edit:false,
+
             },
             {
-                name:"Go to Club",
-                id:Math.random(),
+                title:"Go to Club",
+                id:uuid(),
                 completed:false,
+                edit:false,
+
             },
         ],
         todo:[]
 },
     reducers:{
-        addTodo: (store,action ,e) =>{
-            e.preventDefault();
-            store.push({
-                name:action.payload.name,
-                id:action.payload.id,
+        addTodo: (state,{payload}) =>{
+           if(state.todoValue){
+            let newTodo = {
+                title:state.todoValue,
+                id:uuid(),
                 completed:false,
-            })
+                edit:false,
+            }      
+            state.todos = [newTodo, ...state.todos];
+            state.todoValue = "";
+        }
         },
-        deleteTodo:(store,action) =>{
-            const todo =  store.find((todo) => todo.id != action.payload)
-              todo.completed = !todo.completed
 
+        deleteTodo:(state,{payload}) =>{
+            const filtered =   state.todos.filter((item) => item.id != payload)
+            state.todos = filtered;
         },
-        changeValue:(store,action,e) => {
-            const value = (e.target.value);
-            console.log(e.target.value);
+        changeValue:(state,{payload}) => {
+            state.todoValue = payload;
           },
+
+          changeCompleted:(state,{payload}) => {    
+             state.todos.find((item) => {
+                if(item.id === payload) {
+                    item.completed = !item.completed;
+              
+                }})   
+          },
+          editTodo:(state,{payload}) =>{
+           const editedTodo =  state.todos.map((item) => {
+                if(item.id === payload) {
+                    item.edit = true;
+           
+             
+                }})   
+
+                state.todos = [...editedTodo];
+          }
     }
 })
 
