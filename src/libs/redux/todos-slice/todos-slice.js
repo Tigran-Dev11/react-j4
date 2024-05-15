@@ -3,77 +3,83 @@ import { v4 as uuid } from "uuid";
 import EditTask from "../../../components/todo-edit";
 
 export const TodosSlice = createSlice({
-    name:"Todolist",
-    initialState:{
-        todos:[
-            {
-                title:"Go Shopping",
-                id:uuid(),
-                completed:false,
-                edit:false,
+  name: "Todolist",
+  initialState: {
+    todos: [
+      {
+        title: "Go Shopping",
+        id: uuid(),
+        completed: false,
+        edit: false
+      },
+      {
+        title: "Go to Schooll",
+        id: uuid(),
+        completed: false,
+        edit: false
+      },
+      {
+        title: "Go to Club",
+        id: uuid(),
+        completed: false,
+        edit: false
+      }
+    ],
+    todo: {},
+    todoValue: ""
+  },
+  reducers: {
+    addTodo: (state) => {
+      if (state.todoValue) {
+        let newTodo = {
+          title: state.todoValue,
+          id: uuid(),
+          completed: false,
+          edit: false
+        };
+        state.todos = [newTodo, ...state.todos];
+        state.todoValue = "";
+      }
+    },
 
-            },
-            {
-                title:"Go to Schooll",
-                id:uuid(),
-                completed:false,
-                edit:false,
+    deleteTodo: (state, { payload }) => {
+      const filtered = state.todos.filter((item) => item.id != payload);
+      state.todos = filtered;
+    },
+    changeValue: (state, { payload }) => {
+      state.todoValue = payload;
+    },
 
-            },
-            {
-                title:"Go to Club",
-                id:uuid(),
-                completed:false,
-                edit:false,
-
-            },
-        ],
-        todo:[]
-},
-    reducers:{
-        addTodo: (state,{payload}) =>{
-           if(state.todoValue){
-            let newTodo = {
-                title:state.todoValue,
-                id:uuid(),
-                completed:false,
-                edit:false,
-            }      
-            state.todos = [newTodo, ...state.todos];
-            state.todoValue = "";
+    changeCompleted: (state, { payload }) => {
+      state.todos.find((item) => {
+        if (item.id === payload) {
+          item.completed = !item.completed;
         }
-        },
+      });
+    },
+    editTodo: (state, { payload }) => {
+      const editedTodo = state.todos.map((item) => {
+        if (item.id === payload) {
+          return {
+            ...item,
+            edit: true
+          };
+        }
 
-        deleteTodo:(state,{payload}) =>{
-            const filtered =   state.todos.filter((item) => item.id != payload)
-            state.todos = filtered;
-        },
-        changeValue:(state,{payload}) => {
-            state.todoValue = payload;
-          },
+        return item;
+      });
 
-          changeCompleted:(state,{payload}) => {    
-             state.todos.find((item) => {
-                if(item.id === payload) {
-                    item.completed = !item.completed;
-              
-                }})   
-          },
-          editTodo:(state,{payload}) =>{
-           const editedTodo =  state.todos.map((item) => {
-                if(item.id === payload) {
-                    item.edit = true;
-           
-             
-                }})   
+      state.todos = editedTodo;
 
-                state.todos = [...editedTodo];
-          }
+      const editedTodoItem = state.todos.find((item) => item.id === payload);
+      state.todo = editedTodoItem;
+      state.todoValue = editedTodoItem?.title;
     }
-})
+  }
+});
 
 export const todoActions = {
-    ...TodosSlice.actions
-  };
+  ...TodosSlice.actions
+};
 
-  export const todosReducer = TodosSlice.reducer;
+export const todosReducer = TodosSlice.reducer;
