@@ -7,14 +7,16 @@ const todoSlice = createSlice({
   name: todoSliceName,
   initialState: {
     todos: [],
-    todoValue: "",
+    todoValue: ""
   },
   reducers: {
     onChangeInput: (state, { payload }) => {
       state.todoValue = payload;
     },
-    deleteTodo:(id, {todos} ) => {
-      todos = todos.map((prev)=>(prev.filter((id)=>todo.id != todo.id)))
+
+    deleteTodo: (state, { payload }) => {
+      const data = state.todos.filter((todo)=> todo.id !== payload)
+      state.todos = data
     },
     acceptedTodo: (state, { payload }) => {
       if (state.checked) {
@@ -27,19 +29,19 @@ const todoSlice = createSlice({
         let newTodoItem = {
           title: state.todoValue,
           completed: false,
-          id: uuid(),
+          id: uuid()
         };
 
         state.todos = [newTodoItem, ...state.todos];
         state.todoValue = "";
       }
-    },
-  },
+    }
+  }
 });
 
 export const todoReducer = todoSlice.reducer;
 
 export const todoActions = {
   ...todoSlice.actions,
-  getTodos,
+  getTodos
 };

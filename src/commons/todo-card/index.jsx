@@ -3,9 +3,11 @@ import * as S from "./styled";
 import { todoActions } from "../../libs/redux/todo-slice/todo-slice";
 
 const TodoItem = ({ todo }) => {
-  const { completed, title } = todo;
+  const { completed, title, id } = todo;
 
   const dispatch = useDispatch();
+
+
   const editTodo = () => {
     dispatch(todoActions.editTodo());
   };
@@ -15,7 +17,7 @@ const TodoItem = ({ todo }) => {
   };
 
   const deleteHandleTodo = () => {
-    dispatch(todoActions.deleteTodo());
+    dispatch(todoActions.deleteTodo(id));
   };
   return (
     <S.todoCont>
@@ -27,7 +29,7 @@ const TodoItem = ({ todo }) => {
       <S.titleTodo>{title}</S.titleTodo>
       <S.buttonsCont>
         <S.editButton onClick={editTodo}>edit</S.editButton>
-        <S.deleteButton onClick={() => deleteHandleTodo(todo.id)}>
+        <S.deleteButton onClick={() => deleteHandleTodo()}>
           delete
         </S.deleteButton>
       </S.buttonsCont>
