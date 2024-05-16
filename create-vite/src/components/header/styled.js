@@ -70,20 +70,27 @@ export const HeaderIcon = styled.img`
 
 
 export const HeaderMenuDivOne = styled.div`
-border: 1px solid white;
+
 
 `
 
 export const HeaderMenuDivTwo = styled.div`
 
-border: 1px solid white;
+
 `
 
 
 export const HeaderMenuList = styled.ul`
-
+display: flex;
+list-style: none;
+gap: 30px;
 
 `
 export const HeaderMenuListItem = styled.li`
+color: gray;
+cursor: pointer;
+`
 
+export const HeaderMenuAddress = styled.p`
+    color: white;
 `

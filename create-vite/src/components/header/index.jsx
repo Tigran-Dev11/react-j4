@@ -35,15 +35,15 @@ const Header = () => {
             <S.HeaderMenu>
                 <S.HeaderMenuDivOne>
                     <S.HeaderMenuList>
-                        {headerMenu.map(({path, title}) => (
+                        {headerMenu.map(({ path, title }) => (
                             <S.HeaderMenuListItem key={path}>
-                                    <NavLink to={path}>{title}</NavLink>
+                                <a href={path}>{title}</a>
                             </S.HeaderMenuListItem>
                         ))}
                     </S.HeaderMenuList>
                 </S.HeaderMenuDivOne>
                 <S.HeaderMenuDivTwo>
-
+                    <S.HeaderMenuAddress>Tel:(219) 555-0114</S.HeaderMenuAddress>
                 </S.HeaderMenuDivTwo>
             </S.HeaderMenu>
         </S.HeaderContainer>
