@@ -37,7 +37,7 @@ const Header = () => {
                     <S.HeaderMenuList>
                         {headerMenu.map(({ path, title }) => (
                             <S.HeaderMenuListItem key={path}>
-                                <a href={path}>{title}</a>
+                                <NavLink to={path}>{title}</NavLink>
                             </S.HeaderMenuListItem>
                         ))}
                     </S.HeaderMenuList>
