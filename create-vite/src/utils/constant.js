@@ -1,29 +1,39 @@
-import { v4 as uuid } from "uuid";
+
+export const ROUTES = {
+    home: "/",
+    shop: "/shop",
+    pages:"/pages",
+    blog:"/blog",
+    aboutUs:"/about-us",
+    contactUs:"/contact-us"
+
+};
+
 
 
 export const headerMenu = [
     {
-        id:uuid(),
+        path:ROUTES.home,
         title:"Home"
     },
     {
-        id:uuid(),
+        path:ROUTES.shop,
         title:"Shop"
     },
     {
-        id:uuid(),
+        path:ROUTES.pages,
         title:"Pages"
     },
     {
-        id:uuid(),
+        path:ROUTES.blog,
         title:"Blog"
     },
     {
-        id:uuid(),
+        path:ROUTES.aboutUs,
         title:"About Us"
     },
     {
-        id:uuid(),
+        path:ROUTES.contactUs,
         title:"Contact Us"
     },
 ];
