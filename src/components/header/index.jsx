@@ -7,10 +7,11 @@ const Header = () => {
     <S.HeaderCont>
       <S.component>
         <ul>
-          {headerMenu.map(title => {
-         <h1>{title}</h1>
+          {headerMenu.map((title, index) => {
+              return (
+                <h1 key={index}>{title}</h1>
+              )
           })}
-          <title>adsd</title>
         </ul>
       </S.component>
     </S.HeaderCont>
