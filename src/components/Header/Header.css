@@ -1,0 +1,30 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.head-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+}
