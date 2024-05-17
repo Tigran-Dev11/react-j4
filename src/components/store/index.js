@@ -1,4 +1,3 @@
-// store/index.js
 import { configureStore } from '@reduxjs/toolkit';
 import carsReducer from './carsSlice';
 import userReducer from './userSlice';

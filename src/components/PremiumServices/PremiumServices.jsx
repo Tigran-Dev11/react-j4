@@ -1,4 +1,3 @@
-// PremiumServices.jsx
 import React from 'react';
 import './PremiumServices.css';
 

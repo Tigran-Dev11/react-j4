@@ -1,4 +1,4 @@
-// FeaturedCars.jsx
+
 import React from 'react';
 import './FeaturedCars.css';
 

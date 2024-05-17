@@ -1,23 +1,24 @@
-// Header.jsx
 import React from 'react';
-import './Header.css';
+import * as S from './styled';
+import { NavLink } from 'react-router-dom';
+import Button from '../../commons/button';
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="logo">GARRENT</div>
-      <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#booking">Booking</a>
-        <a href="#cars">Cars</a>
-        <a href="#contacts">Contacts</a>
-      </nav>
-      <div className="auth-buttons">
-        <button className="btn login">Login</button>
-        <button className="btn sign-up">Sign Up</button>
-      </div>
-    </header>
+    <S.HeaderContainer>
+      <S.Logo>GARRENT</S.Logo>
+      <S.Navbar>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/booking">Booking</NavLink>
+        <NavLink to="/cars">Cars</NavLink>
+        <NavLink to="/contacts">Contacts</NavLink>
+      </S.Navbar>
+      <S.AuthButtons>
+        <Button title='Login' />
+        <Button title='Sign Up' />
+      </S.AuthButtons>
+    </S.HeaderContainer>
   );
 };
 

@@ -1,4 +1,3 @@
-// Testimonials.jsx
 import React from 'react';
 import './Testimonials.css';
 
@@ -12,7 +11,6 @@ const Testimonials = () => {
       quote: "I love their collection! Every time I visit them they have new additions which makes me come back again & again!",
       author: "Stephen Lim"
     }
-    // Добавьте дополнительные отзывы здесь
   ];
 
   return (

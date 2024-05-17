@@ -1,29 +1,27 @@
-// Footer.jsx
 import React from 'react';
-import './Footer.css';
+import * as S from './Footer.styled';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
+    <S.FooterContainer>
+      <S.FooterContent>
+        <S.FooterSection>
           <h3>About GARRENT</h3>
           <p>We specialize in offering luxury rental cars at affordable prices. Our collection includes BMWs, Mercedes Benz, and many more!</p>
-        </div>
-        <div className="footer-section">
+        </S.FooterSection>
+        <S.FooterSection>
           <h3>Contact Us</h3>
           <p>Feel free to call us: +1234567890</p>
           <p>Email: contact@garrent.com</p>
-        </div>
-        <div className="footer-section">
+        </S.FooterSection>
+        <S.FooterSection>
           <h3>Follow Us</h3>
-          {/* Social media icons would go here */}
-        </div>
-      </div>
-      <div className="footer-bottom">
+        </S.FooterSection>
+      </S.FooterContent>
+      <S.FooterBottom>
         <p>© 2024 GARRENT. All rights reserved.</p>
-      </div>
-    </footer>
+      </S.FooterBottom>
+    </S.FooterContainer>
   );
 };
 
