@@ -1,16 +1,15 @@
-import TodoHeader from "./components/todo-header";
-import TodoItem from "./components/todo-item";
-
-
-
+import Header from "./components/header";
+import TodoTask from "./components/todo-task";
+import TodoForm from "./components/todos-form";
 
 function App() {
  
 
   return (
     <>
-      <TodoHeader/>
-      <TodoItem/>
+      <Header />
+      <TodoForm />
+      <TodoTask />
     </>
   );
 }
