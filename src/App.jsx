@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Booking from './pages/Booking';
 import Cars from './pages/Cars';
-import Contacts from './components/ContactFrom/Contacts';
+import Contacts from './pages/Contacts';
 import './index.css';
 
 function App() {
