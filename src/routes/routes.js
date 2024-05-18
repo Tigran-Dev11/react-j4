@@ -14,7 +14,7 @@ export const routes = [
 
     {
         component: Shop,
-        path: ROUTES.sjop
+        path: ROUTES.shop
     },
     {
         component: Pages,
