@@ -1,8 +1,9 @@
-import { Router } from './routes/router'
+
 import './App.css'
 import Footer from './components/footer'
 import Header from './components/header'
 import Router from './routes/router'
+
 
 function App() {
 

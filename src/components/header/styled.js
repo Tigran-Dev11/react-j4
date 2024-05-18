@@ -15,11 +15,12 @@ export const Link = styled(NavLink)`
 export const HeaderTop = styled.div`
 
     width: 100%;
-    height: 50px;
+    height: 42px;
     border-bottom: 1px solid gray;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #FFFFFF;
 `
 
 export const HeaderSearch = styled.div`
