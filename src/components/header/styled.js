@@ -9,6 +9,8 @@ export const HeaderContainer = styled.div`
 `
 
 export const Link = styled(NavLink)`
+color: white;
+text-decoration: none;
 
 `
 
@@ -26,17 +28,31 @@ export const HeaderTop = styled.div`
 export const HeaderSearch = styled.div`
 
     width: 100%;
-    height: 120px;
+    height: 92px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
 `
 
+export const HeaderLogoOne = styled.img`
+
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+`
+export const HeaderLogoTwo = styled.img`
+
+        width: 144px;
+        height: 32px;
+        cursor: pointer;
+`
+
+
 export const HeaderMenu = styled.div`
     width: 100%;
-    height: 80px;
-    background-color: black;
+    height: 60px;
+    background-color: #333333;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -58,7 +74,8 @@ export const HeaderTopText = styled.p`
 `
 
 export const HeaderSearchDivOne = styled.div`
-
+    display: flex;
+    gap: 10px;
 `
 export const HeaderSearchDivTwo = styled.div`
 
@@ -91,10 +108,10 @@ display: flex;
 list-style: none;
 gap: 30px;
 
+
 `
 export const HeaderMenuListItem = styled.li`
-color: gray;
-cursor: pointer;
+
 `
 
 export const HeaderMenuAddress = styled.p`

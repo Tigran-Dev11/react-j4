@@ -1,9 +1,8 @@
 import * as S from "./styled.js";
 import Button from "../../commons/button";
-import SearchForm from "../../commons/form-search";
 import { IMAGES } from "../../assets/index.js";
-import { NavLink } from "react-router-dom";
 import { headerMenu } from "../../utils/constant.js"
+import HeaderSearchInput from "../../commons/header-search-input/index.jsx";
 
 
 const Header = () => {
@@ -22,10 +21,11 @@ const Header = () => {
             </S.HeaderTop>
             <S.HeaderSearch>
                 <S.HeaderSearchDivOne>
-                    Logo
+                    <S.HeaderLogoOne src={IMAGES.headerLogoOne} />
+                    <S.HeaderLogoTwo src={IMAGES.headerLogoTwo} />
                 </S.HeaderSearchDivOne>
                 <S.HeaderSearchDivTwo>
-                    <SearchForm type="text" placeholder="Search" />
+                    <HeaderSearchInput type="text" placeholder="Search" />
                 </S.HeaderSearchDivTwo>
                 <S.HeaderSearchDivThree>
                     <S.HeaderIcon src={IMAGES.heartIcon} alt="icon" />
