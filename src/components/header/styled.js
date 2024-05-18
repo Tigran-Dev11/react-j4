@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 
 export const HeaderContainer = styled.div`
     width: 100%;
     height: auto;
     
+`
+
+export const Link = styled(NavLink)`
+
 `
 
 export const HeaderTop = styled.div`
