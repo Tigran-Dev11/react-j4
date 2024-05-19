@@ -9,7 +9,8 @@ const MainContent = () => {
   return (
     <div className="main-content">
       <h1>Enjoy your life with our comfortable cars.</h1>
-      <p>Choose from our top models at reasonable costs & enjoy every moment spent together!</p>
+      <p>Carent, is ready to serve the best
+experience in car rental.</p>
       <button className="learn-more-btn" onClick={handleLearnMoreClick}>Learn More</button>
     </div>
   );
