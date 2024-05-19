@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styled';
 import { NavLink } from 'react-router-dom';
-import Button from '../../commons/button'; // Убедитесь, что путь к Button правильный
+//import Button from '../../commons/button'; // Убедитесь, что путь к Button правильный
 
 const Header = () => {
   return (
@@ -15,8 +15,8 @@ const Header = () => {
         <NavLink to="/contacts">Contacts</NavLink>
       </S.Navbar>
       <S.AuthButtons>
-        <Button title='Login' />
-        <Button title='Sign Up' />
+        {/* <Button title='Login' />
+        <Button title='Sign Up' /> */}
       </S.AuthButtons>
     </S.HeaderContainer>
   );

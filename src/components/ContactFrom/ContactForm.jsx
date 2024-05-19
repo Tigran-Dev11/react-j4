@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './ContactForm.styled';
+import * as S from './styled';
 
 const ContactForm = () => {
   return (

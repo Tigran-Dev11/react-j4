@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import CarsList from '../components/CarsList/CarsList';
+//import CarsList from '../components/CarsList/CarsList';
 
 const Cars = () => {
   return (
@@ -10,7 +10,7 @@ const Cars = () => {
       <main>
         <h1>Our Cars</h1>
         <p>Explore our wide selection of vehicles and find your perfect match.</p>
-        <CarsList />
+        {/* <CarsList /> */}
       </main>
       <Footer />
     </div>
