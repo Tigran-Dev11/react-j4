@@ -5,8 +5,7 @@ const AboutUs = () => {
   return (
     <div className="about-us">
       <h2>About Us</h2>
-      <p>We are specialized in offering luxury rental cars at affordable prices. We have all those luxurious brands which you always wanted to drive. Our collection includes BMWs, Mercedes Benz & many more! We offer special packages as well as customized ones as per your requirements so that you can enjoy long drives without any worries!</p>
-      <button className="book-now-btn">Book Now</button>
+      <p>We are a specialized team committed to providing reliable car rental services. One of the advantages of renting a car from us is offering competitive and transparent prices. By providing services such as comprehensive insurance ......</p>
     </div>
   );
 };

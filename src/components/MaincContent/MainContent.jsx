@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainContent.css';
+import './styled.js';
 
 const MainContent = () => {
   const handleLearnMoreClick = () => {
@@ -11,7 +11,6 @@ const MainContent = () => {
       <h1>Enjoy your life with our comfortable cars.</h1>
       <p>Carent, is ready to serve the best
 experience in car rental.</p>
-      <button className="learn-more-btn" onClick={handleLearnMoreClick}>Learn More</button>
     </div>
   );
 };
