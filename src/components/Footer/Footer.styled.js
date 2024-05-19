@@ -7,7 +7,6 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterContent = styled.div`
-  /* Стили для контента футера */
 `;
 
 export const FooterSection = styled.div`
