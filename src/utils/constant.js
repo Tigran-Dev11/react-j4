@@ -27,7 +27,7 @@ export const headerMenu = [
         title:"Login"
     },
     {
-        path:ROUTES.aboutUs,
-        title:"About Us"
+        path:ROUTES.signUp,
+        title:"Sign Up"
     },
 ];
