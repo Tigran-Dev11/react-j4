@@ -57,5 +57,19 @@ export const FooterContacts = styled.p`
 
 export const FooterDivTwo = styled.div`
 
+    display: flex;
 
 `
+export const FooterMenu = styled.div`
+    display: flex;
+    gap: 130px;
+`
+
+export const FooterMenuTitle =styled.p`
+color: white;
+`
+
+export const FooterMenuList= styled.ul`
+color: white;
+`
+

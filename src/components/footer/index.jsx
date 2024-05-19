@@ -1,4 +1,5 @@
 import { IMAGES } from "../../assets/index.js";
+import { footerMenu } from "../../utils/constant.js";
 import * as S from "./styled.js";
 
 
@@ -15,7 +16,11 @@ const Footer = () => {
                 <S.FooterContacts>(219) 555-0114 or Proxy@gmail.com</S.FooterContacts>
             </S.FooterDivOne>
             <S.FooterDivTwo>
-                
+                <S.FooterMenu>
+                {footerMenu.map(({ id, title }) => (
+                    <S.FooterMenuTitle key={id}>{title}</S.FooterMenuTitle>
+                ))}
+                </S.FooterMenu>
             </S.FooterDivTwo>
         </S.FooterContainer>
     )
