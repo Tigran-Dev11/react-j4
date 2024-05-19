@@ -37,3 +37,8 @@ export const headerMenu = [
         title:"Contact Us"
     },
 ];
+
+
+export const footerMenu = [
+
+]
