@@ -1,8 +1,8 @@
 import * as S from "./styled.js";
 import Button from "../../commons/button";
 import { IMAGES } from "../../assets/index.js";
-import { headerMenu } from "./data.js"
 import HeaderSearchInput from "../../commons/header-search-input/index.jsx";
+import { headerMenu } from "../../utils/constant.js";
 
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
             <S.HeaderMenu>
                 <S.HeaderMenuDivOne>
                     <S.HeaderMenuList>
-                        {headerMenu().map(({ path, title }) => (
+                        {headerMenu.map(({ path, title }) => (
                             <S.HeaderMenuListItem key={path}>
                                 <S.Link to={path}>{title}</S.Link>
                             </S.HeaderMenuListItem>
