@@ -24,19 +24,56 @@ export const commentsUsers = [
 
 export const ROUTES = {
     home:"/",
+    basket:"/basket",
+    login:"/login",
+    register:"/register"
 }
 
-export const headerMenu = [
+export const headerMenus = [
     {
-        title:"Shop"
+        title:"Shop",
     },
     {
-        title:"On Sale"
+        title:"On Sale",
     },
     {
-        title:"down arrow"
+        title:"New Arrivals",
     },
     {
-        title:"Brands"
+        title:"Brands",
+
     }
 ];
+
+export const purchasedProducts = [
+    {
+        quantity:"200+",
+        productsBranch:"International Brands"
+    },
+    {
+        quantity:"2,000+",
+        productsBranch:"High-Quality Products"
+    },
+    {
+        quantity:"30,000+",
+        productsBranch:"Happy Customers"
+    }
+]
+
+export const brandsNames = [
+    {
+        brand:IMAGES.versace
+    },
+    {
+        brand:IMAGES.zara
+    },
+    {
+        brand:IMAGES.gucci
+    },
+    {
+        brand:IMAGES.prada
+    },
+    {
+        brand:IMAGES.cKlein
+    }   
+]
