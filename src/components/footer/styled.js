@@ -60,16 +60,22 @@ export const FooterDivTwo = styled.div`
     display: flex;
 
 `
+export const FooterMenuContainer = styled.div`
+    display: flex;
+    gap: 30px;
+`
+
 export const FooterMenu = styled.div`
     display: flex;
-    gap: 130px;
+    flex-direction: column;
+    gap: 30px;
 `
 
 export const FooterMenuTitle =styled.p`
 color: white;
 `
 
-export const FooterMenuList= styled.ul`
-color: white;
+export const FooterMenuList= styled.p`
+color: #999999;
 `
 

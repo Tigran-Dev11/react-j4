@@ -17,16 +17,16 @@ const Footer = () => {
         <S.FooterContacts>(219) 555-0114 or Proxy@gmail.com</S.FooterContacts>
       </S.FooterDivOne>
       <S.FooterDivTwo>
-        <S.FooterMenu>
+        <S.FooterMenuContainer>
           {footerMenu().map(({ id, title, items }) => (
-            <div key={id} style={{ display: "flex", flexDirection: "column" }}>
+            <S.FooterMenu key={id} >
               <S.FooterMenuTitle>{title}</S.FooterMenuTitle>
               {items.map(({ name }) => (
-                <p key={name}>{name}</p>
+                <S.FooterMenuList key={name}>{name}</S.FooterMenuList>
               ))}
-            </div>
+            </S.FooterMenu>
           ))}
-        </S.FooterMenu>
+        </S.FooterMenuContainer>
       </S.FooterDivTwo>
     </S.FooterContainer>
   );
