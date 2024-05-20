@@ -1,12 +1,14 @@
-import "./style.css";
+import { IMAGES } from "../../assets/index.js";
+import * as S from "./styled.js";
 
 
 const Home = () =>{
 
     return (
-        <div>
-            Home
-        </div>
+        <S.HomeContainer>
+            <S.MainBannerOne src={IMAGES.homeBannerOne}/>
+            
+        </S.HomeContainer>
     )
 };
 
