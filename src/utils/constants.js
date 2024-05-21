@@ -1,5 +1,65 @@
 import { IMAGES } from "../assets";
 
+
+export const ROUTES = {
+    home:"/",
+    basket:"/basket",
+    login:"/login",
+    register:"/register"
+}
+
+
+
+
+export const brandsNames = [
+    {
+        brand:IMAGES.versace
+    },
+    {
+        brand:IMAGES.zara
+    },
+    {
+        brand:IMAGES.gucci
+    },
+    {
+        brand:IMAGES.prada
+    },
+    {
+        brand:IMAGES.cKlein
+    }   
+]
+
+export const headerMenus = [
+    {
+        title:"Shop",
+    },
+    {
+        title:"On Sale",
+    },
+    {
+        title:"New Arrivals",
+    },
+    {
+        title:"Brands",
+
+    }
+];
+
+export const purchasedProducts =  [
+    {
+        quantity:"200+",
+        productsBranch:"International Brands"
+    },
+    {
+        quantity:"2,000+",
+        productsBranch:"High-Quality Products"
+    },
+    {
+        quantity:"30,000+",
+        productsBranch:"Happy Customers"
+    }
+]
+
 export const commentsUsers = [
     {
        title:"Sarah M.",
@@ -20,60 +80,4 @@ export const commentsUsers = [
         description:"As someone whos always on the lookout for unique fashion pieces, Im thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”",
         approvedUser:IMAGES.successIcon
     }
-]
-
-export const ROUTES = {
-    home:"/",
-    basket:"/basket",
-    login:"/login",
-    register:"/register"
-}
-
-export const headerMenus = [
-    {
-        title:"Shop",
-    },
-    {
-        title:"On Sale",
-    },
-    {
-        title:"New Arrivals",
-    },
-    {
-        title:"Brands",
-
-    }
-];
-
-export const purchasedProducts = [
-    {
-        quantity:"200+",
-        productsBranch:"International Brands"
-    },
-    {
-        quantity:"2,000+",
-        productsBranch:"High-Quality Products"
-    },
-    {
-        quantity:"30,000+",
-        productsBranch:"Happy Customers"
-    }
-]
-
-export const brandsNames = [
-    {
-        brand:IMAGES.versace
-    },
-    {
-        brand:IMAGES.zara
-    },
-    {
-        brand:IMAGES.gucci
-    },
-    {
-        brand:IMAGES.prada
-    },
-    {
-        brand:IMAGES.cKlein
-    }   
 ]

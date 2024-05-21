@@ -1,34 +1,63 @@
-import { useNavigate } from "react-router-dom"
-import Input from "../../../components/commons/input"
-import * as S from "./styled"
-import { ROUTES } from "../../../utils/constants"
-import Button from "../../../components/commons/button"
+import { useNavigate } from "react-router-dom";
+import * as S from "./styled";
+import { ROUTES } from "../../../utils/constants";
+import Input from "../../../common/input/index";
+import Button from "../../../common/button/index";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { SCHEMA } from "../../../validation";
 
 const Login = () => {
+  const navigate = useNavigate();
 
-const navigate = useNavigate()
-    
-const goToRegister = () => {
-    navigate(ROUTES.register)
-}
- 
-    return(
-        <S.loginContainer>
-            <S.loginCardCont>
-             <S.titleLogin>Login</S.titleLogin>
-             <S.formInputs onSubmit={onsubmit}>
-                <S.label htmlFor="fullName">userName</S.label>
-                <Input name="fullName" type="text" required="required" /> 
-                <S.label htmlFor="Email">Email</S.label>
-                <Input name="Email"  type="email" required="required" />
-                <S.label htmlFor="password">password</S.label>
-                <Input name="password" type="password" required="required"/>
-                <S.linkToRegister onClick={goToRegister}>do not have an account ?</S.linkToRegister>
-                <Button>enter</Button>
-             </S.formInputs>
-            </S.loginCardCont>
-        </S.loginContainer>
-    )
-}
+  const goToRegister = () => {
+    navigate(ROUTES.register);
+  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(SCHEMA.loginSchema),
+  });
 
-export default Login
+  const onSubmit = (data) => {
+    localStorage.getItem("data", JSON.stringify(data));
+
+    navigate(ROUTES.userpage);
+  };
+
+  return (
+    <S.loginContainer>
+      <S.loginCardCont>
+        <S.titleLogin>Login</S.titleLogin>
+        <S.formInputs onSubmit={handleSubmit(onSubmit)}>
+          <S.label htmlFor="Email">Email</S.label>
+          <Input
+            type="email"
+            placeholder="Email *"
+            register={register("email")}
+            variant={"primary"}
+            error={errors?.email}
+          />
+          <S.label htmlFor="password">Password</S.label>
+          <Input
+            type="password"
+            placeholder="Password *"
+            register={register("password")}
+            error={errors?.password}
+            variant={"primary"}
+            isPasswordMode={true}
+            className="loginPassword"
+          />
+          <S.linkToRegister onClick={goToRegister}>
+            do not have an account ?
+          </S.linkToRegister>
+          <Button>enter</Button>
+        </S.formInputs>
+      </S.loginCardCont>
+    </S.loginContainer>
+  );
+};
+
+export default Login;

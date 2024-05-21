@@ -1,9 +1,9 @@
 import * as S from "./styled";
-import { headerMenus } from "../../utils/constants";
-import { IMAGES } from "../../assets";
+import { IMAGES } from "../../assets/index";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constants";
-import { useLayoutEffect } from "react";
+import { headerMenus } from "../../utils/constants";
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <S.HeaderCont>
       <S.component>
-        <S.titleShop>SHOP.CO</S.titleShop>
+        <S.titleShop onClick={goToHome}>SHOP.CO</S.titleShop>
         {headerMenus.map((menu, index) => {
           return <S.Link key={index}>{menu.title}</S.Link>;
         })}

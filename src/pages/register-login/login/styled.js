@@ -3,7 +3,7 @@ import { IMAGES } from "../../../assets";
 
 export const loginContainer = styled.div`
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height:100vh;
   position: relative;
   top: 158px;
   background-image: url(${IMAGES.mainRectangle});
@@ -20,11 +20,12 @@ export const titleLogin = styled.h3`
 
 export const loginCardCont = styled.div`
   width: 460px;
-  height: 600px;
+  min-height: 640px;
+  padding-block: 20px;
   background-color: transparent;
   backdrop-filter: blur(50px);
   border: 2px solid white;
-  margin-top: 100px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +59,7 @@ top: 40px;
 export const linkToRegister = styled.a`
 cursor: pointer;
 text-decoration: underline;
-margin-left: 120px;
+margin-left: 60px;
 color: black;
 opacity: 1.2;
 `

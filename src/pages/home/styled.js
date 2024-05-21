@@ -92,16 +92,17 @@ text-align: left;
 `
 
 export const explanationShoes = styled.p`
-max-width: 545px;
+width: 545px;
 min-height: 33px;
-top: 442px;
-left: 100px;
-gap: 0px;
 opacity: 0px;
 font-size: 16px;
 font-weight: 400;
 line-height: 22px;
 text-align: left;
+
+@media ${BREAKPOINTS.md}{
+    width: 300px;
+}
 `
 
 export const quantityCont = styled.ul`

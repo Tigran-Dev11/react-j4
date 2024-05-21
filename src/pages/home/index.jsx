@@ -1,9 +1,11 @@
+import * as S from "./styled";
 import { IMAGES } from "../../assets";
 import Brands from "../../components/brands-section";
-import Button from "../../components/commons/button";
+import Button from "../../common/button";
 import NewArriwals from "../../components/shoes-description/new-arriwals";
 import { purchasedProducts } from "../../utils/constants";
-import * as S from "./styled";
+
+
 
 const Home = () => {
   return (

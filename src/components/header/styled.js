@@ -21,6 +21,7 @@ export const titleShop = styled.h1`
   font-weight: 700;
   line-height: 38.4px;
   text-align: left;
+  cursor: pointer;
 `;
 export const itemContainer = styled.ul`
   gap: 20px;
