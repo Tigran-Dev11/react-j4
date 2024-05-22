@@ -64,17 +64,8 @@ export const FooterMenu = styled.div`
 `;
 
 export const FooterMenuTitle = styled.p`
-<<<<<<< HEAD
-color: white;
-`
-
-export const FooterMenuList = styled.p`
-color: #999999;
-`
-=======
   color: white;
 `;
->>>>>>> 0583c539a76d8b75dc5218b73a7e489116580dbc
 
 export const FooterMenuList = styled.p`
   color: #999999;
