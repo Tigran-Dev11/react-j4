@@ -5,7 +5,7 @@ const ProductItem = () =>{
 
     return(
         <div>
-            
+              product
         </div>
     )
 };

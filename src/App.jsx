@@ -1,8 +1,8 @@
 
 import './App.css'
-import Footer from './components/footer'
 import Header from './components/header'
 import Router from './routes/router'
+import Footer from './components/footer'
 
 
 function App() {

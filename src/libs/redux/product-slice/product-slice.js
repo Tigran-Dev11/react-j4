@@ -1,43 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { FETCH_STATUS } from "../../../utils/constant";
-import { getProducts, productSliceName} from "./actions";
-
-
+import { getProducts, productSliceName } from "./actions";
 
 const productSlice = createSlice({
+  name: productSliceName,
+  initialState: {
+    products: [],
+    getProductsStatus: FETCH_STATUS.IDLE
+  },
 
-    name: productSliceName,
-    initialState: {
-        products: [],
-        getProductsStatus: FETCH_STATUS.IDLE
-    },
+  reducers: {},
 
-    reducers: {
-
-    },
-
-    extraReducers: (builder) => {
-
-        builder.addCase(getProducts.pending, (state) => {
-            state.getProductsStatus = FETCH_STATUS.PANDING;
-        }),
-            builder.addCase(getProducts.fulfilled, (state, { payload }) => {
-                state.getProductsStatus = FETCH_STATUS.SUCCESS;
-                state.products = payload;
-            });
-        builder.addCase(getProducts.rejected, (state) => {
-            state.getProductsStatus = FETCH_STATUS.REJECTED;
-        });
-    }
-
+  extraReducers: (builder) => {
+    builder.addCase(getProducts.pending, (state) => {
+      state.getProductsStatus = FETCH_STATUS.PANDING;
+    }),
+      builder.addCase(getProducts.fulfilled, (state, { payload }) => {
+        state.getProductsStatus = FETCH_STATUS.SUCCESS;
+        state.products = payload;
+      });
+    builder.addCase(getProducts.rejected, (state) => {
+      state.getProductsStatus = FETCH_STATUS.REJECTED;
+    });
+  }
 });
-
-
 
 export const productReducer = productSlice.reducer;
 
-
 export const productActions = {
-    ...productSlice.actions,
-    getProducts
+  ...productSlice.actions,
+  getProducts
 };

@@ -14,13 +14,16 @@ const Shop = () => {
 
     const dispatch = useDispatch();
 
+
     useEffect(() => {
         dispatch(productActions.getProducts());
     }, []);
 
+    console.log(products);
+
     return (
         <div>
-            {products.map((product) => (
+            {products?.map((product) => (
                 <ProductItem key={product.id} />
             ))}
         </div>
