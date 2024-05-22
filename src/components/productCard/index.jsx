@@ -1,47 +1,44 @@
 import * as S from "./styled";
 import { useState, useContext } from "react";
-import { GlobalContext } from "../../provider";
 
 const ProductCard = ({ products }) => {
   const [count, setCount] = useState(1);
-  const { basketItems, setBasketItems } = useContext(GlobalContext);
 
-  console.log(products);
 
-  const addBasket = () => {
-    const basketCard = {
-      id: products.id,
-      title: products.title,
-      image: products.image,
-      price: products.price,
-      count,
-    };
+  // const addBasket = () => {
+  //   const basketCard = {
+  //     id: products.id,
+  //     title: products.title,
+  //     image: products.image,
+  //     price: products.price,
+  //     count,
+  //   };
 
-    setBasketItems((prevState) => {
-      const filterItem = prevState.find((item) => item.id === products.id);
+  //   setBasketItems((prevState) => {
+  //     const filterItem = prevState.find((item) => item.id === products.id);
 
-      if (filterItem) {
-        const newData = prevState.map((elem) => {
-          if (elem.id === products.id) {
-            return {
-              ...elem,
-              count: elem.count + count,
-            };
-          }
-          return elem;
-        });
+  //     if (filterItem) {
+  //       const newData = prevState.map((elem) => {
+  //         if (elem.id === products.id) {
+  //           return {
+  //             ...elem,
+  //             count: elem.count + count,
+  //           };
+  //         }
+  //         return elem;
+  //       });
 
-        localStorage.setItem("basketItems", JSON.stringify(newData));
+  //       localStorage.setItem("basketItems", JSON.stringify(newData));
 
-        return newData;
-      } else {
-        const newData = [...prevState, basketCard];
+  //       return newData;
+  //     } else {
+  //       const newData = [...prevState, basketCard];
 
-        localStorage.setItem("basketItems", JSON.stringify(newData));
-        return newData;
-      }
-    });
-  };
+  //       localStorage.setItem("basketItems", JSON.stringify(newData));
+  //       return newData;
+  //     }
+  //   });
+  // };
 
   const minusItem = () => {
     if (count > 1) {
@@ -55,7 +52,7 @@ const ProductCard = ({ products }) => {
 
   return (
     <S.productContainer>
-      {products.title}
+      {/* {products.title}
       <S.productItem>
         <S.productImg src={products.image} alt="image" />
         <p>{products.price * count} $</p>
@@ -67,7 +64,7 @@ const ProductCard = ({ products }) => {
           <S.plusItem onClick={plusItem}>+</S.plusItem>
         </S.productCount>
         <S.addBasketButton onClick={addBasket}>Add Basket</S.addBasketButton>
-      </S.addBasket>
+      </S.addBasket> */}
     </S.productContainer>
   );
 };

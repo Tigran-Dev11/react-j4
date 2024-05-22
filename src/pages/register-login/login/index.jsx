@@ -22,7 +22,7 @@ const Login = () => {
   });
 
   const onSubmit = (data) => {
-    localStorage.getItem("data", JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
 
     navigate(ROUTES.userpage);
   };
