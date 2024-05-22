@@ -10,6 +10,7 @@ export const getProduct = createAsyncThunk(
     try {
       const response = await productServices.getProduct();
 
+
       return response.data;
     } catch (error) {
       rejectWithValue(error);

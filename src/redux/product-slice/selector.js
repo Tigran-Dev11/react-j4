@@ -1,1 +1,3 @@
-export const productSelector = (state) => state.products;
+import { productSliceName } from "./actions";
+
+export const productSelector = (state) => state[productSliceName];
