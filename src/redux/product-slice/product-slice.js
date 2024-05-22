@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
-import { getProduct, productSliceName } from "./action";
+import { getProduct, productSliceName } from "./actions";
 import { FETCH_STATUS } from "../../utils/constants";
 
 const productSlice = createSlice({
