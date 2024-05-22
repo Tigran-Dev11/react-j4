@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.4",
+    "axios": "^1.7.2",
     "babel-plugin-styled-components": "^2.1.4",
     "i18next": "^23.11.4",
     "i18next-browser-languagedetector": "^8.0.0",
