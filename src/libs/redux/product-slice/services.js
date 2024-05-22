@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { getProducts } from './actions';
 
 
 export const productServices = {
-    getTodos: () => axios('https://www.fruityvice.com/api/fruit/all')
+    getProducts: () => axios('https://www.fruityvice.com/api/fruit/all')
 };

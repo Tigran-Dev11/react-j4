@@ -20,9 +20,9 @@ const Shop = () => {
 
     return (
         <div>
-            {products.map((product) => (
-                <ProductItem key={product.id} />
-            ))}
+            {products.map((product) => {
+                return <ProductItem key={product.id} />
+            })}
         </div>
     )
 };

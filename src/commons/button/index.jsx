@@ -1,11 +1,11 @@
-import "./style.css";
+import * as S from "./styled.js";
 
 
 const Button = ({title, onClick}) => {
 
 
     return (
-        <button onClick={onClick}>{title}</button>
+        <S.Button onClick={onClick}>{title}</S.Button>
     )
 };
 

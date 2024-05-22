@@ -1,12 +1,12 @@
 
 
-const ProductItem = () =>{
+const ProductItem = () => {
 
 
-    return(
-        <div>
+    return (
+        <>
             
-        </div>
+        </>
     )
 };
 

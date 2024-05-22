@@ -71,11 +71,11 @@ export const FooterMenu = styled.div`
     gap: 30px;
 `
 
-export const FooterMenuTitle =styled.p`
+export const FooterMenuTitle = styled.p`
 color: white;
 `
 
-export const FooterMenuList= styled.p`
+export const FooterMenuList = styled.p`
 color: #999999;
 `
 
