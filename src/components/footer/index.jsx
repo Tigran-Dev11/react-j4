@@ -1,6 +1,6 @@
 import { IMAGES } from "../../assets/index.js";
 import { footerMenu } from "./data.js";
-import * as S from "./styled.js";
+import * as S from "./styled";
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
       <S.FooterDivTwo>
         <S.FooterMenuContainer>
           {footerMenu().map(({ id, title, items }) => (
-            <S.FooterMenu key={id} >
+            <S.FooterMenu key={id}>
               <S.FooterMenuTitle>{title}</S.FooterMenuTitle>
               {items.map(({ name }) => (
                 <S.FooterMenuList key={name}>{name}</S.FooterMenuList>
