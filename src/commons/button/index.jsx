@@ -1,10 +1,10 @@
 import * as S from './styled.js'
 
 
-const Button = ({title, onClick}) => {
+const Button = ({onClick,children, ...props}) => {
 
     return (
-        <S.Btn onClick={onClick}> {title}</S.Btn>
+        <S.Button onClick={onClick} {...props}>{children}</S.Button>
     )
 };
 

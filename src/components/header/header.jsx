@@ -1,6 +1,6 @@
-import * as S from "./styled";
 import { headerMenu } from "../../utils/constant";
 import { IMAGES } from "../../assets/images";
+import * as S from './styled'
 
 const Header = () => {
   return (
@@ -14,6 +14,7 @@ const Header = () => {
           </S.Li>
         ))}
       </S.Ul>
+      <S.Inp placeholder="   Search"></S.Inp>
       </S.MenuHeader>
   );
 };
