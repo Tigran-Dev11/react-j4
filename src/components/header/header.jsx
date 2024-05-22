@@ -5,16 +5,9 @@ import { IMAGES } from "../../assets/images";
 const Header = () => {
     return (
 
-        <S.MenuHeader>
-            <S.Logo src={IMAGES.group}></S.Logo>
-            <S.Ul >
-                {headerMenu.map(({ title, path }) => (
-                    <S.Li key={path}>
-                        <S.A href={path}>{title}</S.A>
-                    </S.Li>
-                ))}
-            </S.Ul>
-        </S.MenuHeader>
+        <div>
+            header
+        </div>
     );
 };
 

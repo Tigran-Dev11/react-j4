@@ -1,19 +1,15 @@
 export const ROUTES = {
-    stores: "stores",
-    HelpSupport: "Help & Support"
+  stores: "/stores",
+  HelpSupport: "/help"
 };
 
-
-
 export const headerMenu = [
-    {
-        path: ROUTES.stores,
-        title: "Stores"
-    },
-    {
-        path: ROUTES.HelpSupport,
-        title: "Help & Support"
-    },
-
-
+  {
+    path: ROUTES.stores,
+    title: "Stores"
+  },
+  {
+    path: ROUTES.HelpSupport,
+    title: "Help & Support"
+  }
 ];
