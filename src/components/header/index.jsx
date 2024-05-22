@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../utils/constants";
 import { headerMenus } from "../../utils/constants";
 
-
 const Header = () => {
   const navigate = useNavigate();
   const goToBasketPage = () => {
@@ -16,9 +15,8 @@ const Header = () => {
   };
 
   const goToHome = () => {
-    navigate(ROUTES.home)
-  }
- 
+    navigate(ROUTES.home);
+  };
 
   return (
     <S.HeaderCont>
@@ -35,7 +33,7 @@ const Header = () => {
           </S.searchContainer>
           <S.basketUser onClick={goToBasketPage} src={IMAGES.basket} />
           <S.userProfile src={IMAGES.profileUser} onClick={goToProfile} />
-          <S.homeIcon src={IMAGES.homeIcon} onClick={goToHome}/>
+          <S.homeIcon src={IMAGES.homeIcon} onClick={goToHome} />
         </S.itemContainer>
       </S.component>
     </S.HeaderCont>

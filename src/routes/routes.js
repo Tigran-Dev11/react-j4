@@ -6,25 +6,25 @@ import { ROUTES } from "../utils/constants";
 
 const routes = [
   {
-    id:1,
+    id: 1,
     component: Home,
     path: ROUTES.home,
   },
   {
-    id:2,
-    component:Basket,
-    path:ROUTES.basket
+    id: 2,
+    component: Basket,
+    path: ROUTES.basket,
   },
   {
-    id:3,
-    component:Login,
-    path:ROUTES.login
+    id: 3,
+    component: Login,
+    path: ROUTES.login,
   },
   {
-    id:4,
-    component:Register,
-    path:ROUTES.register
-  }
+    id: 4,
+    component: Register,
+    path: ROUTES.register,
+  },
 ];
 
 export default routes;

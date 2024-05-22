@@ -11,7 +11,9 @@ const NewArriwals = () => {
     const getProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios("https://fakestoreapi.com/products");
+        const response = await axios(
+          "https://api.escuelajs.co/api/v1/products"
+        );
         if (response?.status) {
           setProducts(response.data);
           setLoading(false);
@@ -31,7 +33,11 @@ const NewArriwals = () => {
   return (
     <S.shoesContainer>
       <S.titleShoes>NEW ARRIVALS</S.titleShoes>
-
+      <S.productTop>
+        {products?.map((products, index) => (
+          <ProductCard key={index} products={products} />
+        ))}
+      </S.productTop>
       <ProductCard />
     </S.shoesContainer>
   );

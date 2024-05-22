@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TopSelling = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default TopSelling
+export default TopSelling;

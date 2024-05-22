@@ -13,8 +13,8 @@ import gucci from "./images/gucci.png";
 import cKlein from "./images/cKlein.png";
 import prada from "./images/prada.png";
 import menu from "./images/menu.svg";
-import hidePass from "./images/hide-pass.svg"
-import showPass from "./images/show-pass.svg"
+import hidePass from "./images/hide-pass.svg";
+import showPass from "./images/show-pass.svg";
 
 export const IMAGES = {
   basket,
@@ -33,5 +33,5 @@ export const IMAGES = {
   cKlein,
   menu,
   hidePass,
-  showPass
+  showPass,
 };

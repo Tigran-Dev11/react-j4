@@ -7,3 +7,5 @@ height: 700px;
 
 `
 export const titleShoes = styled.h1``
+
+export const productTop = styled.div``

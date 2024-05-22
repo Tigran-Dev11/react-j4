@@ -5,8 +5,6 @@ import Button from "../../common/button";
 import NewArriwals from "../../components/shoes-description/new-arriwals";
 import { purchasedProducts } from "../../utils/constants";
 
-
-
 const Home = () => {
   return (
     <S.AllContentContainer>

@@ -1,11 +1,12 @@
-import * as S from "./styled"
+import * as S from "./styled";
 import { useState, useContext } from "react";
 import { GlobalContext } from "../../provider";
 
 const ProductCard = ({ products }) => {
   const [count, setCount] = useState(1);
   const { basketItems, setBasketItems } = useContext(GlobalContext);
-  
+
+  console.log(products);
 
   const addBasket = () => {
     const basketCard = {
@@ -13,8 +14,8 @@ const ProductCard = ({ products }) => {
       title: products.title,
       image: products.image,
       price: products.price,
-      count
-    }
+      count,
+    };
 
     setBasketItems((prevState) => {
       const filterItem = prevState.find((item) => item.id === products.id);
@@ -24,7 +25,7 @@ const ProductCard = ({ products }) => {
           if (elem.id === products.id) {
             return {
               ...elem,
-              count: elem.count + count
+              count: elem.count + count,
             };
           }
           return elem;
@@ -40,25 +41,23 @@ const ProductCard = ({ products }) => {
         return newData;
       }
     });
-
-  }
+  };
 
   const minusItem = () => {
     if (count > 1) {
-      setCount(count - 1)
+      setCount(count - 1);
     }
-  }
+  };
 
   const plusItem = () => {
-    if (count < 10)
-      setCount(count + 1)
-  }
+    if (count < 10) setCount(count + 1);
+  };
 
   return (
     <S.productContainer>
+      {products.title}
       <S.productItem>
-        <p>{products.category}</p>
-        <S.productImg src={products.image} alt="image"/>
+        <S.productImg src={products.image} alt="image" />
         <p>{products.price * count} $</p>
       </S.productItem>
       <S.addBasket>
@@ -67,10 +66,10 @@ const ProductCard = ({ products }) => {
           <p>{count}</p>
           <S.plusItem onClick={plusItem}>+</S.plusItem>
         </S.productCount>
-        <S.addBasketButton onClick={addBasket} >Add Basket</S.addBasketButton>
+        <S.addBasketButton onClick={addBasket}>Add Basket</S.addBasketButton>
       </S.addBasket>
     </S.productContainer>
   );
 };
 
-export default ProductCard
+export default ProductCard;

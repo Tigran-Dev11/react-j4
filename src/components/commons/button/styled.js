@@ -13,7 +13,7 @@ export const button = styled.button`
   background-color: ${COLORS.black};
   transition: 0.6s;
 
-  &:hover{
+  &:hover {
     transform: scaleX(1.1);
     transition: 0.6s;
   }

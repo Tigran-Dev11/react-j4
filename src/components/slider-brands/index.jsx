@@ -12,15 +12,15 @@ function AutoPlay() {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
   };
 
   return (
     <div className="slider-container">
       <Slider {...settings}>
-      {brandsNames.map((item,index)=>{
-    return <img key={index} src={item.brand} alt={index} />
-  })}
+        {brandsNames.map((item, index) => {
+          return <img key={index} src={item.brand} alt={index} />;
+        })}
       </Slider>
     </div>
   );

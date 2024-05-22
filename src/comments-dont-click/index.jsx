@@ -1,6 +1,7 @@
 // import * as S from "./styled";
 // import { commentsUsers } from "../../utils/constants";
-{/* <S.HomeCont>
+{
+  /* <S.HomeCont>
 <S.ul>
   {commentsUsers.map(
     ({ title, description, fiveStars, approvedUser }) => (
@@ -15,12 +16,10 @@
     )
   )}
 </S.ul>
-</S.HomeCont> */}
+</S.HomeCont> */
+}
 
 //jsx code
-
-
-
 
 //styled components
 
