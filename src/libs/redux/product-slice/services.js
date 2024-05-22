@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import axios from 'axios';
-import { getProducts } from './actions';
-
-
-export const productServices = {
-    getProducts: () => axios('https://www.fruityvice.com/api/fruit/all')
-};
-=======
 export const productServices = {
   getProducts: () => {
     const data = [
@@ -705,4 +696,3 @@ export const productServices = {
     });
   }
 };
->>>>>>> 0583c539a76d8b75dc5218b73a7e489116580dbc

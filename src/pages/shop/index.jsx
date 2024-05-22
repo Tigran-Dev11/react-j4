@@ -19,20 +19,12 @@ const Shop = () => {
         dispatch(productActions.getProducts());
     }, []);
 
-    console.log(products);
-
     return (
-        <div>
-<<<<<<< HEAD
-            {products.map((product) => {
-                return <ProductItem key={product.id} />
-            })}
-=======
+        <S.Container>
             {products?.map((product) => (
-                <ProductItem key={product.id} />
+                <ProductItem key={product.id} products={product}/>
             ))}
->>>>>>> 0583c539a76d8b75dc5218b73a7e489116580dbc
-        </div>
+        </S.Container>
     )
 };
 
