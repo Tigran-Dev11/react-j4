@@ -3,20 +3,43 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
 width:100%;
-height:80px;
-background-color: bisque;
+height:100px;
+background-color: #FAEDDF;
 border-bottom:solid 1px;
-margin:0;
-padding:0;
+
 `
+
+export const TopMenuContainer = styled.div`
+background-color:#826300;
+height:40px;
+display:flex;
+justify-content:center;
+align-items:center;
+`
+export const TextContainer = styled.div`
+width: 200px;
+display: flex;
+justify-content: space-between;
+`
+
+
+export const Text = styled.p`
+color:white;
+`
+
 export const MenuContainer = styled.div`
+display:flex;
+justify-content:space-evenly;
+height:60px;
+
 `
 
 
 export const Ul = styled.ul`
+width:1000px;
+height:60px;
 display:flex;
-justify-content: space-around;
-
+justify-content: space-evenly;
 align-items:center;
 
 `
@@ -26,5 +49,30 @@ list-style:none;
 export const Apath = styled.a`
 color:black;
 text-decoration:none;
+`
+export const Logo = styled.img`
+width:90px;
+height:90px;
+`
+export const LogoContainer = styled.div`
+width: 80px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+`
 
+
+export const ImageContainer = styled.img`
+width:18px;
+height:18px;
+`
+
+
+export const IconsContainer = styled.div`
+width:100px;
+height: 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 `
