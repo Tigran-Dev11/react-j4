@@ -2,13 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { counterSelector } from "../../libs/redux/counter-slice/counter-selector.js"
 import * as S from "./styled.js";
 import { counterActions } from "../../libs/redux/counter-slice/counter-slice.js";
-import { useNavigate } from "react-router-dom";
 import { productActions } from "../../libs/redux/product-slice/product-slice.js";
 
 const ProductItem = ({ products }) => {
 
     const { number } = useSelector(counterSelector);
-   
+
     const dispatch = useDispatch();
 
     const decrement = () => {
@@ -22,7 +21,7 @@ const ProductItem = ({ products }) => {
 
     const addBasket = () => {
         dispatch(productActions.addBasket());
-        
+
     };
 
 

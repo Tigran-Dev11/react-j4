@@ -17,12 +17,18 @@ import blackberry from "../assets/images/Blackberry.jpg";
 import kiwi from "../assets/images/Kiwi.jpg";
 import pineapple from "../assets/images/Pineapple.png";
 import orange from "../assets/images/Orange.jpg";
+import contactUsHeader from "../assets/images/contactUsHeader.png";
+import contactInfo from "../assets/images/ContactInfo.png";
+import contactMessage from "../assets/images/ContactMessage.png";
+import map from "../assets/images/map.png";
+
 
 
 
 export const IMAGES = {
     heartIcon, basketIcon, headerLogoOne, headerLogoTwo, footerIcon,
     homeBannerOne, homeBannerTwo, homeBannerThree, homeBannerFour, persimmon, strawberry,
-    banana, tomato, pear, durian, blackberry, kiwi, pineapple, orange,
+    banana, tomato, pear, durian, blackberry, kiwi, pineapple, orange, contactUsHeader, 
+    contactInfo, contactMessage, map
 
 };
