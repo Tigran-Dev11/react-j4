@@ -28,7 +28,7 @@ const ProductItem = ({ products }) => {
     return (
         <S.ProductsContainer>
             <S.ProductTitle>{products.name}</S.ProductTitle>
-            <S.ProductImage src={products.img} alt="Persimmon" />
+            <S.ProductImage src={products.img} alt="products" />
             <S.OrderButtons>
                 <S.MinusButton onClick={decrement}>-</S.MinusButton>
                 <S.ProductQuantity>{number}</S.ProductQuantity>

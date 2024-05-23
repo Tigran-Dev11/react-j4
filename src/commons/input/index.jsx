@@ -6,7 +6,7 @@ const Input = ({type, placeholder, onChange, value, checked}) => {
 
 
     return (
-        <input type={type} placeholder={placeholder} onChange={onChange} value={value} checked={checked}/>
+        <S.Input type={type} placeholder={placeholder} onChange={onChange} value={value} checked={checked}/>
     )
 };
 
