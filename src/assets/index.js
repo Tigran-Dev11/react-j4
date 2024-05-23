@@ -7,9 +7,22 @@ import homeBannerOne from "../assets/images/main-banner-1.png";
 import homeBannerTwo from "../assets/images/main-banner-2.png";
 import homeBannerThree from "../assets/images/main-banner-3.png";
 import homeBannerFour from "../assets/images/main-banner-4.png";
+import persimmon from "../assets/images/Persimmon.jpg";
+import strawberry from "../assets/images/Strawberry.jpg";
+import banana from "../assets/images/Banana.jpg";
+import tomato from "../assets/images/Tomato.jpg";
+import pear from "../assets/images/Pear.jpg";
+import durian from "../assets/images/Durian.jpg";
+import blackberry from "../assets/images/Blackberry.jpg";
+import kiwi from "../assets/images/Kiwi.jpg";
+import pineapple from "../assets/images/Pineapple.png";
+import orange from "../assets/images/Orange.jpg";
+
 
 
 export const IMAGES = {
     heartIcon, basketIcon, headerLogoOne, headerLogoTwo, footerIcon,
-    homeBannerOne, homeBannerTwo, homeBannerThree, homeBannerFour,
+    homeBannerOne, homeBannerTwo, homeBannerThree, homeBannerFour, persimmon, strawberry,
+    banana, tomato, pear, durian, blackberry, kiwi, pineapple, orange,
+
 };

@@ -2,10 +2,9 @@
 export const ROUTES = {
     home: "/",
     shop: "/shop",
-    pages: "/pages",
-    blog: "/blog",
     aboutUs: "/about-us",
-    contactUs: "/contact-us"
+    contactUs: "/contact-us",
+    basket: "/basket"
 
 };
 
@@ -20,14 +19,6 @@ export const headerMenu = [
         title: "Shop"
     },
     {
-        path: ROUTES.pages,
-        title: "Pages"
-    },
-    {
-        path: ROUTES.blog,
-        title: "Blog"
-    },
-    {
         path: ROUTES.aboutUs,
         title: "About Us"
     },
@@ -35,6 +26,7 @@ export const headerMenu = [
         path: ROUTES.contactUs,
         title: "Contact Us"
     },
+
 ];
 
 
