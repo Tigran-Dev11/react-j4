@@ -9,7 +9,17 @@ const productSlice = createSlice({
     getProductsStatus: FETCH_STATUS.IDLE
   },
 
-  reducers: {},
+  reducers: {
+      addBasket: (state) =>{
+        const basketItem ={
+          id:state.id,
+          name:state.name,
+          img:state.img,
+          number
+        };
+        state.push(basketItem);
+      }
+  },
 
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
