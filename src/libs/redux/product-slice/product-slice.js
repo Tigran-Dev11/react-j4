@@ -6,19 +6,19 @@ const productSlice = createSlice({
   name: productSliceName,
   initialState: {
     products: [],
-    getProductsStatus: FETCH_STATUS.IDLE
+    getProductsStatus: FETCH_STATUS.IDLE,
   },
 
   reducers: {
-      addBasket: (state) =>{
-        const basketItem ={
-          id:state.id,
-          name:state.name,
-          img:state.img,
-          count
-        };
-        state.push(basketItem);
-      }
+    addBasket: (state) => {
+      const basketItem = {
+        id: state.id,
+        name: state.name,
+        img: state.img,
+        count,
+      };
+      state.push(basketItem);
+    },
   },
 
   extraReducers: (builder) => {
@@ -32,12 +32,12 @@ const productSlice = createSlice({
     builder.addCase(getProducts.rejected, (state) => {
       state.getProductsStatus = FETCH_STATUS.REJECTED;
     });
-  }
+  },
 });
 
 export const productReducer = productSlice.reducer;
 
 export const productActions = {
   ...productSlice.actions,
-  getProducts
+  getProducts,
 };
