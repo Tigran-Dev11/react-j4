@@ -1,37 +1,34 @@
-import { useDispatch, useSelector } from "react-redux";
-import { counterSelector } from "../../libs/redux/counter-slice/counter-selector.js"
 import * as S from "./styled.js";
-import { counterActions } from "../../libs/redux/counter-slice/counter-slice.js";
 import { productActions } from "../../libs/redux/product-slice/product-slice.js";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
-const ProductItem = ({ products }) => {
-
-    const { number } = useSelector(counterSelector);
+const ProductItem = ({ product }) => {
 
     const dispatch = useDispatch();
+    const [count, setCount] = useState(1);
 
     const decrement = () => {
-        if (number > 1)
-            dispatch(counterActions.decrement());
+        if (count > 1)
+            setCount(count - 1)
     };
 
     const increment = () => {
-        dispatch(counterActions.increment());
+        setCount(count + 1)
     };
 
     const addBasket = () => {
         dispatch(productActions.addBasket());
-
     };
 
 
     return (
         <S.ProductsContainer>
-            <S.ProductTitle>{products.name}</S.ProductTitle>
-            <S.ProductImage src={products.img} alt="products" />
+            <S.ProductTitle>{product.name}</S.ProductTitle>
+            <S.ProductImage src={product.img} alt="products" />
             <S.OrderButtons>
                 <S.MinusButton onClick={decrement}>-</S.MinusButton>
-                <S.ProductQuantity>{number}</S.ProductQuantity>
+                <S.ProductQuantity>{count}</S.ProductQuantity>
                 <S.PlusButton onClick={increment}>+</S.PlusButton>
             </S.OrderButtons>
             <S.AddBasketButton onClick={addBasket}>Add Basket</S.AddBasketButton>

@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 export const HeaderContainer = styled.div`
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
     
 `
 

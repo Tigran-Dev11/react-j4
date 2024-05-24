@@ -22,7 +22,7 @@ const Shop = () => {
     return (
         <S.Container>
             {products?.map((product) => (
-                <ProductItem key={product.id} products={product}/>
+                <ProductItem key={product.id} product={product}/>
             ))}
         </S.Container>
     )

@@ -15,7 +15,7 @@ const productSlice = createSlice({
           id:state.id,
           name:state.name,
           img:state.img,
-          number
+          count
         };
         state.push(basketItem);
       }
