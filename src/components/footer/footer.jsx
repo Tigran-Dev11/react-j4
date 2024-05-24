@@ -1,9 +1,7 @@
-import * as S from './styled.js';
+import * as S from "./styled.js";
 
-const Footer = ()=>{
-  <div>
-
-  </div>
-}
+const Footer = () => {
+  <div></div>;
+};
 
 export default Footer;

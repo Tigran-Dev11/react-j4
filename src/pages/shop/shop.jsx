@@ -1,12 +1,5 @@
-
-
-const Shop = () =>{
-
-    return (
-        <div>
-            Shop
-        </div>
-    )
+const Shop = () => {
+  return <div>Shop</div>;
 };
 
 export default Shop;
