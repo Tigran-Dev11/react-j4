@@ -7,8 +7,6 @@ export const FormContainer = styled.form`
   width: 300px;
   margin: auto;
   padding: 20px;
-  background: linear-gradient
-  border-radius: 8px;
 `;
 
 export const Input = styled.input`

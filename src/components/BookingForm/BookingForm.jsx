@@ -1,45 +1,65 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { FormContainer, Input, Button } from './BookingFormStyles';
 
+const schema = yup.object({
+  pickupLocation: yup.string().required('Pickup location is required'),
+  pickupDate: yup.date().required('Pickup date is required').nullable(),
+  returnDate: yup.date().required('Return date is required').nullable(),
+  carType: yup.string().required('Car type is required'),
+  pickupTime: yup.string().required('Pickup time is required'),
+  returnTime: yup.string().required('Return time is required'),
+});
+
 const BookingForm = () => {
-  const [formData, setFormData] = useState({
-    pickupLocation: '',
-    pickupDate: '',
-    returnDate: '',
-    carType: '',
-    pickupTime: '',
-    returnTime: ''
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema)
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+  const onSubmit = data => {
+    console.log(data);
   };
 
   return (
-    <FormContainer onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit(onSubmit)}>
       <Input
-        type="text"
-        name="pickupLocation"
+        {...register('pickupLocation')}
         placeholder="Pickup Location"
-        value={formData.pickupLocation}
-        onChange={handleChange}
       />
+      <p>{errors.pickupLocation?.message}</p>
+
       <Input
         type="date"
-        name="pickupDate"
-        placeholder="Pickup Date"
-        value={formData.pickupDate}
-        onChange={handleChange}
+        {...register('pickupDate')}
       />
+      <p>{errors.pickupDate?.message}</p>
+
+      <Input
+        type="date"
+        {...register('returnDate')}
+      />
+      <p>{errors.returnDate?.message}</p>
+
+      <Input
+        {...register('carType')}
+        placeholder="Car Type"
+      />
+      <p>{errors.carType?.message}</p>
+
+      <Input
+        type="time"
+        {...register('pickupTime')}
+      />
+      <p>{errors.pickupTime?.message}</p>
+
+      <Input
+        type="time"
+        {...register('returnTime')}
+      />
+      <p>{errors.returnTime?.message}</p>
+
       <Button type="submit">Book Now</Button>
     </FormContainer>
   );
