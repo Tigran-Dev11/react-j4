@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { IMAGES } from "../../../assets/images/index"
-
+import { COLORS } from "../../../assets/colors"
 
 export const Container  = styled.div`
 width: 100%;
@@ -22,12 +22,12 @@ justify-content: space-between;
 `
 
 export const FirstText  = styled.p`
-color: white;
+color: ${COLORS.white};
 font-size: 30px;
 
 `
 export const SecText  = styled.h1`
-color: white;
+color: ${COLORS.white};
 font-size: 45px;
 `
 
@@ -44,7 +44,7 @@ justify-content: center;
 export const Button  = styled.button`
 width: 164px;
 height: 46px;
-background-color: #826300;
+background-color: ${COLORS.brown};
 border-radius: 8px;
 color: white;
 padding: 10px 10px ;

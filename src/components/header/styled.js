@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import { COLORS } from "../../assets/colors";
 
 
 export const HeaderContainer = styled.div`
 width:100%;
 height:100px;
-background-color: #FAEDDF;
+background-color: ${COLORS.cream};
 border-bottom:solid 1px;
 
 `
 
 export const TopMenuContainer = styled.div`
-background-color:#826300;
+background-color:${COLORS.brown};
 height:40px;
 display:flex;
 justify-content:center;
@@ -24,7 +25,7 @@ justify-content: space-between;
 
 
 export const Text = styled.p`
-color:white;
+color:${COLORS.white};
 `
 
 export const MenuContainer = styled.div`
