@@ -22,14 +22,14 @@ left: 995px;
 export const TextSection = styled.div`
   width: 613px;
   height: 742px;
-  background-color: black; // Черный фон для текстового блока
-  color: white; // Белый текст
+  background-color: black; 
+  color: white; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0px;
-  margin-right: auto; // Отталкиваем блок к левому краю
+  margin-right: auto; 
 `;
 
 
