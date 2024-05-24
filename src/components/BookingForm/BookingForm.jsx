@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { FormContainer, Input, Button } from './BookingFormStyles';
+import * as S from './styled';
 
 const schema = yup.object({
   pickupLocation: yup.string().required('Pickup location is required'),
@@ -23,45 +23,45 @@ const BookingForm = () => {
   };
 
   return (
-    <FormContainer onSubmit={handleSubmit(onSubmit)}>
-      <Input
+    <S.FormContainer onSubmit={handleSubmit(onSubmit)}>
+      <S.Input
         {...register('pickupLocation')}
         placeholder="Pickup Location"
       />
       <p>{errors.pickupLocation?.message}</p>
 
-      <Input
+      <S.Input
         type="date"
         {...register('pickupDate')}
       />
       <p>{errors.pickupDate?.message}</p>
 
-      <Input
+      <S.Input
         type="date"
         {...register('returnDate')}
       />
       <p>{errors.returnDate?.message}</p>
 
-      <Input
+      <S.Input
         {...register('carType')}
         placeholder="Car Type"
       />
       <p>{errors.carType?.message}</p>
 
-      <Input
+      <S.Input
         type="time"
         {...register('pickupTime')}
       />
       <p>{errors.pickupTime?.message}</p>
 
-      <Input
+      <S.Input
         type="time"
         {...register('returnTime')}
       />
       <p>{errors.returnTime?.message}</p>
 
-      <Button type="submit">Book Now</Button>
-    </FormContainer>
+      <S.Button type="submit">Book Now</S.Button>
+    </S.FormContainer>
   );
 };
 

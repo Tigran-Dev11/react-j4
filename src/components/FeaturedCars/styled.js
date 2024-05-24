@@ -19,7 +19,7 @@ export const CarCard = styled.div`
 
 export const CarImage = styled.div`
   width: 100%;
-  height: 200px; 
+  height: auto;
   background-image: url(${props => props.carImage});
   background-size: cover;
   background-position: center;

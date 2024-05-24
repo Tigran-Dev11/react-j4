@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { CarsContainer, CarCard, CarImage, CarDetails, BookButton } from './styled';
+import * as S from './styled';
 
 const FeaturedCars = () => {
   const cars = [
@@ -31,21 +30,21 @@ const FeaturedCars = () => {
   ];
 
   return (
-    <CarsContainer>
+    <S.CarsContainer>
       {cars.map((car, index) => (
-        <CarCard key={index}>
-          <CarImage carImage={`/assets/${car.image}`} />
-          <CarDetails>
+        <S.CarCard key={index}>
+          <S.CarImage carImage={`/assets/${car.image}`} />
+          <S.CarDetails>
             <h3>{car.name}</h3>
             <p>{car.seats} seats</p>
             <p>{car.fuelType}</p>
             <p>{car.type}</p>
             <p>Daily rate from: ${car.rate}</p>
-            <BookButton>Book Now</BookButton>
-          </CarDetails>
-        </CarCard>
+            <S.BookButton>Book Now</S.BookButton>
+          </S.CarDetails>
+        </S.CarCard>
       ))}
-    </CarsContainer>
+    </S.CarsContainer>
   );
 };
 

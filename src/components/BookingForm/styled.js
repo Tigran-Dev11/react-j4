@@ -1,12 +1,13 @@
-
 import styled from 'styled-components';
 
 export const FormContainer = styled.form`
   display: flex;
-  flex-direction: column;
-  width: 300px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: auto;
   margin: auto;
   padding: 20px;
+  background-color: #FFE4C6; 
 `;
 
 export const Input = styled.input`
@@ -14,6 +15,7 @@ export const Input = styled.input`
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  width: calc(33.333% - 20px); 
 `;
 
 export const Button = styled.button`
@@ -22,6 +24,7 @@ export const Button = styled.button`
   color: white;
   border: none;
   cursor: pointer;
+  width: calc(33.333% - 20px); 
   &:hover {
     background-color: darkorange;
   }

@@ -18,11 +18,12 @@ export const TextBlock = styled.div`
 
 export const CarImage = styled.div`
   flex: 1;
-  width: 50%; 
-  height: auto; 
+  width: 548px; 
+  height: 354px; 
   background-image: url(${carImage});
   background-size: cover;
   background-position: center;
+  border-radius: 4px; 
 `;
 
 export const ReadMoreButton = styled.button`

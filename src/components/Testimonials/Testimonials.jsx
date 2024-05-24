@@ -1,5 +1,5 @@
 import React from 'react';
-import './Testimonials.css';
+import * as S from './styled';
 
 const Testimonials = () => {
   const testimonials = [
@@ -9,23 +9,23 @@ const Testimonials = () => {
       
     },
     {
-      quote: "I love their collection! Every time I visit them they have new additions which makes me come back again & again!",
-      author: "Stephen Lim"
+      quote: "During my last trip, I used a Carent sport car . The car was completely clean and had enough gas.!",
+      author: "Robert Fox"
     }
   ];
 
   return (
-    <div className="testimonials">
-      <h2>What Our Clients Say?</h2>
-      <div className="testimonials-container">
+    <S.Testimonials>
+      <S.Title>What Our Clients Say?</S.Title>
+      <S.TestimonialsContainer>
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial">
-            <p className="quote">"{testimonial.quote}"</p>
-            <p className="author">- {testimonial.author}</p>
-          </div>
+          <S.Testimonial key={index}>
+            <S.Quote>"{testimonial.quote}"</S.Quote>
+            <S.Author>- {testimonial.author}</S.Author>
+          </S.Testimonial>
         ))}
-      </div>
-    </div>
+      </S.TestimonialsContainer>
+    </S.Testimonials>
   );
 };
 
