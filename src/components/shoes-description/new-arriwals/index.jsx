@@ -15,13 +15,12 @@ const NewArriwals = () => {
     dispatch(productActions.getProducts());
   }, []);
 
-  
   return (
     <S.shoesContainer>
       <S.titleShoes>NEW ARRIVALS </S.titleShoes>
       <S.productTop>
         {products?.map((product) => (
-          <ProductCard key={product.id} products={product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </S.productTop>
     </S.shoesContainer>

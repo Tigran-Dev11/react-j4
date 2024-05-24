@@ -3,7 +3,7 @@ import { IMAGES } from "../../../assets";
 
 export const loginContainer = styled.div`
   width: 100%;
-  min-height:100vh;
+  min-height: 100vh;
   position: relative;
   top: 158px;
   background-image: url(${IMAGES.mainRectangle});
@@ -39,27 +39,26 @@ export const formInputs = styled.form`
   height: 600px;
 `;
 export const submitButton = styled.button`
-width:100%;
-height: 40px;
-cursor: pointer;
-color:black;
-box-sizing: border-box;
-box-shadow: none;
-border: none;
-background-color: #31363F;
-font-size: 16px;
-border-radius: 20px;
-`
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  color: black;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  background-color: #31363f;
+  font-size: 16px;
+  border-radius: 20px;
+`;
 
 export const label = styled.label`
-position: relative;
-top: 40px;
-
-`
+  position: relative;
+  top: 40px;
+`;
 export const linkToRegister = styled.a`
-cursor: pointer;
-text-decoration: underline;
-margin-left: 60px;
-color: black;
-opacity: 1.2;
-`
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 60px;
+  color: black;
+  opacity: 1.2;
+`;
