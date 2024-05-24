@@ -7,14 +7,14 @@ const Header = () => {
 
     <S.MenuHeader>
       <S.Logo src={IMAGES.apple}></S.Logo>
-      <S.Ul >
+      <S.MenuContainer >
         {headerMenu.map(({ title , path }) => (
-          <S.Li key={path}>
+          <S.MenuItem key={path}>
             <S.A href={path}>{title}</S.A>
-          </S.Li>
+          </S.MenuItem>
         ))}
-      </S.Ul>
-      <S.Inp placeholder="   Search"></S.Inp>
+      </S.MenuContainer>
+      <S.Input placeholder="Search"></S.Input>
       </S.MenuHeader>
   );
 };

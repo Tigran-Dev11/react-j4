@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export const MenuHeader = styled.div`
     background-color: white;
-    width: 100%;
+    padding-inline: 60px;
+    width: calc(100% - 120px);
     height: 120px;
     display: flex;
     align-items: center;
@@ -15,12 +16,12 @@ export const Logo = styled.img`
     margin-left: 40px;
 `
 
-export const Ul = styled.ul`
+export const MenuContainer = styled.ul`
     display:flex;
     gap: 100px;
 
 `
-export const Li = styled.li`
+export const MenuItem = styled.li`
     list-style:none;
     font-size: 17px;
     font-weight: 500;
@@ -30,8 +31,10 @@ export const A = styled.a`
     color:black;
     text-decoration:none;
 `
-export const Inp = styled.input`
+export const Input = styled.input`
     border: 1px solid black;
     width: 230px;
     height: 40px;
+    padding-inline: 12px;
+    margin-left: 10px;
 `

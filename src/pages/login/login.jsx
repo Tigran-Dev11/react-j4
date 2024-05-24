@@ -1,12 +1,11 @@
-
-
+import * as S from './styled.js'
 
 const Login = () =>{
 
     return (
-        <div>
-            Login
-        </div>
+        <S.General>
+            
+        </S.General>
     )
 };
 
