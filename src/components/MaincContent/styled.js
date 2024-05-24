@@ -1,42 +1,48 @@
-// Файл styled.js
 import styled from 'styled-components';
+import carImage from '../../assets/car-mersedec.png';
 
-export const BookingContainer = styled.div`
+export const ContentContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  background: linear-gradient(to bottom, #ffa500, #ffffff);
-  padding: 20px;
-  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px; 
+`;
+
+export const ImageSection = styled.div`
+width: 909px;
+height: 545px;
+background-image: url(${carImage});
+background-size: cover;
+background-position: center;
+position: absolute;
+top: 104px;
+left: 995px;
 `;
 
 export const TextSection = styled.div`
   width: 613px;
   height: 742px;
+  background-color: black; // Черный фон для текстового блока
+  color: white; // Белый текст
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  background-color: #000; // Черный фон
-  color: #fff; // Белый текст
+  align-items: center;
+  padding: 0px;
+  margin-right: auto; // Отталкиваем блок к левому краю
 `;
 
-export const ImageSection = styled.div`
-  width: 613px;
-  height: 742px;
-  background-image: url('путь_к_вашему_изображению.jpg');
-  background-size: cover;
-  background-position: center;
-`;
 
-export const LearnMoreButton = styled.button`
+
+
+export const ExploreButton = styled.button`
   padding: 10px 20px;
-  background-color: #f90; // Оранжевый фон
+  margin-top: 20px;
+  background-color: orange; 
+  color: black; 
   border: none;
-  color: #000; // Черный текст
   cursor: pointer;
-
   &:hover {
-    background-color: #fb0; // Светло-оранжевый фон при наведении
+    background-color: darkorange; 
   }
 `;

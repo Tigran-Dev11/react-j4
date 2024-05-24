@@ -1,27 +1,51 @@
 
 import React from 'react';
-import './FeaturedCars.css';
+import { CarsContainer, CarCard, CarImage, CarDetails, BookButton } from './styled';
 
 const FeaturedCars = () => {
   const cars = [
-    { name: 'BMW', price: 100, seats: 5 },
-    { name: 'Audi', price: 90, seats: 5 },
-    { name: 'Mercedes', price: 120, seats: 5 }
+    {
+      name: 'Jeep XD',
+      seats: 5,
+      fuelType: 'Gasoline',
+      type: 'SUV',
+      rate: 200,
+      image: 'jeep.png'
+    },
+    {
+      name: 'Ferrari Enzo',
+      seats: 2,
+      fuelType: 'Electric',
+      type: 'Sedan',
+      rate: 340,
+      image: 'ferrari.png'
+    },
+    {
+      name: 'Fiat Coupe',
+      seats: 4,
+      fuelType: 'Gasoline',
+      type: 'Mini coupe',
+      rate: 167,
+      image: 'mini.png'
+    }
   ];
 
   return (
-    <div className="featured-cars">
-      <h2>Our Featured Cars</h2>
-      <div className="cars-list">
-        {cars.map((car, index) => (
-          <div key={index} className="car-card">
+    <CarsContainer>
+      {cars.map((car, index) => (
+        <CarCard key={index}>
+          <CarImage carImage={`/assets/${car.image}`} />
+          <CarDetails>
             <h3>{car.name}</h3>
-            <p>${car.price} / Day</p>
-            <p>{car.seats} Seats</p>
-          </div>
-        ))}
-      </div>
-    </div>
+            <p>{car.seats} seats</p>
+            <p>{car.fuelType}</p>
+            <p>{car.type}</p>
+            <p>Daily rate from: ${car.rate}</p>
+            <BookButton>Book Now</BookButton>
+          </CarDetails>
+        </CarCard>
+      ))}
+    </CarsContainer>
   );
 };
 

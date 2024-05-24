@@ -1,17 +1,16 @@
 import React from 'react';
-import './styled.js';
+import { ContentContainer, TextSection, ImageSection, ExploreButton } from './styled';
 
 const MainContent = () => {
-  const handleLearnMoreClick = () => {
-    console.log('Learn more clicked!');
-  };
-
   return (
-    <div className="main-content">
-      <h1>Enjoy your life with our comfortable cars.</h1>
-      <p>Carent, is ready to serve the best
-experience in car rental.</p>
-    </div>
+    <ContentContainer>
+      <TextSection>
+        <h1>Enjoy your life with our comfortable cars.</h1>
+        <p>Carent is ready to serve the best experience in car rental.</p>
+        <ExploreButton>Explore Now</ExploreButton>
+      </TextSection>
+      <ImageSection />
+    </ContentContainer>
   );
 };
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  background-color: #000; 
-  color: #fff; 
+  background-color: white; 
+  color: orange; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@ export const Navbar = styled.nav`
   display: flex;
 
   a {
-    color: #fff; 
+    color: black; 
     text-decoration: none;
     margin: 0 1rem;
     font-size: 1rem;
@@ -38,7 +38,7 @@ export const AuthButtons = styled.div`
     margin-left: 1rem;
     border: 1px solid #fff; 
     background: none;
-    color: #fff; 
+    color: black; 
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; 
 
