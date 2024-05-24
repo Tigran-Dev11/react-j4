@@ -4,8 +4,9 @@ import './Testimonials.css';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "It’s always a pleasure renting from GARRENT! Their fleet is fantastic & service is excellent!",
-      author: "Habib Marwan"
+      author: "Kristin Watson",
+      quote: "I rented a car for a one-week trip from Carnet on the recommendation of my friend. Actually, I am satisfied with them."
+      
     },
     {
       quote: "I love their collection! Every time I visit them they have new additions which makes me come back again & again!",
