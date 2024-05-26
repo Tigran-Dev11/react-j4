@@ -31,16 +31,17 @@ export const PlusButton = styled.button`
   cursor: pointer;
 `;
 
-export const ProductQuantity = styled.p`
-
-`
+export const ProductQuantity = styled.p``;
 
 export const OrderButtons = styled.div`
   display: flex;
   gap: 30px;
-`
+`;
 
 export const RemoveIcon = styled.img`
   width: 20px;
   height: 20px;
-`
+  cursor: pointer;
+`;
+
+export const ProductPrice = styled.p``;

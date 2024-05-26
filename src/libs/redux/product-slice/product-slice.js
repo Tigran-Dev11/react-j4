@@ -35,6 +35,12 @@ const productSlice = createSlice({
         }
       }
     },
+
+    removeItem: (state, { payload }) => {
+      state.basketItems = state.basketItems.filter(
+        (item) => item.id !== payload.id
+      );
+    },
   },
 
   extraReducers: (builder) => {

@@ -26,12 +26,15 @@ const ProductItem = ({ product }) => {
       price: product.price,
     };
     dispatch(productActions.addBasket(item));
+
+    localStorage.setItem("basketItems", JSON.stringify(product));
   };
 
   return (
     <S.ProductsContainer>
       <S.ProductTitle>{product.name}</S.ProductTitle>
       <S.ProductImage src={product.img} alt="products" />
+      <S.ProductPrice>{product.price * count} amd</S.ProductPrice>
       <S.OrderButtons>
         <S.MinusButton onClick={decrement}>-</S.MinusButton>
         <S.ProductQuantity>{count}</S.ProductQuantity>
