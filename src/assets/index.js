@@ -21,14 +21,31 @@ import contactUsHeader from "../assets/images/contactUsHeader.png";
 import contactInfo from "../assets/images/ContactInfo.png";
 import contactMessage from "../assets/images/ContactMessage.png";
 import map from "../assets/images/map.png";
-
-
-
+import removeIcon from "../assets/images/remove-icon.png";
 
 export const IMAGES = {
-    heartIcon, basketIcon, headerLogoOne, headerLogoTwo, footerIcon,
-    homeBannerOne, homeBannerTwo, homeBannerThree, homeBannerFour, persimmon, strawberry,
-    banana, tomato, pear, durian, blackberry, kiwi, pineapple, orange, contactUsHeader, 
-    contactInfo, contactMessage, map
-
+  heartIcon,
+  basketIcon,
+  headerLogoOne,
+  headerLogoTwo,
+  footerIcon,
+  homeBannerOne,
+  homeBannerTwo,
+  homeBannerThree,
+  homeBannerFour,
+  persimmon,
+  strawberry,
+  banana,
+  tomato,
+  pear,
+  durian,
+  blackberry,
+  kiwi,
+  pineapple,
+  orange,
+  contactUsHeader,
+  contactInfo,
+  contactMessage,
+  map,
+  removeIcon,
 };

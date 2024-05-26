@@ -18,7 +18,14 @@ const ProductItem = ({ product }) => {
   };
 
   const addBasket = () => {
-    dispatch(productActions.addBasket());
+    const item = {
+      id: product.id,
+      name: product.name,
+      img: product.img,
+      count,
+      price: product.price,
+    };
+    dispatch(productActions.addBasket(item));
   };
 
   return (

@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { productServices } from "./services";
 
-
 export const productSliceName = "products";
 
 export const getProducts = createAsyncThunk(
@@ -9,7 +8,6 @@ export const getProducts = createAsyncThunk(
   async (body, { rejectWithValue }) => {
     try {
       const response = await productServices.getProducts();
-
 
       return response;
     } catch (error) {

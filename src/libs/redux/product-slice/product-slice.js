@@ -6,18 +6,34 @@ const productSlice = createSlice({
   name: productSliceName,
   initialState: {
     products: [],
+    basketItems: [],
     getProductsStatus: FETCH_STATUS.IDLE,
   },
 
   reducers: {
-    addBasket: (state) => {
-      const basketItem = {
-        id: state.id,
-        name: state.name,
-        img: state.img,
-        count,
-      };
-      state.push(basketItem);
+    addBasket: (state, { payload }) => {
+      if (!state.basketItems.length) {
+        state.basketItems.push(payload);
+      } else {
+        const findItem = state.basketItems.find(
+          (item) => item.id === payload.id
+        );
+
+        if (!findItem) {
+          state.basketItems.push(payload);
+        } else {
+          console.log("mtav");
+          state.basketItems = state.basketItems.map((item) => {
+            if (item.id === findItem.id) {
+              return {
+                ...item,
+                count: item.count + payload.count,
+              };
+            }
+            return item;
+          });
+        }
+      }
     },
   },
 

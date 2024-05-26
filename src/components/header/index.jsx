@@ -2,7 +2,8 @@ import * as S from "./styled.js";
 import Button from "../../commons/button";
 import { IMAGES } from "../../assets/index.js";
 import HeaderSearchInput from "../../commons/header-search-input/index.jsx";
-import { headerMenu } from "../../utils/constant.js";
+import { ROUTES, headerMenu } from "../../utils/constant.js";
+import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
                 </S.HeaderSearchDivTwo>
                 <S.HeaderSearchDivThree>
                     <S.HeaderIcon src={IMAGES.heartIcon} alt="icon" />
-                    <S.HeaderIcon src={IMAGES.basketIcon} alt="basket" />
+                    <NavLink to={ROUTES.basket}><S.HeaderIcon src={IMAGES.basketIcon} alt="basket" /></NavLink>
                 </S.HeaderSearchDivThree>
             </S.HeaderSearch>
             <S.HeaderMenu>
