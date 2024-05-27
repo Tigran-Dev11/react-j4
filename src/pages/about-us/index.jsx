@@ -1,4 +1,5 @@
-import "./style.css";
+import * as S from "./styled.js";
+
 
 
 const AboutUs = () =>{
