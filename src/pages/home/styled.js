@@ -215,6 +215,7 @@ export const Rectangle1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Blackfruits = styled.img`
@@ -241,6 +242,7 @@ export const Rectangle2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Vegetables = styled.img`
@@ -258,6 +260,7 @@ export const Rectangle3 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Meat = styled.img`
@@ -275,6 +278,7 @@ export const Rectangle4 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Snacks = styled.img`
@@ -292,6 +296,7 @@ export const Rectangle5 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Milk = styled.img`
@@ -316,7 +321,7 @@ export const Section5General = styled.div`
     ${COLORS.white} 6.5%,
     ${COLORS.yellow} 100%
   );
-  border-radius: 20px;
+  border-radius: 6px;
   display: flex;
 `;
 

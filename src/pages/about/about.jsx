@@ -16,7 +16,6 @@ const About = () => {
         products on our grocery web store, connecting you with sustainable
         choices that support both the community and the planet.
       </S.Text9>
-      <Button children={"Learn More"} />
     </S.Section5b>
   </S.Section5General>
 </S.Section5>);

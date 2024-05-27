@@ -4,13 +4,14 @@ import Shop from "../pages/shop/shop";
 import About from "../pages/about/about";
 import Login from "../pages/login/login";
 import SignUp from "../pages/sign-up/sign-up";
+import Basket from "../pages/basket/basket";
+
 
 export const routes = [
   {
     component: Home,
     path: ROUTES.home,
   },
-
   {
     component: Shop,
     path: ROUTES.shop,
@@ -27,4 +28,9 @@ export const routes = [
     component: SignUp,
     path: ROUTES.signUp,
   },
+  {
+    component: Basket,
+    path: ROUTES.basket,
+  }
+
 ];

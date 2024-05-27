@@ -4,6 +4,7 @@ export const ROUTES = {
   about: "/about",
   login: "/login",
   signUp: "/sign-up",
+  basket: "./basket",
 };
 
 export const headerMenu = [
@@ -28,3 +29,14 @@ export const headerMenu = [
     title: "Sign Up",
   },
 ];
+
+export const shopMenu = [
+{
+  path: ROUTES.shop,
+  title: "Shop",
+},
+{
+  path: ROUTES.basket,
+  title: "Basket",
+}
+]

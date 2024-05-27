@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS } from "../../assets/colors";
 
 export const Button = styled.button`
   color: white;
@@ -7,7 +8,7 @@ export const Button = styled.button`
   margin-top: 30px;
   border: none;
   padding: 10px;
-  background-color: #000000;
+  background-color: ${COLORS.black};
   font-size: 20px;
   font-family: "montserrat";
   cursor: pointer;
