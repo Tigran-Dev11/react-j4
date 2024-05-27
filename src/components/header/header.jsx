@@ -9,7 +9,7 @@ const Header = () => {
       <S.MenuContainer>
         {headerMenu.map(({ title, path }) => (
           <S.MenuItem key={path}>
-            <S.A href={path}>{title}</S.A>
+          <S.LinkToHome to={path}>{title}</S.LinkToHome>
           </S.MenuItem>
         ))}
       </S.MenuContainer>

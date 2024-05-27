@@ -27,10 +27,6 @@ export const MenuItem = styled.li`
   font-weight: 500;
   font-family: "montserrat";
 `;
-export const A = styled.a`
-  color: ${COLORS.black};
-  text-decoration: none;
-`;
 export const Input = styled.input`
   border: 1px solid ${COLORS.black};
   width: 230px;
@@ -38,4 +34,7 @@ export const Input = styled.input`
   padding-inline: 12px;
   margin-left: 10px;
 `;
-export const LinkToHome = styled(NavLink)``;
+export const LinkToHome = styled(NavLink)`
+  color: ${COLORS.black};
+  text-decoration: none;
+  `;

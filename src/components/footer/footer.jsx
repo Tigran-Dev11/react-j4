@@ -1,7 +1,9 @@
 import * as S from "./styled.js";
 
 const Footer = () => {
-  <div></div>;
+  <S.Footer>
+           
+  </S.Footer>
 };
 
 export default Footer;
