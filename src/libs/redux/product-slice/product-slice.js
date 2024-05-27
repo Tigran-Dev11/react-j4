@@ -5,6 +5,7 @@ import { getProducts, productSliceName } from "./actions";
 const productSlice = createSlice({
   name: productSliceName,
   initialState: {
+    loading:null,
     products: [],
     basketItems: [],
     getProductsStatus: FETCH_STATUS.IDLE,
@@ -54,13 +55,16 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getProducts.pending, (state) => {
       state.getProductsStatus = FETCH_STATUS.PANDING;
+      state.loading = "Loading...";
     }),
       builder.addCase(getProducts.fulfilled, (state, { payload }) => {
         state.getProductsStatus = FETCH_STATUS.SUCCESS;
         state.products = payload;
+        state.loading = "Success...";
       });
     builder.addCase(getProducts.rejected, (state) => {
       state.getProductsStatus = FETCH_STATUS.REJECTED;
+      state.loading = "Failed...";
     });
   },
 });

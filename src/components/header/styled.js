@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import {COLORS} from "../../assets/colors"
-
+import { COLORS } from "../../assets/colors";
 
 export const HeaderContainer = styled.div`
   width: 100%;
@@ -22,7 +21,7 @@ export const HeaderTop = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #ffffff;
+  background-color: ${COLORS.white};
 `;
 
 export const HeaderSearch = styled.div`
@@ -90,5 +89,5 @@ export const HeaderMenuList = styled.ul`
 export const HeaderMenuListItem = styled.li``;
 
 export const HeaderMenuAddress = styled.p`
-  color: white;
+  color: ${COLORS.white};
 `;
