@@ -11,6 +11,13 @@ const productSlice = createSlice({
   },
 
   reducers: {
+    getBasketDataByStorage: (state) => {
+      const basketItems = JSON.parse(localStorage.getItem("basketItems"));
+      if (basketItems && basketItems?.length) {
+        state.basketItems = basketItems;
+      }
+    },
+
     addBasket: (state, { payload }) => {
       if (!state.basketItems.length) {
         state.basketItems.push(payload);
@@ -22,7 +29,6 @@ const productSlice = createSlice({
         if (!findItem) {
           state.basketItems.push(payload);
         } else {
-          console.log("mtav");
           state.basketItems = state.basketItems.map((item) => {
             if (item.id === findItem.id) {
               return {
@@ -34,12 +40,15 @@ const productSlice = createSlice({
           });
         }
       }
+      console.log(JSON.stringify(state.basketItems));
+      localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
     },
 
     removeItem: (state, { payload }) => {
       state.basketItems = state.basketItems.filter(
         (item) => item.id !== payload.id
       );
+      localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
     },
   },
 
