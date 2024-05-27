@@ -1,9 +1,9 @@
+import * as S from "./styled";
 
+const NotFound = () => {
+  return <S.sectionContainer>
 
-const NotFound = () =>{
-
-
-    return <div>Not Found 404</div>
+  </S.sectionContainer>;
 };
 
 export default NotFound;

@@ -4,6 +4,8 @@ import Brands from "../../components/brands-section";
 import Button from "../../common/button";
 import NewArriwals from "../../components/shoes-description/new-arriwals";
 import { purchasedProducts } from "../../utils/constants";
+import TopSelling from "../../components/shoes-description/top-selling";
+import SortedCothesAllMenu from "../../components/sorted-clothes";
 
 const Home = () => {
   return (
@@ -35,6 +37,8 @@ const Home = () => {
       </S.HomeCont>
       <Brands />
       <NewArriwals />
+      <TopSelling />
+      <SortedCothesAllMenu />
     </S.AllContentContainer>
   );
 };

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { starsClothes } from "../../utils/constants";
 import * as S from "./styled";
 import { useState } from "react";
 
@@ -14,18 +15,23 @@ const ProductCard = ({ product }) => {
   };
 
   const minusItem = () => {
-    return (count -= 1);
+    if (count > 1) setCount(count - 1);
   };
-  const plusItem = () => {
-    return (count += 1);
-  };
-  console.log(product.id);
 
+  const plusItem = () => {
+    setCount(count + 1);
+  };
   return (
     <S.productContainer>
       <S.productItem>
-        <img src={product?.images[0]} alt="image" className="pruductImg" />
-        {product?.price}
+        <S.productImg src={product?.images[0]} alt="image" />
+        <S.productTitle>{product.title}</S.productTitle>
+        {starsClothes.map((item, index) => {
+          return <S.fiveStar key={index} src={item.fiveStars} alt="image" />;
+        })}
+        <S.PriceProduct>
+          {"$" + Math.floor(product?.price * count)}
+        </S.PriceProduct>
       </S.productItem>
       <S.addBasket>
         <S.productCount>
@@ -33,9 +39,9 @@ const ProductCard = ({ product }) => {
           {count}
           <S.plusItem onClick={plusItem}>+</S.plusItem>
         </S.productCount>
-        <S.addButton onClick={addBasket} className="addButton">
-          add basket
-        </S.addButton>
+        <S.addToCardContainer>
+          <S.addButton>Add To Card</S.addButton>
+        </S.addToCardContainer>
       </S.addBasket>
     </S.productContainer>
   );

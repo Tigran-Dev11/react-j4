@@ -1,3 +1,4 @@
+import Footer from "./components/footer";
 import Header from "./components/header";
 import TopHeader from "./components/top-header-for-sign-up";
 import Router from "./routes/router";
@@ -10,7 +11,7 @@ function App() {
       <TopHeader />
       <Header />
       <Router />
-      {/* <AutoPlay/> */}
+      <Footer />
     </>
   );
 }

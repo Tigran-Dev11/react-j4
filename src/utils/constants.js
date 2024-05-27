@@ -78,11 +78,86 @@ export const commentsUsers = [
     approvedUser: IMAGES.successIcon,
   },
 ];
-
+export const starsClothes = [
+  {
+    fiveStars: IMAGES.fiveStars,
+  },
+];
 
 export const FETCH_STATUS = {
   IDLE: "idle",
   PANDING: "pending",
   REJECTED: "rejected",
-  SUCCESS: "success"
+  SUCCESS: "success",
 };
+
+export const footerDescription = [
+  {
+    mainTitle: "Company",
+    aboutWebsite: [
+      {
+        title: "About",
+      },
+      {
+        title: "Features",
+      },
+      {
+        title: "Works",
+      },
+      {
+        title: "Career",
+      },
+    ],
+  },
+  {
+    mainTitle: "Help",
+    aboutWebsite: [
+      {
+        title: "Customer Support",
+      },
+      {
+        title: "Delivery Details",
+      },
+      {
+        title: "Terms & Conditions",
+      },
+      {
+        title: "Privacy Policy",
+      },
+    ],
+  },
+  {
+    mainTitle: "FAQ",
+    aboutWebsite: [
+      {
+        title: "Account",
+      },
+      {
+        title: " Manage Deliveries",
+      },
+      {
+        title: "Orders",
+      },
+      {
+        title: "Payments",
+      },
+    ],
+  },
+  {
+    mainTitle: "Resources",
+    aboutWebsite: [
+      {
+        title: "Free eBooks",
+      },
+      {
+        title: " Development Tutorial",
+      },
+      {
+        title: " How to - Blog",
+      },
+      {
+        title: " Youtube Playlist",
+      },
+    ],
+  },
+];

@@ -1,42 +1,83 @@
 import styled from "styled-components";
 
 export const productContainer = styled.div`
-  width: 300px;
-  height: 300px;
-  background-color: aliceblue;
+  width: 340px;
+  height: 400px;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 0px, 12px, 12px, 12px;
+  align-items: start;
   border-radius: 20px;
+  transition: 0.5s;
+  border-radius: 14px;
+
+  &&:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+  }
+`;
+
+export const PriceProduct = styled.p`
+  margin-right: 200px;
 `;
 
 export const productItem = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  align-items: start;
 `;
 
-export const addBasket = styled.div``;
+export const addBasket = styled.div`
+width:100%;
+display: flex;
+align-items: center;
+
+`;
 
 export const productCount = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
 `;
 
-export const minusItem = styled.button``;
-export const plusItem = styled.button``;
+export const minusItem = styled.button`
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+`;
+export const plusItem = styled.button`
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+`;
 export const addButton = styled.button`
-  width: 100%;
+  width: 140px;
   height: 40px;
-  background-color: green;
+  background-color: #3c6255;
   cursor: pointer;
   border: none;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+
+
+  &:hover{
+    transform: scaleX(1.1);
+    transition: 0.5s;
+  }
 `;
 
 export const productImg = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  height: 340px;
 `;
+
+export const productTitle = styled.p``;
+
+export const fiveStar = styled.img``;
+export const addToCardContainer = styled.div``

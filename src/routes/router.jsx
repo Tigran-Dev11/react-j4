@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import routes from "./routes";
+import NotFound from "../pages/not-found";
 
 const Router = () => {
   return (
@@ -7,6 +8,7 @@ const Router = () => {
       {routes.map(({ path, component: Component, id }) => (
         <Route key={id} path={path} element={<Component />} />
       ))}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

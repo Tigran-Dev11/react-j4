@@ -21,7 +21,8 @@ export const titleRegister = styled.h3`
 
 export const formInputs = styled.form`
   width: 460px;
-  height: 600px;
+  padding-block: 40px;
+  min-height: 600px;
   background-color: transparent;
   backdrop-filter: blur(50px);
   border: 2px solid white;

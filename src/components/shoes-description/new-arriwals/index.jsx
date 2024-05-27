@@ -14,15 +14,29 @@ const NewArriwals = () => {
   useEffect(() => {
     dispatch(productActions.getProducts());
   }, []);
+  let cycle = 0;
 
+  const viewAll = () => {
+    console.log("hello");
+  };
   return (
     <S.shoesContainer>
-      <S.titleShoes>NEW ARRIVALS </S.titleShoes>
+      <S.TopPiece>
+        <S.titleShoes>NEW ARRIVALS </S.titleShoes>
+      </S.TopPiece>
       <S.productTop>
-        {products?.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {products?.map((product) => {
+          cycle += 1;
+          if (cycle >= 18) {
+            return;
+          } else if (cycle >= 14) {
+            return <ProductCard key={product.id} product={product} />;
+          }
+        })}
       </S.productTop>
+      <S.viewAllContainer>
+        <S.viewAllClothes onClick={viewAll}>View All</S.viewAllClothes>
+      </S.viewAllContainer>
     </S.shoesContainer>
   );
 };

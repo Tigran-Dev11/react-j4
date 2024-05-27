@@ -15,6 +15,7 @@ import prada from "./images/prada.png";
 import menu from "./images/menu.svg";
 import hidePass from "./images/hide-pass.svg";
 import showPass from "./images/show-pass.svg";
+import casualCloth from "./images/casual-cloth.png"
 
 export const IMAGES = {
   basket,
@@ -34,4 +35,5 @@ export const IMAGES = {
   menu,
   hidePass,
   showPass,
+  casualCloth,
 };
