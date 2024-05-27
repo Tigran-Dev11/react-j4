@@ -22,7 +22,6 @@ const BasketItem = ({ product }) => {
 
   const removeItem = () => {
     dispatch(productActions.removeItem(product));
-    localStorage.setItem("basketItems", JSON.stringify());
   };
 
   return (

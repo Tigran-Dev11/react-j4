@@ -26,8 +26,6 @@ const ProductItem = ({ product }) => {
       price: product.price,
     };
     dispatch(productActions.addBasket(item));
-
-    localStorage.setItem("basketItems", JSON.stringify(product));
   };
 
   return (
