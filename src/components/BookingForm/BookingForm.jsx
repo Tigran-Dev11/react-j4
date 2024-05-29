@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useNavigate } from 'react-router-dom'; 
 import * as S from './styled';
 
 const schema = yup.object({
@@ -14,12 +15,14 @@ const schema = yup.object({
 });
 
 const BookingForm = () => {
+  const navigate = useNavigate(); 
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
 
   const onSubmit = data => {
     console.log(data);
+    navigate('/login'); 
   };
 
   return (
