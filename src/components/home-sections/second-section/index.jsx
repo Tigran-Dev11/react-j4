@@ -19,8 +19,15 @@ const SecondSection = () => {
     dispatch(productActions.getProduct());
   }, []);
 
+  const SeeMore = () =>{
+    if(min< products.length){
+      setMin(min + 4)
+    }
+  }
+
   return (
     <S.Container>
+      <S.ProductsContainer>
       {products.map((item, index) => {
         return index <= min
           ? (
@@ -28,11 +35,13 @@ const SecondSection = () => {
                 <S.ProductImg src={item.images[2]}></S.ProductImg>
                 <S.ProductTitle>{item.title}</S.ProductTitle>
                 <S.ProductPrice>Price: {item.price}$</S.ProductPrice>
-               <S.ButtonSeeMore>ADD BASKET</S.ButtonSeeMore>
+               <S.ButtonAddBasket>ADD BASKET</S.ButtonAddBasket>
               </S.ProductContainer>
             ) 
           : null;
       })}
+      </S.ProductsContainer>
+<S.ButtonSeeMore onClick={SeeMore}>See More</S.ButtonSeeMore>
     </S.Container>
   );
 };
