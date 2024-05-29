@@ -8,7 +8,7 @@ export const productServices = {
         name: "Apple",
         id: 52,
         img: IMAGES.apple,
-        price: $13,
+        price: "$13",
         family: "Ebenaceae",
         order: "Rosales",
         genus: "Diospyros",
@@ -24,7 +24,7 @@ export const productServices = {
         name: "Kiwi",
         id: 3,
         img: IMAGES.kiwi,
-        price: $9,
+        price: "$9",
         family: "Rosaceae",
         order: "Rosales",
         genus: "Fragaria",
@@ -40,7 +40,7 @@ export const productServices = {
         name: "Banana",
         id: 1,
         img: IMAGES.banana,
-        price: $12,
+        price: "$12",
         family: "Musaceae",
         order: "Zingiberales",
         genus: "Musa",
@@ -56,7 +56,7 @@ export const productServices = {
         name: "Tomato",
         id: 5,
         img: IMAGES.tomato,
-        price: $10,
+        price: "$10",
         family: "Solanaceae",
         order: "Solanales",
         genus: "Solanum",
@@ -72,7 +72,7 @@ export const productServices = {
         name: "Spices",
         id: 4,
         img: IMAGES.spices,
-        price: $10,
+        price: "$10",
         family: "Rosaceae",
         order: "Rosales",
         genus: "Pyrus",
@@ -88,7 +88,7 @@ export const productServices = {
         name: "Milk",
         id: 60,
         img: IMAGES.newmilk,
-        price: $5,
+        price: "$5",
         family: "Malvaceae",
         order: "Malvales",
         genus: "Durio",
@@ -104,7 +104,7 @@ export const productServices = {
         name: "Cheese",
         id: 64,
         img: IMAGES.newcheese,
-        price: $15,
+        price: "$15",
         family: "Rosaceae",
         order: "Rosales",
         genus: "Rubus",
@@ -120,7 +120,7 @@ export const productServices = {
         name: "Water",
         id: 66,
         img: IMAGES.water,
-        price: $3,
+        price: "$3",
         family: "Actinidiaceae",
         order: "Struthioniformes",
         genus: "Apteryx",
@@ -137,7 +137,7 @@ export const productServices = {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(data);
-      }, 2000);
+      }, 1000);
     });
   }
 };

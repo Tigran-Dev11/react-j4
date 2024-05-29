@@ -15,6 +15,8 @@ const Shop = () => {
     dispatch(productActions.getProducts());
   }, []);
 
+  console.log(products,'products');
+
   return (
     <S.GeneralSection>
       <S.MenuContainer>
