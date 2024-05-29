@@ -14,6 +14,13 @@ import refundable from "./refundable.png";
 import archive from "./archive.png";
 import support from "./support.png";
 import vector from "./vector.png";
+import banana from "./banana.png";
+import kiwi from "./kiwi.png";
+import newcheese from "./newcheese.png";
+import newmilk from "./newmilk.png";
+import spices from "./spices.png";
+import tomato from "./tomato.png";
+import water from "./water.png";
 
 export const IMAGES = {
   apple,
@@ -32,4 +39,11 @@ export const IMAGES = {
   archive,
   support,
   vector,
+  banana,
+  kiwi,
+  newcheese,
+  newmilk,
+  spices,
+  tomato,
+  water,
 };

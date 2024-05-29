@@ -2,6 +2,17 @@ import styled from "styled-components";
 import { COLORS } from "../../assets/colors";
 import { NavLink } from "react-router-dom";
 
+export const Container = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-block: 50px;
+`;
+
 export const GeneralSection = styled.div`
   width: 100%;
   min-height: 620px;
@@ -10,7 +21,7 @@ export const GeneralSection = styled.div`
     ${COLORS.white} 6.5%,
     ${COLORS.yellow} 100%
   );
-`
+`;
 
 export const MenuContainer = styled.ul`
   display: flex;
@@ -29,4 +40,4 @@ export const MenuItem = styled.li`
 export const LinkToHome = styled(NavLink)`
   color: ${COLORS.black};
   text-decoration: none;
-  `;
+`;

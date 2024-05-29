@@ -4,7 +4,7 @@ export const ROUTES = {
   about: "/about",
   login: "/login",
   signUp: "/sign-up",
-  basket: "./basket",
+  basket: "/basket",
 };
 
 export const headerMenu = [
@@ -31,12 +31,19 @@ export const headerMenu = [
 ];
 
 export const shopMenu = [
-{
-  path: ROUTES.shop,
-  title: "Shop",
-},
-{
-  path: ROUTES.basket,
-  title: "Basket",
-}
-]
+  {
+    path: ROUTES.shop,
+    title: "Shop",
+  },
+  {
+    path: ROUTES.basket,
+    title: "Basket",
+  },
+];
+
+export const FETCH_STATUS = {
+  IDLE: "idle",
+  PANDING: "pending",
+  REJECTED: "rejected",
+  SUCCESS: "success",
+};

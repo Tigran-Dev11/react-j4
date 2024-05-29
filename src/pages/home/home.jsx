@@ -1,6 +1,7 @@
 import * as S from "./styled";
 import Button from "../../commons/button";
 import { IMAGES } from "../../assets/images";
+import { footerMenu } from "./data";
 
 const Home = () => {
   return (
@@ -100,6 +101,21 @@ const Home = () => {
           </S.Section5b>
         </S.Section5General>
       </S.Section5>
+      <S.Section6>
+        <S.Text10>Sign up for new Customer, updates, surveys</S.Text10>
+      </S.Section6>
+      <S.Section7>
+        <S.FooterMenuContainer>
+          {footerMenu().map(({ id, title, items }) => (
+            <S.FooterMenu key={id}>
+              <S.FooterMenuTitle>{title}</S.FooterMenuTitle>
+              {items.map(({ name }) => (
+                <S.FooterMenuList key={name}>{name}</S.FooterMenuList>
+              ))}
+            </S.FooterMenu>
+          ))}
+        </S.FooterMenuContainer>
+      </S.Section7>
     </S.HomeContainer>
   );
 };

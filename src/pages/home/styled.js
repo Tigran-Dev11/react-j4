@@ -357,3 +357,47 @@ export const Text9 = styled.p`
   height: 160px;
   margin-top: 30px;
 `;
+
+export const Section6 = styled.div`
+  width: 100%;
+  height: 100px;
+  background-color: ${COLORS.green2};
+`;
+
+export const Text10 = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "montserrat";
+  font-size: 24px;
+  padding-top: 40px;
+`;
+
+export const Section7 = styled.div`
+  width: 100%;
+  height: 400px;
+`;
+
+export const FooterMenuContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 90px;
+`;
+
+export const FooterMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+export const FooterMenuTitle = styled.p`
+  font-size: 36px;
+  font-family: "montserrat";
+`;
+
+export const FooterMenuList = styled.p`
+  color: ${COLORS.black};
+  font-family: "montserrat";
+  cursor: pointer;
+`;
