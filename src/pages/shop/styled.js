@@ -9,7 +9,8 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  column-gap: 120px;
+  row-gap: 30px;
   padding-block: 50px;
 `;
 

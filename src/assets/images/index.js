@@ -21,6 +21,7 @@ import newmilk from "./newmilk.png";
 import spices from "./spices.png";
 import tomato from "./tomato.png";
 import water from "./water.png";
+import removeitem from "./removeitem.png"
 
 export const IMAGES = {
   apple,
@@ -46,4 +47,5 @@ export const IMAGES = {
   spices,
   tomato,
   water,
+  removeitem
 };
