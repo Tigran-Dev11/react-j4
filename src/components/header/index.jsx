@@ -25,10 +25,10 @@ const Header = () => {
         <S.HeaderTopDivTwo>
           <Button title="Sign In" />
           <Button title="Sign Up" />
-          <select defaultValue="en" onChange={changeLanguage}>
-            <option value="en">Eng</option>
-            <option value="am">Arm</option>
-          </select>
+          <S.TranslateContainer defaultValue="en" onChange={changeLanguage}>
+            <S.SetLanguage value="en">Eng</S.SetLanguage>
+            <S.SetLanguage value="am">Arm</S.SetLanguage>
+          </S.TranslateContainer>
         </S.HeaderTopDivTwo>
       </S.HeaderTop>
       <S.HeaderSearch>

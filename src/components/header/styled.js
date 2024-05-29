@@ -91,3 +91,13 @@ export const HeaderMenuListItem = styled.li``;
 export const HeaderMenuAddress = styled.p`
   color: ${COLORS.white};
 `;
+
+
+export const TranslateContainer = styled.select`
+
+
+`
+
+export const SetLanguage = styled.option`
+
+`
