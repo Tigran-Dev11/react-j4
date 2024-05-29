@@ -18,11 +18,11 @@ const ProductCard = ({ product }) => {
     setCount(count + 1);
   };
 
-  const addBasket = () => {
+  const addBaskett = () => {
     const item = {
       id: product.id,
-      name: product.name,
-      img: product.img,
+      name: product.title,
+      img: product.image,
       count,
       price: product.price,
     };
@@ -48,7 +48,7 @@ const ProductCard = ({ product }) => {
           <S.plusItem onClick={plusItem}>+</S.plusItem>
         </S.productCount>
         <S.addToCardContainer>
-          <S.addButton onClick={addBasket}>Add To Card</S.addButton>
+          <S.addButton onClick={addBaskett}>Add To Card</S.addButton>
         </S.addToCardContainer>
       </S.addBasket>
     </S.productContainer>

@@ -1,32 +1,35 @@
-import { useDispatch, useSelector } from "react-redux";
+/* eslint-disable react/prop-types */
+import { useDispatch } from "react-redux";
 import * as S from "./styled.js";
-import { productSelector } from "../../libs/redux/product-slice/product-selector.js";
 import { useState } from "react";
 import { IMAGES } from "../../assets/index.js";
 import { productActions } from "../../libs/redux/product-slice/product-slice.js";
 
 const BasketCard = ({ product }) => {
-    const { products } = useSelector(productSelector);
-    const [count, setCount] = useState(product.count);
+
+  console.log(product,'productproduct');
+
+  const [count, setCount] = useState(product?.count);
+
     const dispatch = useDispatch();
   
-    const minusItem = () => {
-      if (count > 1) {
-        setCount(count - 1);
-      }
-    };
+    // const minusItem = () => {
+    //   if (count > 1) {
+    //     setCount(count - 1);
+    //   }
+    // };
   
-    const plusItem = () => {
-      setCount(count + 1);
-    };
+    // const plusItem = () => {
+    //   setCount(count + 1);
+    // };
   
-    const removeItem = () => {
-      dispatch(productActions.removeItem(product));
-    };
+    // const removeItem = () => {
+    //   dispatch(productActions.removeItem(product));
+    // };
   
     return (
       <S.BasketItemContainer>
-        <S.ProductName>{product.name}</S.ProductName>
+        {/* <S.ProductName>{product.name}</S.ProductName>
         <S.basketItemImage src={product.img} alt="image" />
         <S.ProductPrice>{product.price * count} $</S.ProductPrice>
         <S.OrderButtons>
@@ -34,7 +37,7 @@ const BasketCard = ({ product }) => {
           <S.ProductQuantity>{count}</S.ProductQuantity>
           <S.PlusButton onClick={plusItem}>+</S.PlusButton>
         </S.OrderButtons>
-        <S.RemoveIcon src={IMAGES.removeIcon} alt="icon" onClick={removeItem} />
+        <S.RemoveIcon src={IMAGES.removeIcon} alt="icon" onClick={removeItem} /> */}
       </S.BasketItemContainer>
     );
   };

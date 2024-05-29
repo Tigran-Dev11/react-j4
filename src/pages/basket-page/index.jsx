@@ -6,6 +6,8 @@ import BasketCard from "../../components/basketCard";
 const Basket = () => {
   const { basketItems } = useSelector(productSelector);
 
+  console.log(basketItems,'basketItems');
+
   return (
     <S.Container>
       <h1>{!basketItems?.length ? "Basket is empty" : ""}</h1>
