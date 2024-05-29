@@ -7,12 +7,12 @@ const SortedCothesAllMenu = () => {
       <S.Item>
         <S.ItemTitle>BROWSE BY dress STYLE</S.ItemTitle>
         <S.FirstCasualContainer>
-          <img src={IMAGES.Casual} alt="" />
-          <img src={IMAGES.Formal} alt="" />
+          <S.CasualImg src={IMAGES.Casual} alt="image" />
+          <S.FormalImg src={IMAGES.Formal} alt="image" />
         </S.FirstCasualContainer>
         <S.SecondGymContainer>
-          <img src={IMAGES.Party} alt="" />
-          <img src={IMAGES.Gym} alt="" />
+          <S.PartyImg src={IMAGES.Party} alt="image" />
+          <S.GymImg src={IMAGES.Gym} alt="image" />
         </S.SecondGymContainer>
       </S.Item>
     </S.Container>

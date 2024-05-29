@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 
 export const SliderContainer = styled.div`
-width: 100%;
+width: calc(100% - 60px);
+padding-inline: 30px;
 height: 80px;
 background-color: black;
 display: flex;

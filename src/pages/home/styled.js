@@ -6,14 +6,14 @@ import { BREAKPOINTS } from "../../assets/breakpoints";
 export const AllContentContainer = styled.div`
 width:100%;
 min-height:100vh;
-padding-inline: 30px;
 display: flex;
 flex-direction: column;
 align-items: center;
 `
 
 export const HomeCont = styled.div`
-width: 100%;
+width: calc(100% - 60px);
+padding-inline: 30px;
 min-height: 660px;
 padding-block: 60px;
 margin-top:158px;
