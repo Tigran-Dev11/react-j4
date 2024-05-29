@@ -5,16 +5,17 @@ import { BREAKPOINTS } from "../../assets/breakpoints";
 import { IMAGES } from "../../assets";
 
 export const HeaderCont = styled.header`
-  width: 100%;
+  width: calc(100% - 120px);
   height: 120px;
+  padding-inline: 60px;
   background-color: ${COLORS.white};
   display: flex;
   align-items: center;
   justify-content: center;
   color: black;
-  margin-top: 38px;
   position: fixed;
   z-index: 90;
+  top: 38px;
 `;
 export const titleShop = styled.h1`
   font-size: 32px;
@@ -41,7 +42,7 @@ export const Link = styled(NavLink)`
     }
 `;
 export const component = styled.div`
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -79,7 +80,7 @@ export const searchIcon = styled.img`
     }
 `;
 export const searchShoes = styled.input`
-  width: 700px;
+  width: 670px;
   height: 48px;
   opacity: 0px;
   border: none;
@@ -112,3 +113,16 @@ display:none;
 
 
 `
+
+export const menuContainer = styled.div`
+width: 500px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 20px;
+`
+
+export const languageSelect = styled.select``
+
+export const languageOptionEng = styled.option``
+export const languageOptionRus = styled.option``

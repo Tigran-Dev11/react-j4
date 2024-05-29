@@ -4,15 +4,16 @@ import { BREAKPOINTS } from "../../assets/breakpoints";
 
 
 export const AllContentContainer = styled.div`
-width: 100%;
+width:100%;
 min-height:100vh;
+padding-inline: 30px;
 display: flex;
 flex-direction: column;
 align-items: center;
 `
 
 export const HomeCont = styled.div`
-width: calc(100% - 120px);
+width: 100%;
 min-height: 660px;
 padding-block: 60px;
 margin-top:158px;
@@ -23,7 +24,7 @@ background-size: cover;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding-inline: 60px;
+
 
 `
 export const bigStar = styled.img`
@@ -56,12 +57,12 @@ justify-content: space-between;
 `
 
 export const descriptionsCont = styled.div`
+width: calc(50% - 120px);
 display: flex;
 flex-direction: column;
 align-items: start;
 padding-inline: 60px;
 justify-content: space-between;
-width: calc(50% - 120px);
 min-height:600px;
 flex-wrap: wrap;
 
@@ -73,10 +74,7 @@ flex-wrap: wrap;
 
 export const sloganShoes = styled.h1`
 width: 577px;
-min-height: 173px;
-top: 237px;
-left: 100px;
-gap: 0px;
+height: 173px;
 color: black;
 font-size: 64px;
 font-weight: 700;
@@ -94,7 +92,6 @@ text-align: left;
 export const explanationShoes = styled.p`
 width: 545px;
 min-height: 33px;
-opacity: 0px;
 font-size: 16px;
 font-weight: 400;
 line-height: 22px;
@@ -115,8 +112,7 @@ gap:20px ;
 
 export const listQuantity = styled.li`
 list-style: none;
-position: relative;
-right:10px;
+
 
 `
 

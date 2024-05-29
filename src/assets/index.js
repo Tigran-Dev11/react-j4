@@ -16,6 +16,10 @@ import menu from "./images/menu.svg";
 import hidePass from "./images/hide-pass.svg";
 import showPass from "./images/show-pass.svg";
 import casualCloth from "./images/casual-cloth.png"
+import Gym from "./images/Gym.png"
+import Party from "./images/Party.png"
+import Casual from "./images/Casual.png"
+import Formal from "./images/Formal.png"
 
 export const IMAGES = {
   basket,
@@ -36,4 +40,8 @@ export const IMAGES = {
   hidePass,
   showPass,
   casualCloth,
+  Casual,
+  Formal,
+  Party,
+  Gym,
 };

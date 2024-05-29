@@ -1,18 +1,20 @@
 import * as S from "./styled";
 import { IMAGES } from "../../assets";
-import Brands from "../../components/brands-section";
 import Button from "../../common/button";
 import NewArriwals from "../../components/shoes-description/new-arriwals";
-import { purchasedProducts } from "../../utils/constants";
+import { brandsNames, purchasedProducts } from "../../utils/constants";
 import TopSelling from "../../components/shoes-description/top-selling";
 import SortedCothesAllMenu from "../../components/sorted-clothes";
+import { Carousel } from "../../common/carousel";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+const {t, i18n} = useTranslation()
   return (
     <S.AllContentContainer>
       <S.HomeCont>
         <S.descriptionsCont>
-          <S.sloganShoes>FIND CLOTHES THAT MATCHES YOUR STYLE</S.sloganShoes>
+          <S.sloganShoes>{t("home.sloganShoes")} </S.sloganShoes>
           <S.explanationShoes>
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
@@ -35,7 +37,7 @@ const Home = () => {
           <S.bigStar src={IMAGES.bigStar} />
         </S.starsContainer>
       </S.HomeCont>
-      <Brands />
+      <Carousel data={brandsNames}/>
       <NewArriwals />
       <TopSelling />
       <SortedCothesAllMenu />

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const productContainer = styled.div`
-  width: 340px;
+  width: 270px;
   height: 400px;
   background: #fff;
   display: flex;
@@ -77,7 +77,9 @@ export const productImg = styled.img`
   height: 340px;
 `;
 
-export const productTitle = styled.p``;
+export const productTitle = styled.p`
+height: 60px;
+`;
 
 export const fiveStar = styled.img``;
 export const addToCardContainer = styled.div``

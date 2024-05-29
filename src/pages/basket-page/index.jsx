@@ -1,17 +1,18 @@
-import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../utils/constants";
+import { useSelector } from "react-redux";
+import { productSelector } from "../../libs/redux/product-slice/product-selector";
+import * as S from "./styled"
+import BasketCard from "../../components/basketCard";
 
 const Basket = () => {
-  const navigate = useNavigate();
+  const { basketItems } = useSelector(productSelector);
 
-  const goToHomePage = () => {
-    navigate(ROUTES.home);
-  };
   return (
-    <div>
-      <h1>sadfghj,m</h1>
-      <button onClick={goToHomePage}>goToHome</button>
-    </div>
+    <S.Container>
+      <h1>{!basketItems?.length ? "Basket is empty" : ""}</h1>
+      {basketItems?.map((product) => (
+        <BasketCard key={product.id} product={product} />
+      ))}
+    </S.Container>
   );
 };
 export default Basket;

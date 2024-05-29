@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect } from "react";
 import * as S from "./styled";
 import ProductCard from "../../productCard";
@@ -14,11 +13,12 @@ const NewArriwals = () => {
   useEffect(() => {
     dispatch(productActions.getProducts());
   }, []);
+
+  console.log(products);
+
   let cycle = 0;
 
-  const viewAll = () => {
-    console.log("hello");
-  };
+  const viewAll = () => {};
   return (
     <S.shoesContainer>
       <S.TopPiece>
@@ -27,9 +27,9 @@ const NewArriwals = () => {
       <S.productTop>
         {products?.map((product) => {
           cycle += 1;
-          if (cycle >= 18) {
+          if (cycle >= 5) {
             return;
-          } else if (cycle >= 14) {
+          } else if (cycle >= 0) {
             return <ProductCard key={product.id} product={product} />;
           }
         })}

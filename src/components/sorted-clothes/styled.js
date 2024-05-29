@@ -13,7 +13,10 @@ justify-content: center;
 
 `
 export const Item = styled.div`
-width: 90%;
+width: 96%;
+display: flex;
+justify-content: center;
+align-items: start;
 min-height: 800px;
 background: #F0F0F0;
 border-radius: 40px;

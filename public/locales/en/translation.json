@@ -1,0 +1,17 @@
+{
+  "header": {
+    "title": "SHOP.CO",
+    "shop": "Shop",
+    "onSale": "On Sale",
+    "newArriwals": "New Arrivals",
+    "brands": "Brands"
+  },
+  "home": {
+    "sloganShoes": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+    "explanationShoes": " Browse through our diverse range of meticulously crafted garments,designed to bring out your individuality and cater to your sense of style",
+    "shopButton": "Shop Now",
+    "productsBranch1": "International Brands",
+    "productsBranch2": "High-Quality Products",
+    "productsBranch3": "Happy Customers"
+  }
+}

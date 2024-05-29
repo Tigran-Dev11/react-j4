@@ -1,3 +1,4 @@
+import { IMAGES } from "../../assets";
 import * as S from "./styled";
 
 const SortedCothesAllMenu = () => {
@@ -6,12 +7,12 @@ const SortedCothesAllMenu = () => {
       <S.Item>
         <S.ItemTitle>BROWSE BY dress STYLE</S.ItemTitle>
         <S.FirstCasualContainer>
-          <S.CasualClothButton>Casual</S.CasualClothButton>
-          <S.FormClothButton>Form</S.FormClothButton>
+          <img src={IMAGES.Casual} alt="" />
+          <img src={IMAGES.Formal} alt="" />
         </S.FirstCasualContainer>
         <S.SecondGymContainer>
-          <S.PartyClothButton>Party</S.PartyClothButton>
-          <S.GymClothButton>Gym</S.GymClothButton>
+          <img src={IMAGES.Party} alt="" />
+          <img src={IMAGES.Gym} alt="" />
         </S.SecondGymContainer>
       </S.Item>
     </S.Container>

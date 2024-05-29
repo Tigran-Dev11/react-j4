@@ -10,6 +10,7 @@ align-items: center;
 justify-content: center;
 position: fixed;
 z-index:90;
+top: 0px;
 `
 export const aboutSignUp = styled.p`
 height: auto;
