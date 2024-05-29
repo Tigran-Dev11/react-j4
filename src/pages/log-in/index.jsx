@@ -2,8 +2,9 @@ import * as S from "./styled.js";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { SCHEMA } from "../../validation";
-
+import { ROUTES } from "../../utils/constant.js"
 import Input from "../../commons/input";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -14,19 +15,24 @@ const Login = () => {
     resolver: yupResolver(SCHEMA.loginSchema),
   });
 
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
     localStorage.getItem("data", JSON.stringify(data));
+
+    navigate(ROUTES.shop);
   };
+
+
 
   return (
     <S.FormContainer className="container">
       <S.PageTitle>Login page</S.PageTitle>
-      <S.LoginForm onSubmit={handleSubmit(onSubmit)}>
+      <S.LoginForm action="" onSubmit={handleSubmit(onSubmit)}>
         <Input
           type="email"
           placeholder="Email *"
           register={register("email")}
-          variant={"primary"}
           error={errors?.email}
         />
 
@@ -35,9 +41,7 @@ const Login = () => {
           placeholder="Password *"
           register={register("password")}
           error={errors?.password}
-          variant={"primary"}
           isPasswordMode={true}
-          className="loginPassword"
         />
         <S.LoginButton>Login</S.LoginButton>
       </S.LoginForm>
