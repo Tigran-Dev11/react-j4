@@ -3,6 +3,7 @@ import Shop from "../pages/shop";
 import AboutUs from "../pages/about-us";
 import ContactUs from "../pages/contact-us";
 import Basket from "../pages/basket";
+import Login from "../pages/log-in";
 import { ROUTES } from "../utils/constant";
 
 export const routes = [
@@ -27,6 +28,9 @@ export const routes = [
         component: Basket,
         path: ROUTES.basket
     },
-
+    {
+        component: Login,
+        path: ROUTES.login
+    },
 
 ];
