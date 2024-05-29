@@ -9,7 +9,7 @@ export const ROUTES = {
 };
 
 
-export const headerMenu = [
+export const headerMenu = (t) =>[
     {
         path: ROUTES.home,
         title: "Home"

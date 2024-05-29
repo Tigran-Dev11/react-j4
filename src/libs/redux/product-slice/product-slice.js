@@ -12,12 +12,12 @@ const productSlice = createSlice({
   },
 
   reducers: {
-    getBasketDataByStorage: (state) => {
-      const basketItems = JSON.parse(localStorage.getItem("basketItems"));
-      if (basketItems && basketItems?.length) {
-        state.basketItems = basketItems;
-      }
-    },
+    // getBasketDataByStorage: (state) => {
+    //   const basketItems = JSON.parse(localStorage.getItem("basketItems"));
+    //   if (basketItems && basketItems?.length) {
+    //     state.basketItems = basketItems;
+    //   }
+    // },
 
     addBasket: (state, { payload }) => {
       if (!state.basketItems.length) {
