@@ -1,10 +1,11 @@
-import React from 'react';
 import * as S from './styled';
 import img1 from '../../assets/car-jeep.png'
 import img2 from '../../assets/car-ferrari.png'
 import img3 from '../../assets/car-mini.png'
+import { useNavigate } from 'react-router-dom';
 
 const FeaturedCars = () => {
+  const navigate  = useNavigate()
   const cars = [
     {
       name: 'Jeep XD',
@@ -33,6 +34,11 @@ const FeaturedCars = () => {
     
   ];
 
+
+  const booking = ()=>{
+    navigate('/login')
+  }
+
   return (
     <S.CarsContainer>
       {cars.map((car, index) => (
@@ -44,7 +50,7 @@ const FeaturedCars = () => {
             <p>{car.fuelType}</p>
             <p>{car.type}</p>
             <p>Daily rate from: ${car.rate}</p>
-            <S.BookButton>Book Now</S.BookButton>
+            <S.BookButton onClick={booking}>Book Now</S.BookButton>
           </S.CarDetails>
         </S.CarCard>
       ))}
