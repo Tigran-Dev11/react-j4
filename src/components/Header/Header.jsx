@@ -14,8 +14,8 @@ const Header = () => {
         <NavLink to="/contacts">Contacts</NavLink>
       </S.Navbar>
       <S.AuthButtons>
-        <button className='btn'>Login</button>
-        <button className='btn'>Sign Up</button>
+        <NavLink to="/login" className='btn'>Login</NavLink>
+        <NavLink to="/register" className='btn'>Sign Up</NavLink>
       </S.AuthButtons>
     </S.HeaderContainer>
   );

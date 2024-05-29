@@ -1,6 +1,4 @@
-
 import styled from 'styled-components';
-
 
 export const CarsContainer = styled.div`
   display: flex;
@@ -10,7 +8,7 @@ export const CarsContainer = styled.div`
 `;
 
 export const CarCard = styled.div`
-  width: 300px; 
+  width: 320px; 
   margin: 20px;
   background-color: #f0f0f0; 
   border-radius: 10px;
@@ -19,12 +17,11 @@ export const CarCard = styled.div`
 
 export const CarImage = styled.div`
   width: 100%;
-  height: auto;
+  height: 250px;
   background-image: url(${props => props.carImage});
   background-size: cover;
   background-position: center;
 `;
-
 export const CarDetails = styled.div`
   padding: 15px;
   color: black; 

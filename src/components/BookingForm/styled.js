@@ -15,7 +15,7 @@ export const Input = styled.input`
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: calc(33.333% - 20px); 
+  width: calc(33.333% - 100px); 
 `;
 
 export const Button = styled.button`
