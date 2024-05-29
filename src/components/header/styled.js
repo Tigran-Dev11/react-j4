@@ -36,7 +36,7 @@ height:60px;
 `
 
 
-export const Ul = styled.ul`
+export const MenuItemsContainer = styled.ul`
 width:1000px;
 height:60px;
 display:flex;
@@ -44,10 +44,10 @@ justify-content: space-evenly;
 align-items:center;
 
 `
-export const Li = styled.li`
+export const MenuItems = styled.li`
 list-style:none;
 `
-export const Apath = styled.a`
+export const MenuItempath = styled.a`
 color:black;
 text-decoration:none;
 `

@@ -7,9 +7,9 @@ width: 100%;
 height: 590px;
 background-color: ${COLORS.grey} ;
 display: flex;
-
 justify-content: space-around;
 align-items: center;
+margin-top: 100px;
 `
 
 export const InfoContainer  = styled.div`

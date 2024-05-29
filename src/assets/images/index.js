@@ -7,6 +7,10 @@ import thirdBackground from "./thirdsecbg.png"
 import SewingMachine from "./Sewing-machine.png"
 import Sewing from "./Sewing.png"
 import TailorUser from "./Tailor.png"
+import instagram from "./instagram.png"
+import facebook from "./facebook.png"
+import twitter from "./twitter.png"
+
 
 
 
@@ -21,5 +25,8 @@ export const IMAGES = {
     thirdBackground,
     SewingMachine,
     Sewing,
-    TailorUser
+    TailorUser,
+    instagram,
+    twitter,
+    facebook
 }

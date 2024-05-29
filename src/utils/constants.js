@@ -1,4 +1,5 @@
 import { IMAGES } from "../assets/images";
+
 export const ROUTES = {
     home: "/",
     contact:"/contact",
@@ -6,6 +7,7 @@ export const ROUTES = {
     weddings:"/weddings",
     shop:"/shop",
     service:"/service",
+    notfound:"/*"
   };
   
   export const menu = [

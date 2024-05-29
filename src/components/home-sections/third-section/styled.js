@@ -8,6 +8,7 @@ min-height: 236px;
 background-image: url(${IMAGES.thirdBackground});
 background-repeat: no-repeat;
 background-size: cover;
+margin-top: 100px;
 display: flex;
 flex-direction: column;
 justify-content: center;

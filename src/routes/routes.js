@@ -4,6 +4,7 @@ import Weddings from "../pages/weddings";
 import Service from "../pages/service";
 import Shop from "../pages/shop";
 import Home from "../pages/home";
+import NotFound from "../pages/not -found";
 import { ROUTES } from "../utils/constants"
 
 export const routes = [
@@ -34,6 +35,10 @@ export const routes = [
   {
     component: Home,
     path: ROUTES.home,
+  },
+  {
+    component: NotFound,
+    path: ROUTES.notfound,
   },
  
 ];

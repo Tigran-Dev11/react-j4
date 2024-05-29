@@ -7,23 +7,23 @@ const Header = () => {
     <S.HeaderContainer>
       <S.TopMenuContainer>
         <S.TextContainer>
-        <S.Text>Mega Sale</S.Text>
-        <S.Text>Take 10% OFF</S.Text>
+          <S.Text>Mega Sale</S.Text>
+          <S.Text>Take 10% OFF</S.Text>
         </S.TextContainer>
       </S.TopMenuContainer>
       <S.MenuContainer>
         <S.LogoContainer>
-          <NavLink to = "./">
-        <S.Logo src={IMAGES.logo}></S.Logo>
-        </NavLink>
+          <NavLink to="./">
+            <S.Logo src={IMAGES.logo}></S.Logo>
+          </NavLink>
         </S.LogoContainer>
-        <S.Ul>
+        <S.MenuItemsContainer>
           {menu.map(({ title, path }) => (
-            <S.Li key={path}>
-              <S.Apath href={path}>{title}</S.Apath>
-            </S.Li>
+            <S.MenuItems key={path}>
+              <S.MenuItempath href={path}>{title}</S.MenuItempath>
+            </S.MenuItems>
           ))}
-        </S.Ul>
+        </S.MenuItemsContainer>
         <S.IconsContainer>
           <S.ImageContainer src={IMAGES.user}></S.ImageContainer>
           <S.ImageContainer src={IMAGES.basket}></S.ImageContainer>

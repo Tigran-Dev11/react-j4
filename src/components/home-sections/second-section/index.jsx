@@ -9,7 +9,9 @@ const SecondSection = () => {
   const dispatch = useDispatch();
   const { products } = useSelector(productSelector);
 
-  const { min, setMin } = useState(8);
+  const [min, setMin] = useState(4);
+  const [count, setCount] = useState();
+
 
   console.log(products, "products");
 
@@ -20,10 +22,17 @@ const SecondSection = () => {
   return (
     <S.Container>
       {products.map((item, index) => {
-       return (index <= min) ? ((<h1>{item.title}</h1>)) :(console.log("sxal"))
+        return index <= min
+          ? (
+              <S.ProductContainer>
+                <S.ProductImg src={item.images[2]}></S.ProductImg>
+                <S.ProductTitle>{item.title}</S.ProductTitle>
+                <S.ProductPrice>Price: {item.price}$</S.ProductPrice>
+               <S.ButtonSeeMore>ADD BASKET</S.ButtonSeeMore>
+              </S.ProductContainer>
+            ) 
+          : null;
       })}
-      
-
     </S.Container>
   );
 };
