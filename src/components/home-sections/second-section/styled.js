@@ -8,7 +8,8 @@ min-height: 590px;
 display: flex;
 flex-wrap: wrap;
 gap:20px;
-justify-content: center;
+flex-direction: column;
+justify-content: space-evenly;
 align-items: center;
 margin-top: 30px;
 `
@@ -40,8 +41,29 @@ export const ProductDesc  = styled.p`
 
 export const ProductPrice = styled.p`
 `
-export const ButtonSeeMore = styled.button`
+export const ButtonAddBasket = styled.button`
    width: 200px;
+height: 46px;
+background-color: ${COLORS.brown};
+border-radius: 8px;
+color: white;
+padding: 10px 10px ;
+font-size:16px;
+`
+
+export const ProductsContainer  = styled.div`
+
+width: 100%;
+min-height: 590px;
+display: flex;
+flex-wrap: wrap;
+gap:20px;
+justify-content: center;
+align-items: center;
+`
+
+export const ButtonSeeMore = styled.button`
+   width: 100px;
 height: 46px;
 background-color: ${COLORS.brown};
 border-radius: 8px;
