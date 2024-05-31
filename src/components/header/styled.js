@@ -27,14 +27,19 @@ export const MenuItem = styled.li`
   font-weight: 500;
   font-family: "montserrat";
 `;
-export const Input = styled.input`
-  border: 1px solid ${COLORS.black};
-  width: 230px;
-  height: 40px;
-  padding-inline: 12px;
-  margin-left: 10px;
-`;
+
 export const LinkToHome = styled(NavLink)`
   color: ${COLORS.black};
   text-decoration: none;
-  `;
+`;
+
+export const languageSelect = styled.select`
+  margin-left: 20px;
+  font-family: "montserrat";
+  border-radius: 6px;
+  padding: 6px;
+  font-weight: 500;
+`;
+
+export const languageOptionEng = styled.option``;
+export const languageOptionRus = styled.option``;

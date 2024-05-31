@@ -6,7 +6,6 @@ import Login from "../pages/login/login";
 import SignUp from "../pages/sign-up/sign-up";
 import Basket from "../pages/basket/basket";
 
-
 export const routes = [
   {
     component: Home,
@@ -31,6 +30,5 @@ export const routes = [
   {
     component: Basket,
     path: ROUTES.basket,
-  }
-
+  },
 ];

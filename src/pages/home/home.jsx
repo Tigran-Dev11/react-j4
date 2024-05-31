@@ -2,8 +2,10 @@ import * as S from "./styled";
 import Button from "../../commons/button";
 import { IMAGES } from "../../assets/images";
 import { footerMenu } from "./data";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <S.HomeContainer>
       <S.Section1>

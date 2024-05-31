@@ -15,12 +15,11 @@ i18n
   .init({
     fallbackLng: "en",
     debug: true,
-    whitelist: ["en", "am"],
-     
+    whitelist: ["en", "ru"],
 
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;

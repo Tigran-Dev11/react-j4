@@ -1,21 +1,38 @@
 import styled from "styled-components";
 import { COLORS } from "../../assets/colors";
 
-export const General = styled.div`
-  width: 100%;
-  height: 620px;
-  background: linear-gradient(
-    180deg,
-    ${COLORS.white} 6.5%,
-    ${COLORS.yellow} 100%
-  );
+export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 90px;
 `;
 
-export const Title = styled.p`
-padding-top: 40px;
-display: flex;
-justify-content: center;
-text-align: center;
-font-size: 60px;
-font-family: "montserrat";
-`
+export const PageTitle = styled.h1`
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+  font-family: "montserrat";
+`;
+
+export const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+`;
+
+export const LoginButton = styled.button`
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  color: ${COLORS.black};
+  font-family: "montserrat";
+  box-shadow: 2px 4px 4px 2px ${COLORS.black};
+  cursor: pointer;
+`;

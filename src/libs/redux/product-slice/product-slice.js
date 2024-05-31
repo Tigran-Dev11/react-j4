@@ -57,10 +57,9 @@ const productSlice = createSlice({
       state.getProductsStatus = FETCH_STATUS.PANDING;
     }),
       builder.addCase(getProducts.fulfilled, (state, { payload }) => {
-        console.log(payload,'payload');
+        console.log(payload, "payload");
         state.getProductsStatus = FETCH_STATUS.SUCCESS;
         state.products = payload;
-
       });
     builder.addCase(getProducts.rejected, (state) => {
       state.getProductsStatus = FETCH_STATUS.REJECTED;

@@ -14,6 +14,9 @@ const Basket = () => {
       {basketItems?.map((product) => (
         <BasketItem key={product.id} product={product} />
       ))}
+      {basketItems?.length ? (
+        <S.ButtonDelivery>Make a Delivery</S.ButtonDelivery>
+      ) : null}
     </S.BasketContainer>
   );
 };

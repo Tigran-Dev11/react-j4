@@ -98,6 +98,7 @@ export const Section3 = styled.div`
   width: 100%;
   height: 600px;
   display: flex;
+  justify-content: space-around;
 `;
 
 export const Section3A = styled.div`

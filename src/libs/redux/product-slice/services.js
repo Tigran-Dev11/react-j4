@@ -1,6 +1,5 @@
 import { IMAGES } from "../../../assets/images";
 
-
 export const productServices = {
   getProducts: () => {
     const data = [
@@ -17,8 +16,8 @@ export const productServices = {
           fat: 0.0,
           sugar: 18.0,
           carbohydrates: 18.0,
-          protein: 0.0
-        }
+          protein: 0.0,
+        },
       },
       {
         name: "Kiwi",
@@ -33,8 +32,8 @@ export const productServices = {
           fat: 0.4,
           sugar: 5.4,
           carbohydrates: 5.5,
-          protein: 0.8
-        }
+          protein: 0.8,
+        },
       },
       {
         name: "Banana",
@@ -49,8 +48,8 @@ export const productServices = {
           fat: 0.2,
           sugar: 17.2,
           carbohydrates: 22.0,
-          protein: 1.0
-        }
+          protein: 1.0,
+        },
       },
       {
         name: "Tomato",
@@ -65,8 +64,8 @@ export const productServices = {
           fat: 0.2,
           sugar: 2.6,
           carbohydrates: 3.9,
-          protein: 0.9
-        }
+          protein: 0.9,
+        },
       },
       {
         name: "Spices",
@@ -81,8 +80,8 @@ export const productServices = {
           fat: 0.1,
           sugar: 10.0,
           carbohydrates: 15.0,
-          protein: 0.4
-        }
+          protein: 0.4,
+        },
       },
       {
         name: "Milk",
@@ -97,8 +96,8 @@ export const productServices = {
           fat: 5.3,
           sugar: 6.75,
           carbohydrates: 27.1,
-          protein: 1.5
-        }
+          protein: 1.5,
+        },
       },
       {
         name: "Cheese",
@@ -113,8 +112,8 @@ export const productServices = {
           fat: 0.4,
           sugar: 4.5,
           carbohydrates: 9.0,
-          protein: 1.3
-        }
+          protein: 1.3,
+        },
       },
       {
         name: "Water",
@@ -129,8 +128,8 @@ export const productServices = {
           fat: 0.5,
           sugar: 9.0,
           carbohydrates: 15.0,
-          protein: 1.1
-        }
+          protein: 1.1,
+        },
       },
     ];
 
@@ -139,5 +138,5 @@ export const productServices = {
         resolve(data);
       }, 100);
     });
-  }
+  },
 };

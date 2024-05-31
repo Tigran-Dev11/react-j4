@@ -15,8 +15,8 @@ export const ProductsContainer = styled.div`
 `;
 
 export const ProductTitle = styled.p`
-font-size: 24px;
-font-family: "montserrat";
+  font-size: 24px;
+  font-family: "montserrat";
 `;
 
 export const ProductImage = styled.img`
@@ -44,8 +44,8 @@ export const PlusButton = styled.button`
 `;
 
 export const ProductQuantity = styled.p`
-font-family:"montserrat";
-font-weight: 500;
+  font-family: "montserrat";
+  font-weight: 500;
 `;
 
 export const AddBasketButton = styled.button`
@@ -56,9 +56,10 @@ export const AddBasketButton = styled.button`
   height: 30px;
   width: 250px;
   border-radius: 0 0 8px 8px;
+  font-family: "montserrat";
 `;
 
 export const ProductPrice = styled.p`
-font-family: "montserrat";
-font-weight: 500;
+  font-family: "montserrat";
+  font-weight: 500;
 `;

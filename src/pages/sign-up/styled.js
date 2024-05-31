@@ -1,21 +1,20 @@
 import styled from "styled-components";
-import { COLORS } from "../../assets/colors";
 
-export const General = styled.div`
-  width: 100%;
-  height: 620px;
-  background: linear-gradient(
-    180deg,
-    ${COLORS.white} 6.5%,
-    ${COLORS.yellow} 100%
-  );
+export const RegisterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 90px;
+`;
+export const Title = styled.h3`
+  font-family: "montserrat";
+  font-size: 60px;
 `;
 
-export const Title = styled.p`
-  padding-top: 40px;
+export const FormInputs = styled.form`
   display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 60px;
-  font-family: "montserrat";
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 `;

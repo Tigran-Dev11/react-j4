@@ -1,21 +1,26 @@
 import styled from "styled-components";
+import { COLORS } from "../../assets/colors";
 
 export const BasketItemContainer = styled.div`
   width: 800px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid black;
+  border: 1px solid ${COLORS.black};
   height: auto;
   border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px ${COLORS.black};
 `;
 
 export const basketItemImage = styled.img`
-  widows: 150px;
+  widows: 200px;
   height: 150px;
 `;
 
-export const ProductName = styled.p``;
+export const ProductName = styled.p`
+  font-family: "montserrat";
+  font-weight: 500;
+`;
 
 export const MinusButton = styled.button`
   font-size: 16px;
@@ -31,7 +36,10 @@ export const PlusButton = styled.button`
   cursor: pointer;
 `;
 
-export const ProductQuantity = styled.p``;
+export const ProductQuantity = styled.p`
+  font-family: "montserrat";
+  font-weight: 500;
+`;
 
 export const OrderButtons = styled.div`
   display: flex;
@@ -44,4 +52,7 @@ export const RemoveIcon = styled.img`
   cursor: pointer;
 `;
 
-export const ProductPrice = styled.p``;
+export const ProductPrice = styled.p`
+  font-family: "montserrat";
+  font-weight: 500;
+`;
