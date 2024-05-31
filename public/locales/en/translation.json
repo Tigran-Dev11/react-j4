@@ -1,3 +1,6 @@
 {
-    "title":"Armen"
+    "title":"Armen",
+    "menu":{
+        "home":"Home"
+    }
 }

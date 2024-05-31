@@ -14,7 +14,7 @@ const Header = () => {
     <S.HeaderContainer>
       <S.Logo>GARRENT</S.Logo>
       <S.Navbar>
-        <NavLink to="/">{t('Home')}</NavLink>
+        <NavLink to="/">{t('menu.home')}</NavLink>
         <NavLink to="/about">{t('About')}</NavLink>
         <NavLink to="/booking">{t('Booking')}</NavLink>
         <NavLink to="/cars">{t('Cars')}</NavLink>
