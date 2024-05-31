@@ -5,19 +5,19 @@ import { getProducts, productSliceName } from "./actions";
 const productSlice = createSlice({
   name: productSliceName,
   initialState: {
-    loading:null,
+    loading: null,
     products: [],
     basketItems: [],
     getProductsStatus: FETCH_STATUS.IDLE,
   },
 
   reducers: {
-    // getBasketDataByStorage: (state) => {
-    //   const basketItems = JSON.parse(localStorage.getItem("basketItems"));
-    //   if (basketItems && basketItems?.length) {
-    //     state.basketItems = basketItems;
-    //   }
-    // },
+    getBasketDataByStorage: (state) => {
+      const basketItems = JSON.parse(localStorage.getItem("basketItems"));
+      if (basketItems && basketItems?.length) {
+        state.basketItems = basketItems;
+      }
+    },
 
     addBasket: (state, { payload }) => {
       if (!state.basketItems.length) {

@@ -2,10 +2,11 @@ import * as S from "./styled.js";
 import Button from "../../commons/button";
 import { IMAGES } from "../../assets/index.js";
 import HeaderSearchInput from "../../commons/header-search-input/index.jsx";
-import { ROUTES, headerMenu } from "../../utils/constant.js";
+import { ROUTES } from "../../utils/constant.js";
 import { NavLink } from "react-router-dom";
 import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
+import { headerMenu } from "./data.js";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -19,7 +20,7 @@ const Header = () => {
       <S.HeaderTop>
         <S.HeaderTopDivOne>
           <S.HeaderTopText>
-            Store Location: Lincoln-344, Illinois, Chicago, USA
+            {t('header.address')}
           </S.HeaderTopText>
         </S.HeaderTopDivOne>
         <S.HeaderTopDivTwo>
