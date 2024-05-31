@@ -4,12 +4,14 @@ import { COLORS } from "../../../assets/colors"
 
 export const Container  = styled.div`
 width: 100%;
-height: 590px;
+min-height: 590px;
 background-color: ${COLORS.grey} ;
 display: flex;
-justify-content: space-around;
+flex-wrap: wrap;
+justify-content: space-evenly;
 align-items: center;
 margin-top: 100px;
+padding: 30px;
 `
 
 export const InfoContainer  = styled.div`

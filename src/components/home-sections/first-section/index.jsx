@@ -1,15 +1,20 @@
-import Button from "../../../commons/button";
+
 import * as S from "./styled";
+import { useTranslation } from "react-i18next";
+
 
 const FirstContainer = () => {
+
+  const { t, i18n } = useTranslation();
+
   return (
     <S.Container>
       <S.TextContainer>
-        <S.FirstText>LOOK YOUR BEST</S.FirstText>
-        <S.SecText>FOR YOUR SPECIAL DAY</S.SecText>
+        <S.FirstText>{t("home.look")}</S.FirstText>
+        <S.SecText>{t("home.SpecialDay")}</S.SecText>
       </S.TextContainer>
       <S.BtnContainer>
-        <S.Button>New Arrivals</S.Button>
+        <S.Button>{t("home.btnTitle")}</S.Button>
       </S.BtnContainer>
     </S.Container>
   );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../assets/colors";
-
+import { BREAKPOINTS } from "../../assets/breakpoints";
 
 export const HeaderContainer = styled.div`
 width:100%;
@@ -42,7 +42,12 @@ height:60px;
 display:flex;
 justify-content: space-evenly;
 align-items:center;
-
+@media ${BREAKPOINTS.lg} {
+    width: 700px;
+      }
+      @media ${BREAKPOINTS.md} {
+    width: 500px;
+      }
 `
 export const MenuItems = styled.li`
 list-style:none;
@@ -77,3 +82,18 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 `
+export const LanguageConatainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+`
+
+export const LanguageSelect = styled.select`
+height:20px;
+border:none;
+background-color: ${COLORS.brown};
+color: ${COLORS.white};
+`
+
+export const LanguageOptionEng = styled.option``
+export const LanguageOptionArm = styled.option``

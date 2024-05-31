@@ -3,7 +3,7 @@ import { Description } from "../../../utils/constants";
 
 const FifthSection = () => {
   return (
-    <S.Container>
+    <S.Container key = " ">
       {Description.map((item) => (
         <S.InfoContainer>
           <S.InfoIcon src={item.img}></S.InfoIcon>

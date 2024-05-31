@@ -21,7 +21,7 @@ border-radius: 20px;
 display: flex;
 background-color: ${COLORS.grey};
 flex-direction: column;
-justify-content: center;
+justify-content: space-evenly;
 align-items: center;
 padding: 6px 6px 0px ;
 `
@@ -70,4 +70,29 @@ border-radius: 8px;
 color: white;
 padding: 10px 10px ;
 font-size:16px;
+`
+export const CountContainer = styled.div`
+width: 120px;
+height: 20px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+`
+
+export const MinusBtn = styled.button`
+width: 30px;
+height: 20px;
+border:none;
+border-radius: 4px;
+
+`
+
+export const PlusBtn = styled.button`
+width: 30px;
+height: 20px;
+border:none;
+border-radius: 4px;
+`
+
+export const CountPlace = styled.p`
 `

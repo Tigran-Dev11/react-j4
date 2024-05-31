@@ -66,3 +66,28 @@ color: white;
 padding: 10px 10px ;
 font-size:16px;
 `
+
+export const MinusBtn = styled.button`
+width: 30px;
+height: 20px;
+border:none;
+border-radius: 4px;
+
+`
+
+export const PlusBtn = styled.button`
+width: 30px;
+height: 20px;
+border:none;
+border-radius: 4px;
+`
+
+export const CountPlace = styled.p`
+`
+export const CountContainer = styled.div`
+width: 120px;
+height: 20px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+`
