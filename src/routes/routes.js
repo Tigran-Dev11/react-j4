@@ -6,6 +6,7 @@ import Shop from "../pages/shop";
 import Home from "../pages/home";
 import NotFound from "../pages/not -found";
 import { ROUTES } from "../utils/constants"
+import SingleProduct from "../pages/single-prduct";
 
 export const routes = [
   {
@@ -27,6 +28,10 @@ export const routes = [
   {
     component: Products,
     path: ROUTES.products,
+  },
+  {
+    component:SingleProduct,
+    path: ROUTES.singleProduct,
   },
   {
     component: Service,
