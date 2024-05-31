@@ -4,18 +4,20 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom'; 
 import * as S from './styled';
+import { useTranslation } from 'react-i18next'; 
 
 const schema = yup.object({
-  pickupLocation: yup.string().required('Pickup location is required'),
-  pickupDate: yup.date().required('Pickup date is required').nullable(),
-  returnDate: yup.date().required('Return date is required').nullable(),
-  carType: yup.string().required('Car type is required'),
-  pickupTime: yup.string().required('Pickup time is required'),
-  returnTime: yup.string().required('Return time is required'),
+  pickupLocation: yup.string().required(),
+  pickupDate: yup.date().required().nullable(),
+  returnDate: yup.date().required().nullable(),
+  carType: yup.string().required(),
+  pickupTime: yup.string().required(),
+  returnTime: yup.string().required(),
 });
 
 const BookingForm = () => {
   const navigate = useNavigate(); 
+  const { t } = useTranslation();
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
@@ -29,7 +31,7 @@ const BookingForm = () => {
     <S.FormContainer onSubmit={handleSubmit(onSubmit)}>
       <S.Input
         {...register('pickupLocation')}
-        placeholder="Pickup Location"
+        placeholder={t('pickupLocation')}
       />
       <p>{errors.pickupLocation?.message}</p>
 
@@ -47,7 +49,7 @@ const BookingForm = () => {
 
       <S.Input
         {...register('carType')}
-        placeholder="Car Type"
+        placeholder={t('carType')}
       />
       <p>{errors.carType?.message}</p>
 
@@ -63,7 +65,7 @@ const BookingForm = () => {
       />
       <p>{errors.returnTime?.message}</p>
 
-      <S.Button type="submit">Book Now</S.Button>
+      <S.Button type="submit">{t('bookNow')}</S.Button>
     </S.FormContainer>
   );
 };
