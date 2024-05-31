@@ -14,7 +14,6 @@ const SecondSection = () => {
   const [min, setMin] = useState(4);
   const [count, setCount] = useState(1);
 
-  console.log(products, "products");
 
   useEffect(() => {
     dispatch(productActions.getProduct());
@@ -33,9 +32,9 @@ const SecondSection = () => {
     if (count > 1) setCount(count - 1);
   };
 
-  const addBasket = (product, id) => {
+  const addBasket = (product) => {
     const item = {
-      id,
+      id:product.id,
       title: product.title,
       img: product.title,
       count,
@@ -61,7 +60,7 @@ const SecondSection = () => {
                 <S.CountPlace>{count}</S.CountPlace>
                 <S.PlusBtn onClick={plusBtn}>+</S.PlusBtn>
               </S.CountContainer>
-              <S.ButtonAddBasket onClick={() => addBasket(product.id)}>
+              <S.ButtonAddBasket onClick={() => addBasket(product)}>
                 {t("home.btnAddBasket")}
               </S.ButtonAddBasket>
             </S.ProductContainer>

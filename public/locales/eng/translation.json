@@ -1,19 +1,21 @@
 {
-    "header":{
-        "sale":"Mega Sale",
-        "takeOff":"Take 10% OFF"
-    },
+  "header": {
+    "sale": "Mega Sale",
+    "takeOff": "Take 10% OFF"
+  },
 
-    "home":{
-        "look":"LOOK YOUR BEST",
-        "FOR YOUR SPECIAL DAY":"FOR YOUR SPECIAL DAY",
-        "btnTitle":"New Arrivals",
-        "btnMore":"See More",
-        "btnAddBasket":"Add Basket",
-        "titleMade":"Made-To-Order",
-        "btnLeranMore":"Learn More",
-        "shopCollection":"Shop Collection",
-        "price":"Price"
-
-     }
+  "home": {
+    "look": "LOOK YOUR BEST",
+    "FOR YOUR SPECIAL DAY": "FOR YOUR SPECIAL DAY",
+    "btnTitle": "New Arrivals",
+    "btnMore": "See More",
+    "btnAddBasket": "Add Basket",
+    "titleMade": "Made-To-Order",
+    "btnLeranMore": "Learn More",
+    "shopCollection": "Shop Collection",
+    "price": "Price"
+  },
+  "menu": {
+    "home": "Home"
+  }
 }

@@ -14,7 +14,10 @@
        "btnLeranMore":"Իմացեք ավելին",
        "shopCollection":"ԽԱՆՈՒԹԻ ՀԱՎԱՔԱԾՈՒ",
        "price":"Գին"
-    }
+    },
+    "menu": {
+        "home": "Home"
+      }
 }
 
 
