@@ -1,26 +1,23 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import en from '../public/local/en/en.json';
-import ru from '../public/local/ru/ru.json';
-import hy from '../public/local/hy/hy.json';
+import Backend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
+
+  .use(Backend)
+
+  .use(LanguageDetector)
+
   .use(initReactI18next)
+
   .init({
-    resources: {
-      en: {
-        translation: en
-      },
-      ru: {
-        translation: ru
-      },
-      hy: {
-        translation: hy
-      }
-    },
-    lng: "en",
     fallbackLng: "en",
+    debug: true,
+    whitelist: ["en", "ru", 'hy'],
+
+
     interpolation: {
       escapeValue: false
     }
