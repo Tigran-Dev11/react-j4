@@ -15,14 +15,14 @@ const Header = () => {
       <S.Logo>GARRENT</S.Logo>
       <S.Navbar>
         <NavLink to="/">{t('menu.home')}</NavLink>
-        <NavLink to="/about">{t('About')}</NavLink>
-        <NavLink to="/booking">{t('Booking')}</NavLink>
-        <NavLink to="/cars">{t('Cars')}</NavLink>
-        <NavLink to="/contacts">{t('Contacts')}</NavLink>
+        <NavLink to="/about">{t('menu.about')}</NavLink>
+        <NavLink to="/booking">{t('menu.booking')}</NavLink>
+        <NavLink to="/cars">{t('menu.cars')}</NavLink>
+        <NavLink to="/contacts">{t('menu.contacts')}</NavLink>
       </S.Navbar>
       <S.AuthButtons>
-        <NavLink to="/login" className='btn'>{t('Login')}</NavLink>
-        <NavLink to="/register" className='btn'>{t('Signup')}</NavLink>
+        <NavLink to="/login" className='btn'>{t('auth.login')}</NavLink>
+        <NavLink to="/register" className='btn'>{t('auth.signup')}</NavLink>
       </S.AuthButtons>
       <div>
         <select onChange={changeLanguage}>

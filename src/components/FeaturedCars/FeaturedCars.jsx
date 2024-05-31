@@ -1,4 +1,3 @@
-
 import React from 'react';
 import * as S from './styled';
 import img1 from '../../assets/car-jeep.png'
@@ -12,26 +11,26 @@ const FeaturedCars = () => {
   const { t } = useTranslation(); 
   const cars = [
     {
-      name: 'Jeep XD',
+      name: t('cars.jeepXD'),
       seats: 5,
-      fuelType: 'Gasoline',
-      type: 'SUV',
+      fuelType: t('fuelTypes.gasoline'),
+      type: t('carTypes.suv'),
       rate: 200,
       image:  img1
     },
     {
-      name: 'Ferrari Enzo',
+      name: t('cars.ferrariEnzo'),
       seats: 2,
-      fuelType: 'Electric',
-      type: 'Sedan',
+      fuelType: t('fuelTypes.electric'),
+      type: t('carTypes.sedan'),
       rate: 340,
       image: img2
     },
     {
-      name: 'Fiat Coupe',
+      name: t('cars.fiatCoupe'),
       seats: 4,
-      fuelType: 'Gasoline',
-      type: 'Mini coupe',
+      fuelType: t('fuelTypes.gasoline'),
+      type: t('carTypes.miniCoupe'),
       rate: 167,
       image: img3
     }
