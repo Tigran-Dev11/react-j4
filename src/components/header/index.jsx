@@ -1,8 +1,8 @@
 import * as S from "./styled";
-import { menu } from "../../utils/constants";
 import { IMAGES } from "../../assets/images/index";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { menu } from "./data";
 
 
 
@@ -31,7 +31,7 @@ const Header = () => {
           </NavLink>
         </S.LogoContainer>
         <S.MenuItemsContainer>
-          {menu.map(({ title, path }) => (
+          {menu(t).map(({ title, path }) => (
             <S.MenuItems key={path}>
               <S.MenuItempath href={path}>{title}</S.MenuItempath>
             </S.MenuItems>
