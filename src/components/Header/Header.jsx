@@ -1,4 +1,4 @@
-
+// Header.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import * as S from './styled';
@@ -11,7 +11,7 @@ const Header = () => {
     <S.HeaderContainer>
       <S.Logo>GARRENT</S.Logo>
       <S.Navbar>
-        <NavLink to="/">{t('home')}</NavLink> 
+        <NavLink to="/">{t('home')}</NavLink>
         <NavLink to="/about">{t('about')}</NavLink>
         <NavLink to="/booking">{t('booking')}</NavLink>
         <NavLink to="/cars">{t('cars')}</NavLink>
