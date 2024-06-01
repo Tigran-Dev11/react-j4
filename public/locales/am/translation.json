@@ -1,14 +1,13 @@
 {
   "header": {
-    "address": "hayeren text"
+    "address": "Հասցե: Լինքոլնի-344, Իլինոիս, Չիքագո, ԱՄՆ",
+    "telephone": "Հեռ:(219) 555-0114",
+    "login": "Մուտք"
   },
   "menu": {
-    "home": "Glxavor",
-    "shop": "Xanut",
-    "aboutUs": "Mer Masin",
-    "contactUs": "Kap Mez Het"
-  },
-  "telephone": {
-    "telephone": "Heraxos:(219) 555-0114"
+    "home": "Գլխավոր",
+    "shop": "Խանութ",
+    "aboutUs": "Մեր մասին",
+    "contactUs": "Կապ մեզ հետ"
   }
 }

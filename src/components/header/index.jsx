@@ -25,12 +25,11 @@ const Header = () => {
         </S.HeaderTopDivOne>
         <S.HeaderTopDivTwo>
           <NavLink to={ROUTES.login}>
-            <Button title="Sign In" />
+            <Button title={t('header.login')} />
           </NavLink>
-          <Button title="Sign Up" />
           <S.TranslateContainer defaultValue="en" onChange={changeLanguage}>
             <S.SetLanguage value="en">Eng</S.SetLanguage>
-            <S.SetLanguage value="am">Arm</S.SetLanguage>
+            <S.SetLanguage value="am">Հայ</S.SetLanguage>
           </S.TranslateContainer>
         </S.HeaderTopDivTwo>
       </S.HeaderTop>
@@ -43,7 +42,6 @@ const Header = () => {
           <HeaderSearchInput type="text" placeholder="Search" />
         </S.HeaderSearchDivTwo>
         <S.HeaderSearchDivThree>
-          <S.HeaderIcon src={IMAGES.heartIcon} alt="icon" />
           <NavLink to={ROUTES.basket}>
             <S.HeaderIcon src={IMAGES.basketIcon} alt="basket" />
           </NavLink>
@@ -60,7 +58,7 @@ const Header = () => {
           </S.HeaderMenuList>
         </S.HeaderMenuDivOne>
         <S.HeaderMenuDivTwo>
-          <S.HeaderMenuAddress>{t('telephone.telephone')}</S.HeaderMenuAddress>
+          <S.HeaderMenuAddress>{t('header.telephone')}</S.HeaderMenuAddress>
         </S.HeaderMenuDivTwo>
       </S.HeaderMenu>
     </S.HeaderContainer>

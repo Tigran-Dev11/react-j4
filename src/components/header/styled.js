@@ -94,10 +94,11 @@ export const HeaderMenuAddress = styled.p`
 
 
 export const TranslateContainer = styled.select`
-
+  border: none;
+  cursor: pointer;
 
 `
 
 export const SetLanguage = styled.option`
-
+ cursor: pointer;
 `
