@@ -60,7 +60,7 @@ const Header = () => {
           </S.HeaderMenuList>
         </S.HeaderMenuDivOne>
         <S.HeaderMenuDivTwo>
-          <S.HeaderMenuAddress>Tel:(219) 555-0114</S.HeaderMenuAddress>
+          <S.HeaderMenuAddress>{t('telephone.telephone')}</S.HeaderMenuAddress>
         </S.HeaderMenuDivTwo>
       </S.HeaderMenu>
     </S.HeaderContainer>

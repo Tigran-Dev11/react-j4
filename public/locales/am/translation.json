@@ -2,7 +2,13 @@
   "header": {
     "address": "hayeren text"
   },
-  "menu":{
-    "home":"Home"
+  "menu": {
+    "home": "Glxavor",
+    "shop": "Xanut",
+    "aboutUs": "Mer Masin",
+    "contactUs": "Kap Mez Het"
+  },
+  "telephone": {
+    "telephone": "Heraxos:(219) 555-0114"
   }
 }

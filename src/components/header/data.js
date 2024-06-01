@@ -7,15 +7,15 @@ export const headerMenu = (t) =>[
     },
     {
         path: ROUTES.shop,
-        title: "Shop"
+        title: t('menu.shop')
     },
     {
         path: ROUTES.aboutUs,
-        title: "About Us"
+        title: t('menu.aboutUs')
     },
     {
         path: ROUTES.contactUs,
-        title: "Contact Us"
+        title: t('menu.contactUs')
     },
 
 ];
