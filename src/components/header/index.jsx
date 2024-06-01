@@ -24,7 +24,7 @@ const Header = () => {
         </S.HeaderTopDivOne>
         <S.HeaderTopDivTwo>
           <NavLink to={ROUTES.login}>
-          <Button title="Sign In" />
+            <Button title="Sign In" />
           </NavLink>
           <Button title="Sign Up" />
           <S.TranslateContainer defaultValue="en" onChange={changeLanguage}>
