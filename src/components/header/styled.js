@@ -68,6 +68,7 @@ export const HeaderSearchDivOne = styled.div`
 export const HeaderSearchDivTwo = styled.div``;
 export const HeaderSearchDivThree = styled.div`
   display: flex;
+  position: relative;
   gap: 20px;
 `;
 
@@ -92,13 +93,19 @@ export const HeaderMenuAddress = styled.p`
   color: ${COLORS.white};
 `;
 
-
 export const TranslateContainer = styled.select`
   border: none;
   cursor: pointer;
-
-`
+`;
 
 export const SetLanguage = styled.option`
- cursor: pointer;
-`
+  cursor: pointer;
+`;
+
+export const ProductQuantity = styled.span`
+  color: ${COLORS.red};
+  position: absolute;
+  font-size: 16px;
+  right: 13px;
+  top: 9px;
+`;

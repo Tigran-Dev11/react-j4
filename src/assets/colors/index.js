@@ -4,6 +4,7 @@ export const COLORS = {
   green: "green",
   gray: "#999999",
   gray20: "#333333",
+  red:"red"
 };
 
 

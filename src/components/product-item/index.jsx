@@ -3,6 +3,8 @@ import { productActions } from "../../libs/redux/product-slice/product-slice.js"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { productSelector } from "../../libs/redux/product-slice/product-selector.js";
+import { NavLink } from "react-router-dom";
+import { ROUTES } from "../../utils/constant.js";
 
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();
@@ -31,7 +33,9 @@ const ProductItem = ({ product }) => {
   return (
     <S.ProductsContainer>
       <S.ProductTitle>{product.name}</S.ProductTitle>
-      <S.ProductImage src={product.img} alt="products" />
+      <NavLink to={ROUTES.singleProduct}>
+        <S.ProductImage src={product.img} alt="products" />
+      </NavLink>
       <S.ProductPrice>{product.price * count} amd</S.ProductPrice>
       <S.OrderButtons>
         <S.MinusButton onClick={decrement}>-</S.MinusButton>
