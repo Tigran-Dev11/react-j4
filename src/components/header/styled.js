@@ -20,6 +20,7 @@ export const Logo = styled.img`
 export const MenuContainer = styled.ul`
   display: flex;
   gap: 100px;
+  align-items: center;
 `;
 export const MenuItem = styled.li`
   list-style: none;

@@ -19,7 +19,7 @@ export const Section1A = styled.div``;
 
 export const Text1 = styled.p`
   width: 504px;
-  padding-top: 198px;
+  padding-top: 108px;
   font-family: Palanquin;
   font-size: 70px;
   font-weight: 500;
@@ -35,13 +35,14 @@ export const Span = styled.span`
   color: ${COLORS.green};
 `;
 export const Text2 = styled.p`
-  width: 504px;
+  width: 400px;
+  max-height: 230px;
   margin-top: 20px;
   font-family: Open Sans;
-  font-size: 28px;
   font-weight: 300;
   line-height: 40px;
   text-align: left;
+  font-size: 24px;
 `;
 
 export const Section1B = styled.div``;
@@ -57,6 +58,7 @@ export const Section2 = styled.div`
   height: 200px;
   display: flex;
   justify-content: center;
+  align-items: center;
   justify-content: space-around;
   margin-top: 30px;
 `;
@@ -92,6 +94,7 @@ export const Textes2 = styled.p`
   font-weight: 300;
   line-height: 40px;
   text-align: left;
+  text-align: center;
 `;
 
 export const Section3 = styled.div`
@@ -337,7 +340,6 @@ export const Fruits = styled.img`
 
 export const Section5b = styled.div`
   margin-left: 30px;
-  margin-top: 40px;
 `;
 
 export const Text8 = styled.p`
@@ -357,6 +359,7 @@ export const Text9 = styled.p`
   width: 710px;
   height: 160px;
   margin-top: 30px;
+  padding-bottom: 50px;
 `;
 
 export const Section6 = styled.div`

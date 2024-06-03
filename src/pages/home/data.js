@@ -1,83 +1,83 @@
 export const footerMenu = (t) => [
   {
     id: 1,
-    title: "Social Media",
+    title: t("section7.textA1"),
     items: [
       {
-        name: "Instagram",
+        name: t("section7.textA2"),
       },
 
       {
-        name: "Twitter",
+        name: t("section7.textA3"),
       },
 
       {
-        name: "Facebook",
+        name: t("section7.textA4"),
       },
     ],
   },
-
+  
   {
     id: 2,
-    title: "Information",
+    title: t("section7.textB1"),
     items: [
       {
-        name: "About Us",
+        name: t("section7.textB2"),
       },
 
       {
-        name: "Blog",
+        name: t("section7.textB3"),
       },
 
       {
-        name: "Check Out",
+        name: t("section7.textB4"),
       },
 
       {
-        name: "Contact",
+        name: t("section7.textB5"),
       },
     ],
   },
 
   {
     id: 3,
-    title: "My Accounts",
+    title: t("section7.textC1"),
     items: [
       {
-        name: "My Account",
+        name: t("section7.textC2"),
       },
 
       {
-        name: "Wish List",
+        name: t("section7.textC3"),
       },
 
       {
-        name: "Shopping Card",
+        name: t("section7.textC4"),
       },
     ],
   },
 
   {
     id: 4,
-    title: "Categories",
+    title: t("section7.textD1"),
     items: [
       {
-        name: "Fresh Product",
+        name: t("section7.textD2"),
       },
 
       {
-        name: "Meat",
+        name: t("section7.textD3"),
       },
 
       {
-        name: "Snacks",
+        name: t("section7.textD4"),
       },
 
       {
-        name: "Drinks",
+        name: t("section7.textD5"),
       },
       {
-        name: "Vegetables",
+        name: t("section7.textD6"),
       },
     ],
   },

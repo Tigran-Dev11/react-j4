@@ -14,7 +14,7 @@ const Header = () => {
     <S.MenuHeader>
       <S.Logo src={IMAGES.apple}></S.Logo>
       <S.MenuContainer>
-        {headerMenu.map(({ title, path }) => (
+        {headerMenu(t).map(({ title, path }) => (
           <S.MenuItem key={path}>
             <S.LinkToHome to={path}>{title}</S.LinkToHome>
           </S.MenuItem>

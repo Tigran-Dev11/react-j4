@@ -7,26 +7,26 @@ export const ROUTES = {
   basket: "/basket",
 };
 
-export const headerMenu = [
+export const headerMenu =(t)=> [
   {
     path: ROUTES.home,
-    title: "Home",
+    title: t("header.title"),
   },
   {
     path: ROUTES.shop,
-    title: "Shop",
+    title: t("header.shop"),
   },
   {
     path: ROUTES.about,
-    title: "About",
+    title: t("header.about"),
   },
   {
     path: ROUTES.login,
-    title: "Login",
+    title: t("header.login"),
   },
   {
     path: ROUTES.signUp,
-    title: "Sign Up",
+    title: t("header.sign-up"),
   },
 ];
 
