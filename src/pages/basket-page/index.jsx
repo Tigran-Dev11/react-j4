@@ -4,7 +4,9 @@ import * as S from "./styled";
 import BasketCard from "../../components/basketCard";
 
 const Basket = () => {
-  const { basketItems } = useSelector(productSelector);
+  const { basketItems, total } = useSelector(productSelector);
+
+  console.log(total, "total");
 
   return (
     <S.Container>
@@ -12,7 +14,7 @@ const Basket = () => {
       {basketItems?.map((product) => (
         <BasketCard key={product.id} product={product} />
       ))}
-      <h1>{!basketItems?.length ? "" : `total :`}</h1>
+      <h1>{!basketItems?.length ? "" : `total : ${total}`}</h1>
     </S.Container>
   );
 };

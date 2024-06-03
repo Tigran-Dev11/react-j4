@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getProducts, productSliceName } from "./actions";
+import { checkProductTotal } from "../../../utils/check-product-total";
 const productSlice = createSlice({
   name: productSliceName,
   initialState: {
     loading: "idle",
     products: [],
     basketItems: [],
+    total: 0,
   },
   reducers: {
     getBasketDataByStorage: (state) => {
@@ -16,7 +18,6 @@ const productSlice = createSlice({
     },
 
     addBasket: (state, { payload }) => {
-      console.log(payload);
       if (!state.basketItems.length) {
         state.basketItems.push(payload);
       } else {
@@ -39,6 +40,8 @@ const productSlice = createSlice({
         }
       }
       localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
+
+      state.total = checkProductTotal(state.basketItems);
     },
 
     removeItem: (state, { payload }) => {
@@ -46,6 +49,7 @@ const productSlice = createSlice({
         (item) => item.id !== payload.id
       );
       localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
+      state.total = checkProductTotal(state.basketItems);
     },
   },
 
