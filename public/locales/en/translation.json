@@ -61,5 +61,8 @@
     "title":"STAY UPTO DATE ABOUT OUR LATEST OFFERS",
     "emailInput":"Enter your email address",
     "emailButton":"Subscribe to Newsletter"
+  },
+  "basket":{
+    "basketStatus":"Basket is empty"
   }
 }
