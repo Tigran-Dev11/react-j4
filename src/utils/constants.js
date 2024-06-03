@@ -1,5 +1,9 @@
 import { IMAGES } from "../assets/images";
 
+
+
+
+
 export const ROUTES = {
   home: "/",
   contact: "/contact",
@@ -9,6 +13,7 @@ export const ROUTES = {
   shop: "/shop",
   service: "/service",
   notfound: "/*",
+  basket:"/basket",
 };
 
 export const FETCH_STATUS = {
@@ -18,24 +23,20 @@ export const FETCH_STATUS = {
   SUCCESS: "success",
 };
 
-export const Description = [
+export const Description =  (t) =>[
   {
     img: IMAGES.SewingMachine,
-    title: "Quality",
-    description: `Our objective is to design and tailor a 
-        made-to-measure suit with a guaranteed fit. We ensure nothing but comfort, 
-        style, and class whenever and wherever you are.`,
+    title:t("fiftContainerOneDesc.title"),
+    description: t("fiftContainerOneDesc.description"),
   },
   {
     img: IMAGES.TailorUser,
-    title: "Customisability",
-    description: `There are many styles to select from when you browse through our gallery. 
-        Every detail identifies your style. At the collaboration, you have complete control over the design process.`,
+    title:t("fiftContainerSecDesc.title"),
+    description:t("fiftContainerSecDesc.description"),
   },
   {
     img: IMAGES.Sewing,
-    title: "Convenience",
-    description: `We bring our bespoke suit tailoring service directly to you at home,
-         the office, or on location, so you have the minimum of interruptions during your busy schedule.`,
+    title:t("fiftContainerThirdDesc.title"),
+    description: t("fiftContainerThirdDesc.description"),
   },
 ];

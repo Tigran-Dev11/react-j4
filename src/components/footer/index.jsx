@@ -13,10 +13,12 @@ const Footer = () => {
       </S.MapContainer>
       <S.MenusContainer>
         <S.MenuItemsContainer>
-          <S.MapTitle>Location</S.MapTitle>
-          <S.MapTitle>007,James bond street, London, England.</S.MapTitle>
-          <S.MapTitle>Mon-Sat 10AM - 9PM</S.MapTitle>
-          <S.MapTitle>Sun:Closed</S.MapTitle>
+          <S.MapTitleContainer>
+            <S.MapTitle>{t("locate.location")}</S.MapTitle>
+            <S.MapTitle>{t("locate.street")}</S.MapTitle>
+            <S.MapTitle>{t("locate.workDay")}</S.MapTitle>
+            <S.MapTitle>{t("locate.offday")}</S.MapTitle>/
+          </S.MapTitleContainer>
         </S.MenuItemsContainer>
         <S.MenuItemsContainer>
           <S.MenuItems>Menus</S.MenuItems>
@@ -29,13 +31,10 @@ const Footer = () => {
         <S.MenuItemsContainer>
           <S.SocialPages>
             <S.SocialItems>
-              <S.SocialItemsPath>SIGN UP AND SAVE</S.SocialItemsPath>
+              <S.SocialItemsPath>{t("Social.SIGNUP")}</S.SocialItemsPath>
             </S.SocialItems>
             <S.SocialItems>
-              <S.SocialItemsPath>
-                Subscribe to get special offers, free giveaways, and
-                once-in-a-lifetime deals.
-              </S.SocialItemsPath>
+              <S.SocialItemsPath>{t("Social.subscribe")}</S.SocialItemsPath>
             </S.SocialItems>
 
             <S.SocialIconsContainer>

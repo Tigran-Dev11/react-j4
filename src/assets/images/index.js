@@ -10,6 +10,7 @@ import TailorUser from "./Tailor.png"
 import instagram from "./instagram.png"
 import facebook from "./facebook.png"
 import twitter from "./twitter.png"
+import burger from "./burgerIcon.jpg"
 
 
 
@@ -28,5 +29,6 @@ export const IMAGES = {
     TailorUser,
     instagram,
     twitter,
-    facebook
+    facebook,
+    burger
 }

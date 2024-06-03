@@ -7,6 +7,7 @@ import Home from "../pages/home";
 import NotFound from "../pages/not -found";
 import { ROUTES } from "../utils/constants"
 import SingleProduct from "../pages/single-prduct";
+import Basket from "../pages/basket";
 
 export const routes = [
   {
@@ -44,6 +45,10 @@ export const routes = [
   {
     component: NotFound,
     path: ROUTES.notfound,
+  },
+  {
+    component: Basket,
+    path: ROUTES.basket,
   },
  
 ];

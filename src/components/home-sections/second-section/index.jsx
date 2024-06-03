@@ -30,7 +30,7 @@ const SecondSection = () => {
       <S.ProductsContainer>
         {products.map((product, index) => {
           return index <= min ? (
-           <ProductItem/>
+           <ProductItem product = {product} />
           ) : null;
         })}
       </S.ProductsContainer>

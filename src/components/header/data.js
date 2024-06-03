@@ -6,23 +6,23 @@ export const menu = (t) => [
     path: ROUTES.home,
   },
   {
-    title: "Products",
+    title: t("menu.Products"),
     path: ROUTES.products,
   },
   {
-    title: "Shop",
+    title: t("menu.Shop"),
     path: ROUTES.shop,
   },
   {
-    title: "Weddings",
+    title: t("menu.Weddings"),
     path: ROUTES.weddings,
   },
   {
-    title: "Service",
+    title: t("menu.Service"),
     path: ROUTES.service,
   },
   {
-    title: "Contact",
+    title: t("menu.Contact"),
     path: ROUTES.contact,
   },
 ];

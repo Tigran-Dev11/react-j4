@@ -3,6 +3,9 @@ import { IMAGES } from "../../assets/images/index";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { menu } from "./data";
+import { ROUTES } from "../../utils/constants";
+
+
 
 
 
@@ -15,6 +18,10 @@ const Header = () => {
     i18n.changeLanguage(e.target.value);
     console.log(e.target.value);
   };
+
+  const menuToggle = () =>{
+
+  }
 
   return (
     <S.HeaderContainer>
@@ -30,6 +37,8 @@ const Header = () => {
             <S.Logo src={IMAGES.logo}></S.Logo>
           </NavLink>
         </S.LogoContainer>
+        <S.BurgerContainer><S.BurgerMenu src={IMAGES.burger} onClick={menuToggle}></S.BurgerMenu></S.BurgerContainer>
+
         <S.MenuItemsContainer>
           {menu(t).map(({ title, path }) => (
             <S.MenuItems key={path}>
@@ -39,7 +48,9 @@ const Header = () => {
         </S.MenuItemsContainer>
         <S.IconsContainer>
           <S.ImageContainer src={IMAGES.user}></S.ImageContainer>
+          <NavLink to={ROUTES.basket}>
           <S.ImageContainer src={IMAGES.basket}></S.ImageContainer>
+          </NavLink>
           <S.ImageContainer src={IMAGES.search}></S.ImageContainer>
         </S.IconsContainer>
         <S.LanguageConatainer>

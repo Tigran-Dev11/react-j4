@@ -11,7 +11,7 @@ flex-wrap: wrap;
 justify-content: space-evenly;
 align-items: center;
 margin-top: 100px;
-padding: 30px;
+
 `
 
 export const InfoContainer  = styled.div`

@@ -18,7 +18,7 @@ justify-content:center;
 align-items:center;
 `
 export const TextContainer = styled.div`
-width: 200px;
+width: 300px;
 display: flex;
 justify-content: space-between;
 `
@@ -33,6 +33,7 @@ display:flex;
 justify-content:space-evenly;
 height:60px;
 
+
 `
 
 
@@ -46,7 +47,7 @@ align-items:center;
     width: 700px;
       }
       @media ${BREAKPOINTS.md} {
-    width: 500px;
+    display: none;
       }
 `
 export const MenuItems = styled.li`
@@ -59,6 +60,8 @@ text-decoration:none;
 export const Logo = styled.img`
 width:90px;
 height:90px;
+cursor: pointer;
+
 `
 export const LogoContainer = styled.div`
 width: 80px;
@@ -72,6 +75,7 @@ align-items: center;
 export const ImageContainer = styled.img`
 width:18px;
 height:18px;
+cursor: pointer;
 `
 
 
@@ -93,7 +97,29 @@ height:20px;
 border:none;
 background-color: ${COLORS.brown};
 color: ${COLORS.white};
+cursor: pointer;
+
 `
 
-export const LanguageOptionEng = styled.option``
-export const LanguageOptionArm = styled.option``
+export const LanguageOptionEng = styled.option`
+cursor: pointer;
+`
+export const LanguageOptionArm = styled.option`
+cursor: pointer;
+`
+
+export const BurgerContainer = styled.div`
+display: none;
+align-items: center;
+justify-content: center;
+@media ${BREAKPOINTS.md} {
+    display:flex;
+      }
+
+`
+
+export const BurgerMenu = styled.img`
+border-radius: 8px;
+width: 30px;
+height: 30px;
+`

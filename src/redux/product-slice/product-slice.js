@@ -46,6 +46,13 @@ const productSlice = createSlice({
     }
     localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
   },
+
+  deleteItem: (state, { payload }) => {
+    state.basketItems = state.basketItems.filter(
+      (item) => item.id !== payload.id
+    );
+    localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
+  }
 },
 
   extraReducers: (builder) => {

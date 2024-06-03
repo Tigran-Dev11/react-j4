@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { productSelector } from "../../redux/product-slice/selector";
+import * as S from "./styled"
+import ImageSlider from "../../components/slider";
 
 const SingleProduct = () => {
   const { products } = useSelector(productSelector);
@@ -11,17 +13,17 @@ const SingleProduct = () => {
   console.log(products);
 
   return (
-    <div>
-      <h4>Product name</h4>
-      <br />
-      <br />
-      <p>{product.title}</p>
-      <br />
-      <br />
-      <h4>Product Description</h4>
-      <br />
-      <p>{product.description}</p>
-    </div>
+    <S.SinglePageContainer>
+      <S.ImgContainer>
+        {/* <S.ProductImg src={product.images}></S.ProductImg> */}
+        <ImageSlider/>
+      </S.ImgContainer>
+      <S.InfoContainer>
+        <S.ProductTitle>{product.title}</S.ProductTitle>
+        <S.ProductPrice>Price:{product.price} $</S.ProductPrice>
+        <S.ProductDesc>{product.description}</S.ProductDesc>
+      </S.InfoContainer>
+      </S.SinglePageContainer>
   );
 };
 

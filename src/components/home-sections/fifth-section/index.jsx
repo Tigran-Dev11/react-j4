@@ -1,10 +1,15 @@
 import * as S from "./styled";
 import { Description } from "../../../utils/constants";
+import { useTranslation } from "react-i18next";
+
 
 const FifthSection = () => {
+
+  const { t, i18n } = useTranslation();
+
   return (
     <S.Container key = " ">
-      {Description.map((item) => (
+      {Description(t).map((item) => (
         <S.InfoContainer>
           <S.InfoIcon src={item.img}></S.InfoIcon>
           <S.InfoTitle>{item.title}</S.InfoTitle>

@@ -28,7 +28,7 @@ font-size: 30px;
 `
 export const SecText  = styled.h1`
 color: ${COLORS.white};
-font-size: 45px;
+font-size: 35px;
 `
 
 export const BtnContainer  = styled.div`
