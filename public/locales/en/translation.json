@@ -65,7 +65,15 @@
     "textD4": "Snacks",
     "textD5": "Drinks",
     "textD6": "Vegetables"
+  },
+  "shop":{
+    "shop": "Shop",
+    "basket": "Basket",
+    "button": "Add Basket"
+  },
+  "basket":{
+    "title": "Basket",
+    "title2": "Basket is empty",
+    "button": "Make a delivery"
   }
-
-
 }

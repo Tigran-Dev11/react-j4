@@ -30,14 +30,14 @@ export const headerMenu =(t)=> [
   },
 ];
 
-export const shopMenu = [
+export const shopMenu =(t)=> [
   {
     path: ROUTES.shop,
-    title: "Shop",
+    title: t("shop.shop"),
   },
   {
     path: ROUTES.basket,
-    title: "Basket",
+    title: t("shop.basket"),
   },
 ];
 

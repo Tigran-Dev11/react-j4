@@ -21,6 +21,7 @@ export const MenuContainer = styled.ul`
   display: flex;
   gap: 100px;
   align-items: center;
+  text-align: center;
 `;
 export const MenuItem = styled.li`
   list-style: none;

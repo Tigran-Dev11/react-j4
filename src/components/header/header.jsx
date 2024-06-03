@@ -4,8 +4,8 @@ import * as S from "./styled";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
-
+  
+const { t, i18n } = useTranslation();
   const changeLanguage = (e) => {
     i18n.changeLanguage(e.target.value);
   };

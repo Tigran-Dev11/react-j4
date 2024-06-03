@@ -26,7 +26,7 @@ export const LoginForm = styled.form`
 `;
 
 export const LoginButton = styled.button`
-  width: 100px;
+  width: auto;
   height: 30px;
   border-radius: 8px;
   border: none;

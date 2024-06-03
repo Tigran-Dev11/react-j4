@@ -3,8 +3,10 @@ import { productActions } from "../../libs/redux/product-slice/product-slice.js"
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { productSelector } from "../../libs/redux/product-slice/product-selector.js";
+import { useTranslation } from "react-i18next";
 
 const ProductItem = ({ product }) => {
+  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
   const { products } = useSelector(productSelector);
   const [count, setCount] = useState(1);
@@ -38,7 +40,7 @@ const ProductItem = ({ product }) => {
         <S.ProductQuantity>{count}</S.ProductQuantity>
         <S.PlusButton onClick={increment}>+</S.PlusButton>
       </S.OrderButtons>
-      <S.AddBasketButton onClick={addBasket}>Add Basket</S.AddBasketButton>
+      <S.AddBasketButton onClick={addBasket}>{t("shop.button")}</S.AddBasketButton>
     </S.ProductsContainer>
   );
 };
