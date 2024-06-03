@@ -33,7 +33,7 @@ const ProductItem = ({ product }) => {
   return (
     <S.ProductsContainer>
       <S.ProductTitle>{product.name}</S.ProductTitle>
-      <NavLink to={ROUTES.singleProduct}>
+      <NavLink to={`${ROUTES.shop}/${product.id}`}>
         <S.ProductImage src={product.img} alt="products" />
       </NavLink>
       <S.ProductPrice>{product.price * count} amd</S.ProductPrice>
