@@ -39,8 +39,8 @@ const Header = () => {
           <S.searchContainer>
             <S.searchIcon src={IMAGES.searchIcon} />
             <S.searchShoes type="text" />
-            <S.languageSelect defaultValue="en" onChange={changeLanguage}>
-              <S.languageOptionEng value="en" >Eng</S.languageOptionEng>
+            <S.languageSelect defaultValue="en" onChange={changeLanguage} >
+              <S.languageOptionEng value="en">Eng</S.languageOptionEng>
               <S.languageOptionRus value="ru">Rus</S.languageOptionRus>
             </S.languageSelect>
           </S.searchContainer>

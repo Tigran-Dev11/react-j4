@@ -122,7 +122,18 @@ align-items: center;
 margin-left: 20px;
 `
 
-export const languageSelect = styled.select``
+export const languageSelect = styled.select`
+width: 100px;
+height: 32px;
+background-color: transparent;
+backdrop-filter: blur(20px);
+border: 0.3px solid gray;
+border-radius: 8px;
+cursor: pointer;
 
-export const languageOptionEng = styled.option``
+
+`
+
+export const languageOptionEng = styled.option`
+`
 export const languageOptionRus = styled.option``

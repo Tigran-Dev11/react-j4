@@ -76,7 +76,7 @@ export const sloganShoes = styled.h1`
 width: 577px;
 height: 173px;
 color: black;
-font-size: 64px;
+font-size: 54px;
 font-weight: 700;
 line-height: 64px;
 text-align: left;

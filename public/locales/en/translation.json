@@ -8,10 +8,58 @@
   },
   "home": {
     "sloganShoes": "FIND CLOTHES THAT MATCHES YOUR STYLE",
-    "explanationShoes": " Browse through our diverse range of meticulously crafted garments,designed to bring out your individuality and cater to your sense of style",
+    "explanationShoes": " Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
     "shopButton": "Shop Now",
     "productsBranch1": "International Brands",
     "productsBranch2": "High-Quality Products",
     "productsBranch3": "Happy Customers"
+  },
+  "newArriwals": {
+    "title": "NEW ARRIWALS",
+    "buttonName": "Add"
+  },
+  "topSelling": {
+    "title": "Top Selling"
+  },
+  "sortedBrands": {
+    "mainTitle": "BROWSE BY dress STYLE",
+    "titleCasual": "Casual",
+    "titleFormal": "Formal",
+    "titleParty": "Party",
+    "titleGym": "Gym"
+  },
+  "purchasedProducts": {
+    "productBranch1": "International Brands",
+    "productBranch2": "High-Quality Products",
+    "productBranch3": "Happy Customers"
+  },
+  "footer":{
+    "descriptionContent":" We have clothes that suits your style and which you’re proud to wear.From women to men.",
+    "title":"SHOP.CO",
+    "mainTitle1": "Company",
+    "mainTitle2": "Help",
+    "mainTitle3": "FAQ",
+    "mainTitle4": "Resources",
+    "title1": "About",
+    "title2": "Features",
+    "title3":"Works",
+    "title4":"Career",
+    "title5": "Customer Support",
+    "title6": "Delivery Details",
+    "title7":"Terms & Conditions",
+    "title8":"Privacy Policy",
+    "title9": "Account",
+    "title10": "Manage Deliveries",
+    "title11":"Orders",
+    "title12":"Payments",
+    "title13": "Free eBooks",
+    "title14": "Development Tutorial",
+    "title15":"How to - Blog",
+    "title16":"Youtube Playlist"
+  },
+  "subscribe":{
+    "title":"STAY UPTO DATE ABOUT OUR LATEST OFFERS",
+    "emailInput":"Enter your email address",
+    "emailButton":"Subscribe to Newsletter"
   }
 }

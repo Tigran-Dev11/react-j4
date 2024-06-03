@@ -16,12 +16,14 @@ import menu from "./images/menu.svg";
 import hidePass from "./images/hide-pass.svg";
 import showPass from "./images/show-pass.svg";
 import casualCloth from "./images/casual-cloth.png"
-import Gym from "./images/Gym.png"
-import Party from "./images/Party.png"
-import Casual from "./images/Casual.png"
-import Formal from "./images/Formal.png"
+import Gym from "./images/Gym1.png"
+import Party from "./images/Party1.png"
+import Casual from "./images/Casual1.png"
+import Formal from "./images/Formal1.png"
+import deleteIcon from "./images/delete.svg"
 
 export const IMAGES = {
+
   basket,
   fiveStars,
   successIcon,
@@ -44,4 +46,6 @@ export const IMAGES = {
   Formal,
   Party,
   Gym,
+  deleteIcon,
+
 };

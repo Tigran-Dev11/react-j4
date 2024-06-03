@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../../assets/colors";
+import { IMAGES } from "../../assets";
 
 export const Container = styled.div`
   width: 100%;
@@ -39,32 +40,46 @@ export const SecondGymContainer = styled.div`
   gap: 40px;
 `;
 
-export const PartyImg = styled.img`
+export const PartyBlock = styled.div`
   width: 50%;
   height: 400px;
   transition: 1s;
   cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  border-radius: 14px;
+  background-repeat: no-repeat;
+  background-image:url(${IMAGES.Party}); 
 
   &&:hover {
     transform: scale(1.1);
     transition: 1s;
   }
 `;
-export const GymImg = styled.img`
+export const GymBlock  = styled.div`
   width: 40%;
   height: 400px;
   transition: 1s;
   cursor: pointer;
-
+  border-radius: 14px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(${IMAGES.Gym}); 
   &&:hover {
     transform: scale(1.1);
     transition: 1s;
   }
 `;
-export const CasualImg = styled.img`
+export const CasualBlock  = styled.div`
   width: 30%;
   height: 300px;
   transition: 1s;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  background-image: url(${IMAGES.Casual});
   cursor: pointer;
 
   &&:hover {
@@ -72,10 +87,15 @@ export const CasualImg = styled.img`
     transition: 1s;
   }
 `;
-export const FormalImg = styled.img`
+export const FormalBlock = styled.div`
   width: 60%;
   height: 300px;
   transition: 1s;
+  border-radius: 14px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(${IMAGES.Formal}); 
   cursor: pointer;
   
   &&:hover {
@@ -83,3 +103,5 @@ export const FormalImg = styled.img`
     transition: 1s;
   }
 `;
+
+export const title = styled.h1``

@@ -1,12 +1,10 @@
 import { useSelector } from "react-redux";
 import { productSelector } from "../../libs/redux/product-slice/product-selector";
-import * as S from "./styled"
+import * as S from "./styled";
 import BasketCard from "../../components/basketCard";
 
 const Basket = () => {
   const { basketItems } = useSelector(productSelector);
-
-  console.log(basketItems,'basketItems');
 
   return (
     <S.Container>
@@ -14,6 +12,7 @@ const Basket = () => {
       {basketItems?.map((product) => (
         <BasketCard key={product.id} product={product} />
       ))}
+      <h1>{!basketItems?.length ? "" : `total :`}</h1>
     </S.Container>
   );
 };

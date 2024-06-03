@@ -1,24 +1,29 @@
 import React from "react";
 import * as S from "./styled";
-import { footerDescription } from "../../utils/constants";
+import { ROUTES, footerDescription } from "../../utils/constants";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate(ROUTES.home)
+  }
   return (
     <S.Container>
       <S.WebTitleCont>
-        <S.WebsiteName>SHOP.CO</S.WebsiteName>
-        <S.Description>
-          We have clothes that suits your style and which you’re proud to wear.
-          From women to men.
-        </S.Description>
+        <S.WebsiteName onClick={goToHome}>{t("footer.title")}</S.WebsiteName>
+        <S.Description>{t("footer.descriptionContent")}</S.Description>
       </S.WebTitleCont>
       <S.itemContainer>
-        {footerDescription.map(({mainTitle,aboutWebsite},index) => {
+        {footerDescription(t).map(({ mainTitle, aboutWebsite }, index) => {
           return (
             <S.aboutWeb key={index}>
               <S.mainTitle key={index}>{mainTitle}</S.mainTitle>
-              {aboutWebsite.map(({title})=>{
-                return <S.itemAbout key={title}>{title}</S.itemAbout>
+              {aboutWebsite(t).map(({ title }) => {
+                return <S.itemAbout key={title}>{title}</S.itemAbout>;
               })}
             </S.aboutWeb>
           );

@@ -1,17 +1,65 @@
 {
   "header": {
     "title": "МАГАЗИН.РУ",
-      "shop": "Магазин",
-      "onSale": "В Продаже" ,
-      "newArriwals": "Новые поступления" ,
-      "brands": "Бренды" 
+    "shop": "Магазин",
+    "onSale": "В Продаже",
+    "newArriwals": "Новые поступления",
+    "brands": "Бренды"
   },
   "home": {
-    "sloganShoes": "TEST",
-    "explanationShoes": " Browse through our diverse range of meticulously crafted garments,designed to bring out your individuality and cater to your sense of style",
-    "shopButton": "Shop Now",
-    "productsBranch1": "International Brands",
-    "productsBranch2": "High-Quality Products",
-    "productsBranch3": "Happy Customers"
+    "sloganShoes": "НАЙДИТЕ ОДЕЖДУ, СООТВЕТСТВУЮЩУЮ ВАШЕМУ СТИЛЮ",
+    "explanationShoes": " Просмотрите наш разнообразный ассортимент тщательно созданной одежды, призванной подчеркнуть вашу индивидуальность и удовлетворить ваше чувство стиля.",
+    "shopButton": "Купить сейчас",
+    "productsBranch1": "Международные бренды",
+    "productsBranch2": "Высококачественная продукция",
+    "productsBranch3": "Счастливые клиенты"
+  },
+  "newArriwals": {
+    "title": "НОВЫЕ ПОСТУПЛЕНИЯ",
+    "buttonName": "Добавить"
+  },
+  "topSelling": {
+    "title": "Лучшие продажи"
+  },
+  "sortedBrands": {
+    "mainTitle": "ПОИСК ПО СТИЛЮ ПЛАТЬЯ",
+    "titleCasual": "Повседневный",
+    "titleFormal": "Формальный",
+    "titleParty": "Вечеринка",
+    "titleGym": "Спортзал"
+  },
+  "purchasedProducts": {
+    "productBranch1": "Международные бренды",
+    "productBranch2": "Высококачественная продукция",
+    "productBranch3": "Счастливые клиенты"
+  },
+  "footer": {
+    "descriptionContent": "У нас есть одежда, которая соответствует вашему стилю и которую вы с гордостью носите. От женщин до мужчин.",
+    "title": "МАГАЗИН.РУ",
+    "mainTitle1": "Компания",
+    "mainTitle2": "Помощь",
+    "mainTitle3": "Часто задаваемые вопросы",
+    "mainTitle4": "Ресурсы",
+    "title1": "о нас",
+    "title2": "Функции",
+    "title3": "Работает",
+    "title4": "Карьера",
+    "title5": "Служба поддержки",
+    "title6": "Детали Доставки",
+    "title7": "Условия использования",
+    "title8": "политика конфиденциальности",
+    "title9": "аккаунт",
+    "title10": "Управление поставками",
+    "title11": "Заказы",
+    "title12": "Платежи",
+    "title13": "Бесплатные электронные книги",
+    "title14": "Руководство по разработке",
+    "title15": "Как это сделать - Блог",
+    "title16": "Плейлист Ютуб"
+  },
+  "subscribe":{
+    "title":"БУДЬТЕ В НОВОСТИ О НАШИХ ПОСЛЕДНИХ ПРЕДЛОЖЕНИЯХ",
+    "emailInput":"Введите ваш адрес электронной почты",
+    "emailButton":"Подписаться на новостную рассылку"
   }
 }

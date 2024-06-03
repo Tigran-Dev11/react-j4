@@ -40,18 +40,18 @@ export const headerMenus = [
   },
 ];
 
-export const purchasedProducts = [
+export const purchasedProducts = (t) => [
   {
     quantity: "200+",
-    productsBranch: "International Brands",
+    productsBranch: t("purchasedProducts.productBranch1"),
   },
   {
     quantity: "2,000+",
-    productsBranch: "High-Quality Products",
+    productsBranch: t("purchasedProducts.productBranch2"),
   },
   {
     quantity: "30,000+",
-    productsBranch: "Happy Customers",
+    productsBranch: t("purchasedProducts.productBranch3"),
   },
 ];
 
@@ -91,72 +91,72 @@ export const FETCH_STATUS = {
   SUCCESS: "success",
 };
 
-export const footerDescription = [
+export const footerDescription = (t) => [
   {
-    mainTitle: "Company",
-    aboutWebsite: [
+    mainTitle: t("footer.mainTitle1"),
+    aboutWebsite: (t) => [
       {
-        title: "About",
+        title: t("footer.title1"),
       },
       {
-        title: "Features",
+        title: t("footer.title2"),
       },
       {
-        title: "Works",
+        title: t("footer.title3"),
       },
       {
-        title: "Career",
+        title: t("footer.title4"),
       },
     ],
   },
   {
-    mainTitle: "Help",
-    aboutWebsite: [
+    mainTitle: t("footer.mainTitle2"),
+    aboutWebsite: (t) => [
       {
-        title: "Customer Support",
+        title: t("footer.title5"),
       },
       {
-        title: "Delivery Details",
+        title: t("footer.title6"),
       },
       {
-        title: "Terms & Conditions",
+        title: t("footer.title7"),
       },
       {
-        title: "Privacy Policy",
-      },
-    ],
-  },
-  {
-    mainTitle: "FAQ",
-    aboutWebsite: [
-      {
-        title: "Account",
-      },
-      {
-        title: " Manage Deliveries",
-      },
-      {
-        title: "Orders",
-      },
-      {
-        title: "Payments",
+        title: t("footer.title8"),
       },
     ],
   },
   {
-    mainTitle: "Resources",
-    aboutWebsite: [
+    mainTitle: t("footer.mainTitle3"),
+    aboutWebsite: (t) => [
       {
-        title: "Free eBooks",
+        title: t("footer.title9"),
       },
       {
-        title: " Development Tutorial",
+        title: t("footer.title10"),
       },
       {
-        title: " How to - Blog",
+        title: t("footer.title11"),
       },
       {
-        title: " Youtube Playlist",
+        title: t("footer.title12"),
+      },
+    ],
+  },
+  {
+    mainTitle: t("footer.mainTitle4"),
+    aboutWebsite: (t) => [
+      {
+        title: t("footer.title13"),
+      },
+      {
+        title: t("footer.title14"),
+      },
+      {
+        title: t("footer.title15"),
+      },
+      {
+        title: t("footer.title16"),
       },
     ],
   },

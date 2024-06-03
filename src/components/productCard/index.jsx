@@ -4,9 +4,11 @@ import { starsClothes } from "../../utils/constants";
 import * as S from "./styled";
 import { useState } from "react";
 import { productActions } from "../../libs/redux/product-slice/product-slice";
+import { useTranslation } from "react-i18next";
 
 const ProductCard = ({ product }) => {
   const [count, setCount] = useState(1);
+  const { t } = useTranslation()
 
   const dispatch = useDispatch();
 
@@ -48,7 +50,7 @@ const ProductCard = ({ product }) => {
           <S.plusItem onClick={plusItem}>+</S.plusItem>
         </S.productCount>
         <S.addToCardContainer>
-          <S.addButton onClick={addBaskett}>Add To Card</S.addButton>
+          <S.addButton onClick={addBaskett}>{t("newArriwals.buttonName")}</S.addButton>
         </S.addToCardContainer>
       </S.addBasket>
     </S.productContainer>

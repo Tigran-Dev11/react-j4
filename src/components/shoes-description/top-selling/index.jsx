@@ -4,10 +4,11 @@ import ProductCard from "../../productCard";
 import { useDispatch, useSelector } from "react-redux";
 import { productSelector } from "../../../libs/redux/product-slice/product-selector";
 import { productActions } from "../../../libs/redux/product-slice/product-slice";
+import { useTranslation } from "react-i18next";
 
 const TopSelling = () => {
   const { products } = useSelector(productSelector);
-
+const { t } = useTranslation()
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const TopSelling = () => {
   return (
     <S.Container>
       <S.TopPiece>
-        <S.TopTitle>TOP SELLING</S.TopTitle>
+        <S.TopTitle>{t("topSelling.title")}</S.TopTitle>
       </S.TopPiece>
       <S.ClothesPiece>
       {products?.map((product) => {

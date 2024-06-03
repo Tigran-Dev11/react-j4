@@ -2,27 +2,27 @@ import * as S from "./styled";
 import { IMAGES } from "../../assets";
 import Button from "../../common/button";
 import NewArriwals from "../../components/shoes-description/new-arriwals";
-import { brandsNames, purchasedProducts } from "../../utils/constants";
+import { brandsNames, commentsUsers, purchasedProducts } from "../../utils/constants";
 import TopSelling from "../../components/shoes-description/top-selling";
 import SortedCothesAllMenu from "../../components/sorted-clothes";
 import { Carousel } from "../../common/carousel";
 import { useTranslation } from "react-i18next";
+import OurHappyCustomers from "../../components/our-happy-customers";
+import Subscribe from "../../components/subscribe";
 
 const Home = () => {
-const {t, i18n} = useTranslation()
+const {t} = useTranslation()
   return (
     <S.AllContentContainer>
       <S.HomeCont>
         <S.descriptionsCont>
           <S.sloganShoes>{t("home.sloganShoes")} </S.sloganShoes>
           <S.explanationShoes>
-            Browse through our diverse range of meticulously crafted garments,
-            designed to bring out your individuality and cater to your sense of
-            style
+            {t("home.explanationShoes")}
           </S.explanationShoes>
-          <Button>Shop Now</Button>
+          <Button>{t("home.shopButton")}</Button>
           <S.quantityCont>
-            {purchasedProducts.map(({ productsBranch, quantity }, index) => {
+            {purchasedProducts(t).map(({ productsBranch, quantity }, index) => {
               return (
                 <S.listQuantity key={index}>
                   <S.Quantity>{quantity}</S.Quantity>
@@ -41,6 +41,8 @@ const {t, i18n} = useTranslation()
       <NewArriwals />
       <TopSelling />
       <SortedCothesAllMenu />
+      <OurHappyCustomers />
+      <Subscribe />
     </S.AllContentContainer>
   );
 };
