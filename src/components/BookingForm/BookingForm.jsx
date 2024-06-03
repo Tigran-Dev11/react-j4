@@ -6,18 +6,19 @@ import { useNavigate } from 'react-router-dom';
 import * as S from './styled';
 import { useTranslation } from 'react-i18next'; 
 
-const schema = yup.object({
-  pickupLocation: yup.string().required(),
-  pickupDate: yup.date().required().nullable(),
-  returnDate: yup.date().required().nullable(),
-  carType: yup.string().required(),
-  pickupTime: yup.string().required(),
-  returnTime: yup.string().required(),
-});
-
 const BookingForm = () => {
   const navigate = useNavigate(); 
   const { t } = useTranslation();
+
+  const schema = yup.object({
+    pickupLocation: yup.string().required(t('errors.required')),
+    pickupDate: yup.date().required(t('errors.required')).nullable(),
+    returnDate: yup.date().required(t('errors.required')).nullable(),
+    carType: yup.string().required(t('errors.required')),
+    pickupTime: yup.string().required(t('errors.required')),
+    returnTime: yup.string().required(t('errors.required')),
+  });
+
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
@@ -31,7 +32,7 @@ const BookingForm = () => {
     <S.FormContainer onSubmit={handleSubmit(onSubmit)}>
       <S.Input
         {...register('pickupLocation')}
-        placeholder={t('pickupLocation')}
+        placeholder={t('bookingForm.pickupLocation')}
       />
       <p>{errors.pickupLocation?.message}</p>
 
@@ -49,7 +50,7 @@ const BookingForm = () => {
 
       <S.Input
         {...register('carType')}
-        placeholder={t('carType')}
+        placeholder={t('bookingForm.carType')}
       />
       <p>{errors.carType?.message}</p>
 
@@ -65,7 +66,7 @@ const BookingForm = () => {
       />
       <p>{errors.returnTime?.message}</p>
 
-      <S.Button type="submit">{t('bookNow')}</S.Button>
+      <S.Button type="submit">{t('bookingForm.bookNow')}</S.Button>
     </S.FormContainer>
   );
 };

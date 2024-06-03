@@ -14,11 +14,11 @@ const Header = () => {
     <S.HeaderContainer>
       <S.Logo>GARRENT</S.Logo>
       <S.Navbar>
-        <NavLink to="/">{t('menu.home')}</NavLink>
-        <NavLink to="/about">{t('menu.about')}</NavLink>
-        <NavLink to="/booking">{t('menu.booking')}</NavLink>
-        <NavLink to="/cars">{t('menu.cars')}</NavLink>
-        <NavLink to="/contacts">{t('menu.contacts')}</NavLink>
+        <NavLink to="/">{t('header.home')}</NavLink>
+        <NavLink to="/about">{t('header.about')}</NavLink>
+        <NavLink to="/booking">{t('header.booking')}</NavLink>
+        <NavLink to="/cars">{t('header.cars')}</NavLink>
+        <NavLink to="/contacts">{t('header.contacts')}</NavLink>
       </S.Navbar>
       <S.AuthButtons>
         <NavLink to="/login" className='btn'>{t('auth.login')}</NavLink>

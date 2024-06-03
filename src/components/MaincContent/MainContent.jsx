@@ -8,9 +8,9 @@ const MainContent = () => {
   return (
     <S.ContentContainer>
       <S.TextSection>
-        <h1>{t('enjoyLife')}</h1>
-        <p>{t('carentReady')}</p>
-        <S.ExploreButton>{t('exploreNow')}</S.ExploreButton>
+        <h1>{t('MainContent.enjoyLife')}</h1>
+        <p>{t('MainContent.carentReady')}</p>
+        <S.ExploreButton>{t('MainContent.exploreNow')}</S.ExploreButton>
       </S.TextSection>
       <S.ImageSection />
     </S.ContentContainer>

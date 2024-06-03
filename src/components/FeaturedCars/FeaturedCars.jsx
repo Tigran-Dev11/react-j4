@@ -11,26 +11,26 @@ const FeaturedCars = () => {
   const { t } = useTranslation(); 
   const cars = [
     {
-      name: t('cars.jeepXD'),
+      name: t('featuredCars.cars.jeepXD'),
       seats: 5,
-      fuelType: t('fuelTypes.gasoline'),
-      type: t('carTypes.suv'),
+      fuelType: t('featuredCars.fuelTypes.gasoline'),
+      type: t('featuredCars.carTypes.suv'),
       rate: 200,
       image:  img1
     },
     {
-      name: t('cars.ferrariEnzo'),
+      name: t('featuredCars.cars.ferrariEnzo'),
       seats: 2,
-      fuelType: t('fuelTypes.electric'),
-      type: t('carTypes.sedan'),
+      fuelType: t('featuredCars.fuelTypes.electric'),
+      type: t('featuredCars.carTypes.sedan'),
       rate: 340,
       image: img2
     },
     {
-      name: t('cars.fiatCoupe'),
+      name: t('featuredCars.cars.fiatCoupe'),
       seats: 4,
-      fuelType: t('fuelTypes.gasoline'),
-      type: t('carTypes.miniCoupe'),
+      fuelType: t('featuredCars.fuelTypes.gasoline'),
+      type: t('featuredCars.carTypes.miniCoupe'),
       rate: 167,
       image: img3
     }
@@ -49,11 +49,11 @@ const FeaturedCars = () => {
           <S.CarImage carImage={car.image} />
           <S.CarDetails>
             <h3>{car.name}</h3>
-            <p>{car.seats} {t('seats')}</p>
-            <p>{t('fuelType')}: {car.fuelType}</p>
-            <p>{t('type')}: {car.type}</p>
-            <p>{t('dailyRate')}: ${car.rate}</p>
-            <S.BookButton onClick={booking}>{t('bookNow')}</S.BookButton>
+            <p>{car.seats} {t('featuredCars.seats')}</p>
+            <p>{t('featuredCars.fuelType')}: {car.fuelType}</p>
+            <p>{t('featuredCars.type')}: {car.type}</p>
+            <p>{t('featuredCars.dailyRate')}: ${car.rate}</p>
+            <S.BookButton onClick={booking}>{t('featuredCars.bookNow')}</S.BookButton>
           </S.CarDetails>
         </S.CarCard>
       ))}

@@ -1,17 +1,19 @@
 import React from 'react';
 import * as S from './styled';
+import { useTranslation } from 'react-i18next'; 
 
 const PremiumServices = () => {
+  const { t } = useTranslation(); 
   const services = [
-    { title: '24 Hours Support', description: 'We support you all hours of the day.' },
-    { title: 'Qualified Assurance', description: 'All cars have a valid insurance.' },
-    { title: 'GPS on Cars', description: 'All cars are equipped with GPS navigation system.' }
+    { title: t('premiumServices.services.24HoursSupport.title'), description: t('premiumServices.services.24HoursSupport.description') },
+    { title: t('premiumServices.services.qualifiedAssurance.title'), description: t('premiumServices.services.qualifiedAssurance.description') },
+    { title: t('premiumServices.services.gpsOnCars.title'), description: t('premiumServices.services.gpsOnCars.description') }
   ];
 
   return (
     <S.ServicesSection>
-      <S.Title>Our Premium Services</S.Title>
-      <S.Subtitle>Carent is a reputable car rental company that offers a wide range of useful services for every taste.</S.Subtitle>
+      <S.Title>{t('premiumServices.title')}</S.Title>
+      <S.Subtitle>{t('premiumServices.servicesDescription')}</S.Subtitle>
       <S.ServiceContainer>
         {services.map((service, index) => (
           <S.ServiceBox key={index}>

@@ -1,22 +1,23 @@
 import React from 'react';
 import * as S from './styled';
+import { useTranslation } from 'react-i18next'; 
 
 const Testimonials = () => {
+  const { t } = useTranslation(); 
   const testimonials = [
-    {
-      author: "Kristin Watson",
-      quote: "I rented a car for a one-week trip from Carnet on the recommendation of my friend. Actually, I am satisfied with them."
-      
+    { 
+      author: t('testimonials.kristinWatson.name'), 
+      quote: t('testimonials.kristinWatson.quote') 
     },
-    {
-      quote: "During my last trip, I used a Carent sport car . The car was completely clean and had enough gas.!",
-      author: "Robert Fox"
+    { 
+      author: t('testimonials.robertFox.name'), 
+      quote: t('testimonials.robertFox.quote') 
     }
   ];
 
   return (
     <S.Testimonials>
-      <S.Title>What Our Clients Say?</S.Title>
+      <S.Title>{t('testimonials.title')}</S.Title>
       <S.TestimonialsContainer>
         {testimonials.map((testimonial, index) => (
           <S.Testimonial key={index}>

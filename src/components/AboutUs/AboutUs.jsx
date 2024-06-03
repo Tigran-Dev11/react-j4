@@ -8,9 +8,9 @@ const AboutUs = () => {
   return (
     <S.AboutContainer>
       <S.TextBlock>
-        <h1>{t('aboutUs')}</h1>
-        <p>{t('aboutUsDescription')}</p>
-        <S.ReadMoreButton>{t('readMore')}</S.ReadMoreButton>
+        <h1>{t('aboutus.aboutUs')}</h1>
+        <p>{t('aboutus.aboutUsDescription')}</p>
+        <S.ReadMoreButton>{t('aboutus.readMore')}</S.ReadMoreButton>
       </S.TextBlock>
       <S.CarImage />
     </S.AboutContainer>
