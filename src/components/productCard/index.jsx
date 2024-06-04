@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from "react-redux";
-import { starsClothes } from "../../utils/constants";
+import { ROUTES, starsClothes } from "../../utils/constants";
 import * as S from "./styled";
 import { useState } from "react";
 import { productActions } from "../../libs/redux/product-slice/product-slice";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const [count, setCount] = useState(1);
@@ -31,10 +32,15 @@ const ProductCard = ({ product }) => {
     dispatch(productActions.addBasket(item));
   };
 
+  const navigate = useNavigate()
+
+  const goToSingleProduct = () => {
+    navigate(ROUTES.singleProduct)
+  }
   return (
     <S.productContainer>
       <S.productItem>
-        <S.productImg src={product?.image} alt="image" />
+        <S.productImg onClick={goToSingleProduct} src={product?.image} alt="image" />
         <S.productTitle>{product.title}</S.productTitle>
         {starsClothes.map((item, index) => {
           return <S.fiveStar key={index} src={item.fiveStars} alt="image" />;

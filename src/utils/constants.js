@@ -3,6 +3,7 @@ import { IMAGES } from "../assets";
 export const ROUTES = {
   home: "/",
   basket: "/basket",
+  singleProduct:"/:product-id",
   login: "/login",
   register: "/register",
 };
@@ -30,76 +31,6 @@ export const headerMenus = [
     title: "Shop",
   },
   {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     title: "On Sale",
   },
   {

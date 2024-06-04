@@ -1,11 +1,30 @@
-import React from 'react'
+import { useSelector } from "react-redux";
+import { productSelector } from "../../libs/redux/product-slice/product-selector";
+import { useParams } from "react-router-dom";
 
 const SingleProduct = () => {
-  return (
-    <S.Container>
-    
-    </S.Container>
-  )
-}
+  const { products } = useSelector(productSelector);
+  const { "product-id": ProductId } = useParams();
+  console.log(ProductId);
 
-export default SingleProduct
+  const product = products?.find((item) => item.id == ProductId);
+
+  return (
+    <div>
+      <p>{product?.name}</p>
+      <img src={product?.img} alt="image" />
+      <p>Nutritions</p>
+      <ul>
+        {/* {Object.keys(product?.nutritions)?.map((key) => {
+          return (
+            <li key={key}>
+              <b>{key}</b>:{product?.nutritions[key]}
+            </li>
+          );
+        })} */}
+      </ul>
+    </div>
+  );
+};
+
+export default SingleProduct;

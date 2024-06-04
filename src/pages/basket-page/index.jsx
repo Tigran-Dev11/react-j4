@@ -6,8 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const Basket = () => {
   const { basketItems, total } = useSelector(productSelector);
-
-  console.log(total, "total");
+  const {t} = useTranslation()
 
   return (
     <S.Container>
@@ -15,7 +14,7 @@ const Basket = () => {
       {basketItems?.map((product) => (
         <BasketCard key={product.id} product={product} />
       ))}
-      <h1>{!basketItems?.length ? "" : `total : ${total}`}</h1>
+      <h1>{!basketItems?.length ? "" : `total : ${total}$`}</h1>
     </S.Container>
   );
 };
