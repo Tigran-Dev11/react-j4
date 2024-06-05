@@ -1,0 +1,79 @@
+{
+  "header":{
+    "title": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "login": "Login",
+    "sign-up":"Sign-up"
+  },
+  "section1":{
+    "text1": "Your Ultimate Online",
+    "text2": "Grocery",
+    "text3": "Experience grocery shopping and swift home delivery with our wide range of fresh produce and essentials",
+    "text4": "Learn More"
+  },
+  "section2":{
+    "text1": "Support 24 h",
+    "text2": "Dedicated support",
+    "text3": "Secure Payment",
+    "text4": "Ensure your money is safe",
+    "text5": "Refundable",
+    "text6": "Damage items can refund it",
+    "text7": "Free Shipping",
+    "text8": "Order over 40$"
+  },
+  "section3":{
+    "text1": "SUMMER SALE",
+    "text2": "40%OFF",
+    "text3": "Fresh Fruit %100",
+    "text4": "Shop Now",
+    "text5": "Fresh Delivered Daily"
+  },
+  "section4":{
+    "text1": "Top Category",
+    "text2": "Fruits",
+    "text3": "Vegetable",
+    "text4": "Meat",
+    "text5": "Snacks",
+    "text6": "Milk"
+  },
+  "section5":{
+    "text1": "ECO-Friendly",
+    "text2": "Discover a vibrant array of locally sourced and eco-friendly products on our grocery web store, connecting you with sustainable choices that support both the community and the planet.",
+    "text3": "Learn More"
+  },
+  "section6":{
+    "text1": "Sign up for new Customer, updates, surveys"
+  },
+  "section7":{
+    "textA1": "Social Media",
+    "textA2": "Instagram",
+    "textA3": "Facebook",
+    "textA4": "Twitter",
+    "textB1": "Information",
+    "textB2": "About Us",
+    "textB3": "Blog",
+    "textB4": "Check Out",
+    "textB5": "Contact",
+    "textC1": "My Accounts",
+    "textC2": "My Account",
+    "textC3": "Wish List",
+    "textC4": "Shopping Card",
+    "textD1": "Categories",
+    "textD2": "Fresh Product",
+    "textD3": "Meat",
+    "textD4": "Snacks",
+    "textD5": "Drinks",
+    "textD6": "Vegetables"
+  },
+  "shop":{
+    "shop": "Shop",
+    "basket": "Basket",
+    "button": "Add Basket"
+  },
+  "basket":{
+    "title": "Basket",
+    "title2": "Basket is empty",
+    "button": "Make a delivery"
+  }
+}
