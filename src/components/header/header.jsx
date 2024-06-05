@@ -24,6 +24,7 @@ const { t, i18n } = useTranslation();
       <S.languageSelect defaultValue="en" onChange={changeLanguage}>
         <S.languageOptionEng value="en">Eng</S.languageOptionEng>
         <S.languageOptionRus value="ru">Rus</S.languageOptionRus>
+        <S.languageOptionArm value="am">Arm</S.languageOptionArm>
       </S.languageSelect>
     </S.MenuHeader>
   );

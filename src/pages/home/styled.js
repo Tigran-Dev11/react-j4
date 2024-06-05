@@ -158,7 +158,7 @@ export const Text4 = styled.p`
 export const Text5 = styled.p`
   font-family: Palanquin;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 70px;
   text-align: center;
 `;
@@ -175,7 +175,7 @@ export const Section3B = styled.div`
 export const Text6 = styled.p`
   font-family: Palanquin;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 50px;
   text-align: center;
   margin-top: 20px;

@@ -45,3 +45,4 @@ export const languageSelect = styled.select`
 
 export const languageOptionEng = styled.option``;
 export const languageOptionRus = styled.option``;
+export const languageOptionArm = styled.option``;
