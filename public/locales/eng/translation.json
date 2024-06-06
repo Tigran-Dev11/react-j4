@@ -1,0 +1,56 @@
+{
+  "header": {
+    "sale": "Mega Sale",
+    "takeOff": "Take 10% OFF"
+  },
+
+  "home": {
+    "look": "LOOK YOUR BEST",
+    "SpecialDay": "FOR YOUR SPECIAL DAY",
+    "btnTitle": "New Arrivals",
+    "btnMore": "See More",
+    "btnAddBasket": "Add Basket",
+    "titleMade": "Made-To-Order",
+    "btnLeranMore": "Learn More",
+    "shopCollection": "Shop Collection",
+    "price": "Price"
+  },
+  "menu": {
+    "home": "Home",
+    "Products" : "Products",
+    "Shop" : "Shop",
+    "Weddings" : "Weddings",
+    "Service" : "Service",
+    "Contact" : "Contact"
+  },
+
+  "fiftContainerOneDesc" :{
+    "title" : "Quality",
+    "description" : "Our objective is to design and tailor a made-to-measure suit with a guaranteed fit. We ensure nothing but comfort, style, and class whenever and wherever you are."
+
+  },
+  "fiftContainerSecDesc" :{
+    "title" : "Customisability",
+    "description" : "There are many styles to select from when you browse through our gallery. Every detail identifies your style. At the collaboration, you have complete control over the design process."
+
+  },
+  "fiftContainerThirdDesc" :{
+    "title" : "Convenience",
+    "description" : "We bring our bespoke suit tailoring service directly to you at home, the office, or on location, so you have the minimum of interruptions during your busy schedule."
+
+  },
+  "Social" :{
+    "SIGNUP":"SIGN UP AND SAVE",
+    "subscribe" :"Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals."
+  },
+  "locate" :{
+    "location":"Location",
+    "street":"007, James Bond street, London, England",
+    "workDay" : "Mon-Sat 10AM - 9PM",
+    "offday" : "Sun : Closed"
+}
+}
+
+
+  
+
