@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { IMAGES } from "../../../assets/images/index"
 import { COLORS } from "../../../assets/colors"
+import { BREAKPOINTS } from "../../../assets/breakpoints"
 
 export const Container  = styled.div`
 width: 100%;
@@ -19,6 +20,9 @@ display: flex;
 flex-direction:column;
 align-items: start;
 justify-content: space-between;
+@media ${BREAKPOINTS.sm} {
+    align-items: center;
+      }
 `
 
 export const FirstText  = styled.p`
@@ -38,6 +42,9 @@ display: flex;
 flex-direction:column;
 align-items: start;
 justify-content: center;
+@media ${BREAKPOINTS.sm} {
+    align-items: center;
+      }
 `
 
 

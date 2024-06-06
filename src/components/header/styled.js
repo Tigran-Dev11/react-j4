@@ -7,7 +7,7 @@ width:100%;
 height:100px;
 background-color: ${COLORS.cream};
 border-bottom:solid 1px;
-
+position:relative;
 `
 
 export const TopMenuContainer = styled.div`
@@ -85,6 +85,12 @@ height: 60px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+@media ${BREAKPOINTS.md} {
+    width: 200px;
+      }
+      @media ${BREAKPOINTS.sm} {
+    width: 120px;
+      }
 `
 export const LanguageConatainer = styled.div`
 display: flex;
@@ -122,4 +128,38 @@ export const BurgerMenu = styled.img`
 border-radius: 8px;
 width: 30px;
 height: 30px;
+`
+export const ToggleMenu = styled.ul`
+width: 100px;
+z-index: 11;
+background-color: ${COLORS.cream};
+display: none;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position:absolute;
+cursor:pointer;
+margin-top: 61px;
+left: 255px;
+`
+export const ToggleItem =  styled.li`
+width: 100px;
+height: 40px;
+border:solid 1px;
+background-color: ${COLORS.cream};
+list-style: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+`
+export const TogglePath = styled.a`
+background-color: ${COLORS.cream};
+color:${COLORS.brown};
+text-decoration:none;
+
+
+
+
 `

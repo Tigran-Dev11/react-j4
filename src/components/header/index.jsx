@@ -9,6 +9,7 @@ import { ROUTES } from "../../utils/constants";
 
 
 
+
 const Header = () => {
 
 
@@ -20,7 +21,7 @@ const Header = () => {
   };
 
   const menuToggle = () =>{
-
+         
   }
 
   return (
@@ -37,7 +38,11 @@ const Header = () => {
             <S.Logo src={IMAGES.logo}></S.Logo>
           </NavLink>
         </S.LogoContainer>
-        <S.BurgerContainer><S.BurgerMenu src={IMAGES.burger} onClick={menuToggle}></S.BurgerMenu></S.BurgerContainer>
+        <S.BurgerContainer>
+          <S.BurgerMenu src={IMAGES.burger} onClick={menuToggle}></S.BurgerMenu>
+        </S.BurgerContainer>
+
+       
 
         <S.MenuItemsContainer>
           {menu(t).map(({ title, path }) => (
@@ -46,6 +51,7 @@ const Header = () => {
             </S.MenuItems>
           ))}
         </S.MenuItemsContainer>
+      
         <S.IconsContainer>
           <S.ImageContainer src={IMAGES.user}></S.ImageContainer>
           <NavLink to={ROUTES.basket}>
