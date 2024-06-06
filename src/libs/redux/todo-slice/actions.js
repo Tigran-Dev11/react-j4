@@ -1,0 +1,2 @@
+
+export const todoSliceName = "todos"
