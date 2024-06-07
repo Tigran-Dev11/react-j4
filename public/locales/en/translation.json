@@ -1,0 +1,97 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "booking": "Booking",
+        "cars": "Cars",
+        "contacts": "Contacts"
+    },
+    "auth": {
+        "login": "Login",
+        "signup": "Signup"
+    },
+    "footer": {
+        "about": "About GARRENT",
+        "description": "We specialize in offering luxury rental cars at affordable prices. Our collection includes BMWs, Mercedes Benz, and many more!",
+        "contactUs": "Contact Us",
+        "callUs": "Feel free to call us: +1234567890",
+        "email": "Email: contact@garrent.com",
+        "followUs": "Follow Us",
+        "copyright": "© 2024 GARRENT. All rights reserved."
+    },
+    "featuredCars": {
+        "cars": {
+            "jeepXD": "Jeep XD",
+            "ferrariEnzo": "Ferrari Enzo",
+            "fiatCoupe": "Fiat Coupe"
+        },
+        "fuelTypes": {
+            "gasoline": "Gasoline",
+            "electric": "Electric"
+        },
+        "carTypes": {
+            "suv": "SUV",
+            "sedan": "Sedan",
+            "miniCoupe": "Mini coupe"
+        },
+        "seats": "Seats",
+        "fuelType": "Fuel Type",
+        "type": "Type",
+        "dailyRate": "Daily Rate",
+        "bookNow": "Book Now"
+    },
+    "contact": {
+        "contactUs": "Contact Us",
+        "yourName": "Your Name",
+        "yourEmail": "Your Email",
+        "yourMessage": "Your Message",
+        "sendMessage": "Send Message"
+    },
+    "bookingForm": {
+        "pickupLocation": "Pickup Location",
+        "yourName": "Your Name",
+        "yourEmail": "Your Email",
+        "yourMessage": "Your Message",
+        "sendMessage": "Send Message",
+        "bookNow": "Book Now"
+    },
+    "aboutus": {
+        "aboutUs": "About Us",
+        "aboutUsDescription": "We are a specialized team committed to providing reliable car rental services. One of the advantages of renting a car from us is offering competitive and transparent prices. By providing services such as comprehensive insurance...",
+        "readMore": "Read More"
+    },
+    "MainContent": {
+        "enjoyLife": "Enjoy your life with our comfortable cars.",
+        "carentReady": "Carent is ready to serve the best experience in car rental.",
+        "exploreNow": "Explore Now"
+    },
+    "premiumServices": {
+        "title": "Our Premium Services",
+        "servicesDescription": "Carent is a reputable car rental company that offers a wide range of useful services for every taste.",
+        "services": {
+            "24HoursSupport": {
+                "title": "24 Hours Support",
+                "description": "We support you all hours of the day."
+            },
+            "qualifiedAssurance": {
+                "title": "Qualified Assurance",
+                "description": "All cars have a valid insurance."
+            },
+            "gpsOnCars": {
+                "title": "GPS on Cars",
+                "description": "All cars are equipped with GPS navigation system."
+            }
+        }
+    },
+    "testimonials": {
+        "title": "What Our Clients Say?",
+        "kristinWatson": {
+            "name": "Kristin Watson",
+            "quote": "I rented a car for a one-week trip from Carnet on the recommendation of my friend. Actually, I am satisfied with them."
+        },
+        "robertFox": {
+            "name": "Robert Fox",
+            "quote": "During my last trip, I used a Carent sport car. The car was completely clean and had enough gas!"
+        }
+    }
+}
