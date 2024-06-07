@@ -12,7 +12,9 @@ const Header = () => {
 
   return (
     <S.HeaderContainer>
-      <S.Logo>GARRENT</S.Logo>
+      <NavLink to="/">
+        <S.Logo>GARRENT</S.Logo>
+      </NavLink>
       <S.Navbar>
         <NavLink to="/">{t('header.home')}</NavLink>
         <NavLink to="/about">{t('header.about')}</NavLink>
